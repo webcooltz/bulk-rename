@@ -59,13 +59,12 @@ const getScrapedData = async () => {
             // console.log("showMetaData: ", showMetaData);
 
             const showDataJSON = JSON.stringify(showMetaData, null, 2);
-            const showMetaDataFile = "./results/showMetaData-output.json";
+            const showMetaDataFile = "./results/show-output.json";
             fs.writeFileSync(showMetaDataFile, showDataJSON);
             console.log(`showMetaData written to ${showMetaDataFile}`);
 
             const scrapeEpisodeData = async (season) => {
                 try {
-                    // const seasonEpisodes = [];
                     const episodeScrapeUrl = baseUrl + showTitleId + baseSeasonUrl + season;
                         // e.g. - https://www.imdb.com/title/tt0417299/episodes?season=1
                     const episodeResponse = await axios.get(episodeScrapeUrl, requestOptions);
