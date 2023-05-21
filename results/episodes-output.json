@@ -1,0 +1,442 @@
+[
+  [
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 0,
+      "title": "Avatar: The Last Airbender",
+      "description": "Sokka and his sister Kya - later renamed Katara, must travel the world to find masters for Aang, who is the Avatar. However, they must evade a critical foe, Prince Zuko of the Fire Nation, who wants to capture Aang.",
+      "airDate": "2-21-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 1,
+      "title": "The Boy in the Iceberg",
+      "description": "The legend of the Avatar is told. Katara and Sokka find a strange boy within an iceberg.",
+      "airDate": "2-21-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 2,
+      "title": "The Avatar Returns",
+      "description": "Aang and Katara inadvertently set off a trap the brings the warmongering Fire Nation to the Southern Water Tribe's peaceful village at the South Pole.",
+      "airDate": "2-21-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 3,
+      "title": "The Southern Air Temple",
+      "description": "After his departure from the Southern Air Temple 100 years ago, an excited Aang finally returns home but is disillusioned by what he finds there.",
+      "airDate": "2-25-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 4,
+      "title": "The Warriors of Kyoshi",
+      "description": "The gang arrives at Kyoshi Island and are captured by some Kyoshi warriors. When Aang reveals that he is the avatar, news quickly spreads out and suddenly reaches to Prince Zuko who then goes to Kyoshi Island to capture him.",
+      "airDate": "3-4-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 5,
+      "title": "The King of Omashu",
+      "description": "Aang's abilities as an airbender are challenged by a king.",
+      "airDate": "3-18-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 6,
+      "title": "Imprisoned",
+      "description": "In a nearby Earth Village, the gang meets a teenage earthbender named Haru. This village lives in fear of the Fire Nation, for soldiers there capture any earthbenders they can find.",
+      "airDate": "3-25-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 7,
+      "title": "The Spirit World (Winter Solstice, Part 1)",
+      "description": "Aang and friends visit a village being terrorized by an angry spirit. Iroh is captured by Earth Kingdom soldiers.",
+      "airDate": "4-8-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 8,
+      "title": "Avatar Roku (Winter Solstice, Part 2)",
+      "description": "To contact the spirit of the previous Avatar, Aang must reach a temple in the Fire Nation before the sun sets on the following day. There he will learn what he must do to restore balance to the world. Zuko must defy his banishment to follow Aang.",
+      "airDate": "4-15-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 9,
+      "title": "The Waterbending Scroll",
+      "description": "Katara, desperate to improve her abilities and teach Aang, steals an expensive waterbending scroll from pirates, causing them to pursue the group.",
+      "airDate": "4-29-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 10,
+      "title": "Jet",
+      "description": "Aang, Katara, and Sokka have their friendship tested by a charismatic Rebel Leader who is fighting against the Fire Nation.",
+      "airDate": "5-6-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 11,
+      "title": "The Great Divide",
+      "description": "Aang is tested as the Avatar when he must help two feuding clans cross a dangerous canyon peacefully.",
+      "airDate": "5-20-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 12,
+      "title": "The Storm",
+      "description": "Aang relives the events after finding out that he is the Avatar 100 years ago and tells them to Katara, while Iroh tells the story of Zuko's scar and banishment to the crew.",
+      "airDate": "6-3-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 13,
+      "title": "The Blue Spirit",
+      "description": "When Aang is captured by the Fire Nation, his only hope is a mysterious masked figure.",
+      "airDate": "6-17-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 14,
+      "title": "The Fortuneteller",
+      "description": "The gang visits a village where a fortuneteller lives who is said to never be wrong. Aang tries to show Katara how he feels about her.",
+      "airDate": "9-23-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 15,
+      "title": "Bato of the Water Tribe",
+      "description": "Sokka and Katara meet a friend of their father who offers to take them to join the Water Tribe's navy. Aang fears his friends will choose seeing their father again over staying with him.",
+      "airDate": "10-7-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 16,
+      "title": "The Deserter",
+      "description": "When he meets an outcast from the Fire Nation, Aang is impatient to skip ahead in his training.",
+      "airDate": "10-21-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 17,
+      "title": "The Northern Air Temple",
+      "description": "Aang is upset when he finds an old Air Temple has been desecrated by an old inventor and his son.",
+      "airDate": "11-4-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 18,
+      "title": "The Waterbending Master",
+      "description": "The heroes finally arrive at the North Pole. But for Katara, the trip may have been in vain, as Master Pakku refuses to teach girls waterbending.",
+      "airDate": "11-18-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 19,
+      "title": "The Siege of the North, Part 1",
+      "description": "While Katara herself becomes a great waterbending master, Commander Zhao plans a siege on the Northern Water Tribe. Meanwhile, Sokka's on a mission to stop this siege while Aang tries to buy them some time.",
+      "airDate": "12-2-2005"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 20,
+      "title": "The Siege of the North, Part 2",
+      "description": "As the Fire Nation continues its assault on the Northern Water Tribe, Sokka, Katara and Yue set out on a search for Aang, being guided by his spirit.",
+      "airDate": "12-2-2005"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 1,
+      "title": "The Avatar State",
+      "description": "Aang and friends arrive in the Earth Kingdom to begin his earthbending training, but a local general convinces Aang that all he needs to do is learn to control his Avatar state. Azula, Zuko's sister, arrives to escort her brother and uncle back to the Fire Nation.",
+      "airDate": "3-17-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 2,
+      "title": "The Cave of Two Lovers",
+      "description": "On their way to Omashu, Team Avatar is forced to travel underground to avoid Fire Nation attacks. Iroh and Zuko adjust to life as fugitives.",
+      "airDate": "3-24-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 3,
+      "title": "Return to Omashu",
+      "description": "Finding the city of Aang's old friend, King Bumi, captured by the Fire Nation, the heroes hatch a plan to rescue Aang's earthbending teacher. Azula gathers two old friends to help her hunt the Avatar.",
+      "airDate": "4-7-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 4,
+      "title": "The Swamp",
+      "description": "Aang hears a swamp calling to him. In the swamp, Aang and the gang find out that this is not any natural swamp.",
+      "airDate": "4-14-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 5,
+      "title": "Avatar Day",
+      "description": "Sokka and Katara have to solve a centuries-old crime when Aang is imprisoned for a murder allegedly committed by one of his past incarnations.",
+      "airDate": "4-28-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 6,
+      "title": "The Blind Bandit",
+      "description": "While looking for an Earthbending teacher, Aang, and his friends discover a young blind girl with secrets of her own.",
+      "airDate": "5-5-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 7,
+      "title": "Zuko Alone",
+      "description": "As Zuko tries to make it by in exile without his uncle, he remembers how his father became Firelord and what happened to his mother.",
+      "airDate": "5-12-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 8,
+      "title": "The Chase",
+      "description": "Team Avatar is getting chased by a mysterious machine, they become sleep deprived when they try to get away from Azula and her two friends. Katara and Toph get into a heated argument, she calls the earth bender out on her unhelpful attitude. Aang realizes the reason why they are being followed by the crown princess and her friends is because of Appa's shedding. Aang and his friends finally clean Appa up and he tries to create a fake decoy trail with the fur to trick Azula and her friends. Aang is finally cornered by the princess, she reveals that she is the younger ...",
+      "airDate": "5-26-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 9,
+      "title": "Bitter Work",
+      "description": "Aang begins to learn earthbending from Toph; Uncle Iroh resumes teaching Zuko firebending to better prepare him for facing Azula, and reveals a new technique he learned from watching waterbenders.",
+      "airDate": "6-2-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 10,
+      "title": "The Library",
+      "description": "When he learns that there is a lost Library with all the knowledge in the world, Sokka convinces the others to seek it out in hopes of finding a weakness of the Fire Nation.",
+      "airDate": "7-14-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 11,
+      "title": "The Desert",
+      "description": "Lost in the desert without Appa, Team Avatar must find a way out. Iroh and Zuko make contact with a secret organization.",
+      "airDate": "7-14-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 12,
+      "title": "The Serpent's Pass",
+      "description": "After getting tickets for the ferry headed to Ba Sing Se, the gang meets an old friend. They skip the ferry ride to help some refugees, one of which is going to have a baby, get to Ba Sing Se. They must lead the refugees through the Serpent's Pass, a dangerous mountain-side path surrounded by water.",
+      "airDate": "9-15-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 13,
+      "title": "The Drill",
+      "description": "After arriving at the great wall of Ba Sing Se, Aang and the gang discover that the Fire Nation has constructed a great drilling machine to penetrate the wall. The drill is also followed by an army of Fire Nation troops. Also, Zuko and Iroh are having trouble hiding the fact that they are both Firebenders.",
+      "airDate": "9-15-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 14,
+      "title": "City of Walls and Secrets",
+      "description": "After getting a house to stay in, Aang and company are given a tour of Ba Sing Se. As they try to get in to tell the Earth King the news, they find that nothing is quite what is seems. Jet is in the city, too, and he is positive that Iroh and Zuko are Firebenders.",
+      "airDate": "9-22-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 15,
+      "title": "The Tales of Ba Sing Se",
+      "description": "A series of short stories covering some of the time spent by Katara, Toph, Iroh, Sokka, Aang, Zuko and Momo as they live in Ba Sing Se.",
+      "airDate": "9-29-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 16,
+      "title": "Appa's Lost Days",
+      "description": "In this special episode, we go back in time to the moment Appa was stolen, will find out where he has gone and who he has met along the way and more importantly where he is now!",
+      "airDate": "10-13-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 17,
+      "title": "Lake Laogai",
+      "description": "The Avatar gang encounters Jet in Ba Sing Se and he helps them to discover the location of Appa. But they will end up discovering something else, a secret of the city.",
+      "airDate": "11-3-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 18,
+      "title": "The Earth King",
+      "description": "The kids battle Long Feng and the Dai Li when they attempt to show the Earth King the vast conspiracy taking place in his city. Zuko becomes seriously ill and has feverish dreams as he faces a spiritual crisis.",
+      "airDate": "11-17-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 19,
+      "title": "The Guru",
+      "description": "Aang receives guidance from Guru Pathik at the Eastern Air Temple; Sokka is reunited with his long-lost father; Princess Azula has something diabolical in store for her enemies; Uncle and Zuko run their own tea shop.",
+      "airDate": "12-1-2006"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 20,
+      "title": "The Crossroads of Destiny",
+      "description": "The heroes work together to stop Azula's destructive plans; Zuko finds companionship in an unlikely source and learns the time has come to make an imperative choice about his future.",
+      "airDate": "12-1-2006"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 1,
+      "title": "The Awakening",
+      "description": "Weeks after the fall of the Earth Kingdom, Aang and his friends must infiltrate the Fire Nation. Katara meets her father for the first time in years. Zuko returns home, but is uneasy with his newfound reputation.",
+      "airDate": "9-21-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 2,
+      "title": "The Headband",
+      "description": "Posing as a regular kid, Aang goes to a Fire Nation school and sees what's missing from their lives. Zuko visits his uncle in prison.",
+      "airDate": "9-28-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 3,
+      "title": "The Painted Lady",
+      "description": "When Aang and his friends come across a fishing village being poisoned by a nearby factory, a local legend comes to life to help the townspeople.",
+      "airDate": "10-5-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 4,
+      "title": "Sokka's Master",
+      "description": "After deciding he's the least valuable member of the team, Sokka seeks an apprenticeship with a sword-master. The rest of the gang tries to adjust to being without him. The imprisoned Iroh may not be as beaten as he seems.",
+      "airDate": "10-12-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 5,
+      "title": "The Beach",
+      "description": "On a forced vacation, Zuko, Azula, Ty Lee and Mai try to blend in with normal teenagers and learn about themselves and one another. Aang and company are attacked by an ominous assassin.",
+      "airDate": "10-19-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 6,
+      "title": "The Avatar and the Fire Lord",
+      "description": "Both Aang and Zuko must learn the history of how the war began. Zuko learns a secret about his great-grandfather's past.",
+      "airDate": "10-26-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 7,
+      "title": "The Runaway",
+      "description": "When Toph discovers a quick way to make cash, Katara disapproves, and the rift between them has disastrous consequences.",
+      "airDate": "11-2-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 8,
+      "title": "The Puppetmaster",
+      "description": "Creepy things are afoot when the gang meets a mysterious old innkeeper with a secret.",
+      "airDate": "11-9-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 9,
+      "title": "Nightmares and Daydreams",
+      "description": "As the invasion approaches, Aang has recurring nightmares about being unprepared to face the Firelord. Zuko feels the perks and pressures of being the prince again.",
+      "airDate": "11-16-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 10,
+      "title": "The Day of Black Sun, Part 1: The Invasion",
+      "description": "Zuko makes a decision about his future. Aang reunites with many of his old friends in a full-scale invasion of the Fire Nation capitol to coincide with an eclipse which will remove the Fire Nation's powers.",
+      "airDate": "11-30-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 11,
+      "title": "The Day of Black Sun, Part 2: The Eclipse",
+      "description": "The invasion seems to be succeeding until Aang learns that their arrival was anticipated. Zuko confronts his father.",
+      "airDate": "11-30-2007"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 12,
+      "title": "The Western Air Temple",
+      "description": "The gang hides out in the Western Air Temple. Zuko tries to convince the gang of his change in heart, but they are very hesitant. Combustion Man/Sparky-Sparky Boom Man attacks again.",
+      "airDate": "7-14-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 13,
+      "title": "The Firebending Masters",
+      "description": "Zuko has joined up with Aang's group and is now ready to teach Aang fire bending. Unfortunately, Zuko has found out that he has lost his ability and must now relearn it. Zuko and Aang travel to find the original source of fire bending so that they both can learn from The Firebending Masters.",
+      "airDate": "7-15-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 14,
+      "title": "The Boiling Rock: Part 1",
+      "description": "Sokka and Zuko head to the Fire Nation's most heavily guarded prison, the Boiling Rock, in hopes of finding and breaking out the captured invasion force.",
+      "airDate": "7-16-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 15,
+      "title": "The Boiling Rock, Part 2",
+      "description": "The escape is planned and the heroes attempt to break from the prison that very day. But problems come when Azula, Mai and Ty Lee arrive at the prison.",
+      "airDate": "7-16-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 16,
+      "title": "The Southern Raiders",
+      "description": "Trying to prove that she can trust him, Zuko helps Katara track down the man who killed her mother.",
+      "airDate": "7-17-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 17,
+      "title": "The Ember Island Players",
+      "description": "The gang, now hiding at Ember Island, watch a play about themselves and their adventures.",
+      "airDate": "7-18-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 18,
+      "title": "Sozin's Comet, Part 1: The Phoenix King",
+      "description": "Sozin's Comet is only three days away. Zuko tells the others what the Fire Lord plans on the day of the comet and the gang realizes that they must stop him before then. But Aang doubts that he can do what is expected of him.",
+      "airDate": "7-19-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 19,
+      "title": "Sozin's Comet, Part 2: The Old Masters",
+      "description": "Aang awakes on a mysterious island and confronts his past lives for advice on how to stop the Fire Lord without killing him. The rest of the group searches for Aang.",
+      "airDate": "7-19-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 20,
+      "title": "Sozin's Comet, Part 3: Into the Inferno",
+      "description": "Zuko battles his sister with Katara's help for the right to be named Fire Lord. Elsewhere, Aang meets Ozai just as the comet arrives.",
+      "airDate": "7-19-2008"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 21,
+      "title": "Sozin's Comet, Part 4: Avatar Aang",
+      "description": "Aang's moment of truth arrives. Can he defeat Ozai, the Phoenix King? Will he be forced to take a human life? All the characters face their greatest challenges.",
+      "airDate": "7-19-2008"
+    }
+  ]
+]
