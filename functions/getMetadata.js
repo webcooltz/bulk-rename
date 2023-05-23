@@ -52,7 +52,7 @@ const main = (pathToVideoFiles, callback) => {
           callback(err, null);
           return;
         }
-        console.log("videoMetadata: ", videoMetadata.format.tags);
+        console.log("videoMetadata format: ", videoMetadata.format);
         
         const metadataFormat = videoMetadata.format;
         metadataObjects.push(metadataFormat);

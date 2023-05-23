@@ -45,33 +45,24 @@ main = async (videofileObjects) => {
                 console.error('An error occurred:', err);
             return;
             }
-        
-            const command = ffmpeg(videofileObject.filename)
-            .outputOptions('-metadata', `show=${videofileObject.show}`)
-            .outputOptions('-metadata', `season=${videofileObject.season}`)
-            .outputOptions('-metadata', `episode=${videofileObject.episode}`)
-            .outputOptions('-metadata', `title=${videofileObject.title}`)
-            .outputOptions('-metadata', `description=${videofileObject.description}`)
-            .outputOptions('-metadata', `date=${videofileObject.date}`)
+
+            ffmpeg(videofileObject.filename)
+            .outputOptions([
+                '-c:v copy',   // Copy video codec
+                '-c:a copy',   // Copy audio codec
+                '-metadata', `show=${videofileObject.show}`,
+                '-metadata', `season_number=${videofileObject.season}`,
+                '-metadata', `title=${videofileObject.title}`,
+                '-metadata', `episode_sort=${videofileObject.episode}`
+            ])
             .save(videofileObject.newFilename)
             .on('end', () => {
-                console.log('Metadata changed successfully.');
+                console.log('Metadata added successfully.');
             })
             .on('error', (err) => {
-                console.error(`An error occurred on ${videofileObject.filename}`, err);
+                console.error(`Error adding metadata: ${videofileObject.filename}\n`, err);
             });
-        
-            command.run();
         });
-
-        // ffmpeg.rename(videofileObject.filename, videofileObject.newFilename, (err) => {
-        //     if (err) {
-        //       console.error(`Error renaming file ${videofileObject.filename}:`, err);
-        //       return;
-        //     }
-          
-        //     console.log(`File renamed successfully: ${videofileObject.newFilename}`);
-        // });
     }
 };
 

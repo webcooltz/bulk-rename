@@ -1,0 +1,5 @@
+next debug
+-find the difference between mission creep and other working episodes
+
+to-do debug
+-check if cleanvid app changes metadata -- if i would need to clean my movies before this

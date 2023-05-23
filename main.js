@@ -4,7 +4,7 @@ const fs = require('fs');
 // ---functions---
 // const scrapeImdbModule = require('./functions/scrapeImdb');
 const getMetadataModule = require('./functions/getMetadata');
-const changeMetadata = require('./functions/changeMetadata');
+// const changeMetadata = require('./functions/changeMetadata');
 
 const fileDirectory = "C:/Users/tyler/Videos/poi/";
 // const showId = "tt0417299";
@@ -34,7 +34,7 @@ const turnMetadataIntoObjects = (metadata) => {
         }
     }
 
-    console.log("videoMetadataObjects: ", videoMetadataObjects);
+    // console.log("videoMetadataObjects: ", videoMetadataObjects);
 
     return videoMetadataObjects;
 };
@@ -127,7 +127,7 @@ main = async () => {
         videofileMetadataObject.show = showMetadata.title;
       }
 
-      // console.log("videofileMetadataObjects: ", videofileMetadataObjects);
+      console.log("videofileMetadataObjects: ", videofileMetadataObjects);
 
       // const episodeMetadataChanged = await changeMetadata.main(videofileMetadataObjects);
 };
