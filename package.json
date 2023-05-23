@@ -4,13 +4,20 @@
   "description": "rename files and meta data",
   "main": "scrape-imdb.js",
   "scripts": {
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape": "node scrape-imdb.js"
+    "scrape": "node ./functions/scrapeImdb.js",
+    "get": "node ./functions/getMetadata.js",
+    "change": "node ./functions/changeMetadata.js"
   },
   "author": "webcooltz",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
-    "cheerio": "^1.0.0-rc.12"
-    }
+    "cheerio": "^1.0.0-rc.12",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.2"
+  }
 }

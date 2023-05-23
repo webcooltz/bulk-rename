@@ -4,15 +4,15 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
 const fs = require('fs');
-const cleanData = require('./helpers/clean-data');
+const cleanData = require('../helpers/cleanData');
 
-const seasons = [1, 2, 3];
-const allEpisodes = [];
+const showId = "tt1839578";
+const seasons = [1, 2, 3, 4, 5];
 // let returnMessage;
 
-const getScrapedData = async () => {
+const getScrapedData = async (showTitleId) => {
     try {
-        const showTitleId = "tt0417299";
+        showTitleId = showId;
         const baseUrl = "https://www.imdb.com/title/";
         const showScrapeUrl = baseUrl + showTitleId;  // e.g. - https://www.imdb.com/title/tt0417299/
         // const season1ScrapeUrl = baseUrl + showTitleId + "/episodes?season=1"; // e.g. - https://www.imdb.com/title/tt0417299/episodes?season=1
@@ -181,11 +181,6 @@ const getScrapedData = async () => {
                         console.error('Error occurred during scraping or writing to file:', error);
                     }
                 })();
-                  
-                // const episodesData = JSON.stringify(allEpisodes, null, 2);
-                // const episodesFile = "./results/episodes-output.json";
-                // fs.writeFileSync(episodesFile, episodesData);
-                // console.log(`episodes written to ${episodesFile}`);
             } else {
                 console.log("showmetadata invalid error");
             }
