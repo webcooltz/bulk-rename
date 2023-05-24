@@ -110,7 +110,11 @@ main = async () => {
       for (let videofileMetadataObject of videofileMetadataObjects) {
         for (let season of seasonsMetadata) {
           for (let episode of season) {
-            if (videofileMetadataObject.filename.includes(episode.title)) {
+            // turn to lowercase to compare easily
+            const filenameLowerCase = videofileMetadataObject.filename.toLowerCase();
+            const titleLowerCase = episode.title.toLowerCase();
+
+            if (filenameLowerCase.includes(titleLowerCase)) {
               videofileMetadataObject.season = episode.seasonNumber;
               videofileMetadataObject.episode = episode.episodeNumber;
               videofileMetadataObject.title = episode.title;

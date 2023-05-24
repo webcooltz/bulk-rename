@@ -1,5 +1,15 @@
 next debug
 -find the difference between mission creep and other working episodes
+-episodes that broke:
+    -season 1: episodes - 3 (itunes but wasnt on other pc), 6, 9-10, 13, 15, 17-18, 20
+    -everything else was going slow
+
+test cases
+-test one of the broken only -- erase all other episodes from the json file
+    -result: 3 was still broken
+    -result: 6 still broken
+-test episode 1 alone
+    -result: works
 
 to-do debug
 -check if cleanvid app changes metadata -- if i would need to clean my movies before this
