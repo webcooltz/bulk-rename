@@ -129,7 +129,17 @@ main = async () => {
 
       console.log("videofileMetadataObjects: ", videofileMetadataObjects);
 
-      // const episodeMetadataChanged = await changeMetadata.main(videofileMetadataObjects);
+      // write videofileMetadataObjects to file
+      const videofileOutputFile = "./results/videofileObjects.json";
+      const videofileMetadataObjectsJSON = JSON.stringify(videofileMetadataObjects, null, 2);
+      fs.writeFile(videofileOutputFile, videofileMetadataObjectsJSON, 'utf8', (err) => {
+        if (err) {
+          console.error('Error writing file:', err);
+          return;
+        } else {
+          console.log("videofileMetadataObjects written to file");
+        }
+      });
 };
 
 main();

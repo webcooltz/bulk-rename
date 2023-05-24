@@ -1,0 +1,733 @@
+[
+  [
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 1,
+      "title": "Pilot",
+      "description": "When the social security number of a young prosecutor comes up, Reese and Finch work together to figure out if their person of interest is the victim or perpetrator.",
+      "airDate": "9-22-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 2,
+      "title": "Ghosts",
+      "description": "Reese and Finch are given the Social Security number of a teenager killed two years ago, questioning the infallibility of the Machine; Finch flashes back to the Machine's origin, and how it was developed.",
+      "airDate": "9-29-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 3,
+      "title": "Mission Creep",
+      "description": "The latest number is an ex-soldier who's now part of a gang that specialize in robberies. Mr. Reese goes undercover, infiltrating the gang. This triggers memories of Jessica.",
+      "airDate": "10-6-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 4,
+      "title": "Cura Te Ipsum",
+      "description": "Reese and Finch surveil their latest POI, Dr. Megan Tillman, while she's on call and after hours to unravel the threat surrounding the promising young physician.",
+      "airDate": "10-13-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 5,
+      "title": "Judgement",
+      "description": "When the Machine produces the social security number of a judge renowned for his tough sentencing, Reese and Finch have the added challenge of investigating a POI who wants nothing to do with their brand of vigilante justice.",
+      "airDate": "10-20-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 6,
+      "title": "The Fix",
+      "description": "Mr. Reese goes as the new driver of fixer Zoe Morgan in order to decide if she's a victim or perpetrator. When Zoe listens to a recording she isn't supposed to, she becomes the target of a pharmaceutical company.",
+      "airDate": "10-27-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 7,
+      "title": "Witness",
+      "description": "The Machine identifies a school teacher who witnessed a mob hit as their next POI and Reese and Finch rush to save his life.",
+      "airDate": "11-3-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 8,
+      "title": "Foe",
+      "description": "When Reese and Finch discover that their latest POI has connections to Cold War Soviet espionage circles, they quickly learn how covert ops were handled in a world before The Machine.",
+      "airDate": "11-17-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 9,
+      "title": "Get Carter",
+      "description": "Reese and Finch's game of cat and mouse with Detective Carter becomes infinitely more complicated when The Machine declares that she is their newest POI.",
+      "airDate": "12-8-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 10,
+      "title": "Number Crunch",
+      "description": "As Detective Carter deals with the fallout from her recent encounter with Reese and Finch, The Machine ups the ante for the duo by giving them four Social Security numbers instead of one.",
+      "airDate": "12-15-2011"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 11,
+      "title": "Super",
+      "description": "Reese works the computer while Finch does the legwork with their latest POI, a building super who keeps too close an eye on his tenants. Meanwhile, Detective Carter may finally get her long-awaited glimpse into a case.",
+      "airDate": "1-12-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 12,
+      "title": "Legacy",
+      "description": "When Carter finally comes face-to-face with Reese, he urges her to join forces to help with their latest POI, a scrappy young woman from the wrong side of the tracks who turned her life around and became a lawyer.",
+      "airDate": "1-19-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 13,
+      "title": "Root Cause",
+      "description": "Finch and Reese run surveillance on a man who's been unemployed for eight months without his family knowing. Angry that he's been fired, he may pose a threat to society.",
+      "airDate": "2-2-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 14,
+      "title": "Wolf and Cub",
+      "description": "The Machine identifies Darren, a teenager whose brother was just murdered, as the next POI. Meanwhile, Finch is growing concerned that the son of his former business partner is dangerously close to finding out about The Machine.",
+      "airDate": "2-9-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 15,
+      "title": "Blue Code",
+      "description": "Reese discovers there's more to the story after he infiltrates a smuggling ring to get close to his latest POI.",
+      "airDate": "2-16-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 16,
+      "title": "Risk",
+      "description": "The Machine leads Reese and Finch to Wall Street when a sharp young trader at a major investment bank becomes embroiled in a multi-million dollar financial scam.",
+      "airDate": "2-23-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 17,
+      "title": "Baby Blue",
+      "description": "When Moretti gets released from prison, Carter and Mr. Reese team up to protect him from Elias. Meanwhile, Finch's new number belongs to a six month old baby girl.",
+      "airDate": "3-8-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 18,
+      "title": "Identity Crisis",
+      "description": "Finch and Mr. Reese are going after a person who seems to be leading a double life. However, they soon realize there are 2 people with the same social security number; one of whom is in danger and one who's an impostor.",
+      "airDate": "3-29-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 19,
+      "title": "Flesh and Blood",
+      "description": "Elias is finally ready to eliminate the dons and become the leader of the underground.",
+      "airDate": "4-5-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 20,
+      "title": "Matsya Nyaya",
+      "description": "In 2012, Mr. Reese goes undercover as an armored car security guard to prevent a robbery. In 2010, CIA plan to eliminate two of their best agents.",
+      "airDate": "4-26-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 21,
+      "title": "Many Happy Returns",
+      "description": "Finch gives Reese the day off ostensibly as a favor but really because the new number is too close to John. He finds out anyway, leading to the question of how far he will go to protect.",
+      "airDate": "5-3-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 22,
+      "title": "No Good Deed",
+      "description": "Finch and Mr. Reese are tailing a spy working for the NSA. As he gets too close to finding out about the Machine, the Government are out to get him.",
+      "airDate": "5-10-2012"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 23,
+      "title": "Firewall",
+      "description": "Reese is trapped next to a person of interest in a part of the city extremely controlled and needs the help of Finch, Fusco and Carter.",
+      "airDate": "5-17-2012"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 1,
+      "title": "The Contingency",
+      "description": "Mr. Reese breaks Finch's code of communicating with the Machine in order to save the new number, Leon, who stole money from some Aryan outlaws. He then convinces the Machine to help him find Finch.",
+      "airDate": "9-27-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 2,
+      "title": "Bad Code",
+      "description": "Detective Carter and Mr. Reese go to Texas to look into Root's past. Root shows to Finch that the people who bought his Machine are evil. Mr. Reese finally finds Finch.",
+      "airDate": "10-4-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 3,
+      "title": "Masquerade",
+      "description": "Mr. Reese becomes the new bodyguard of the daughter of a Brazilian diplomat who parties with the wrong type of people. Finch finds it hard to readjust to society after his kidnapping.",
+      "airDate": "10-18-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 4,
+      "title": "Triggerman",
+      "description": "Mr. Reese and Finch try to protect a man involved in organized crime that has a bounty on him.",
+      "airDate": "10-25-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 5,
+      "title": "Bury the Lede",
+      "description": "The FBI are getting closer to the head of HR. Mr. Reese tries to prevent a young journalist that likes taking risks from being killed. To avoid getting media attention, Mr. Reese starts dating her. Fusco is playing double.",
+      "airDate": "11-1-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 6,
+      "title": "The High Road",
+      "description": "John and Zoe go deep undercover as husband and wife to get close to a person who's been using a dead guy's identity for the past 15 years. In a flashback Finch first meets Grace Hendricks.",
+      "airDate": "11-8-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 7,
+      "title": "Critical",
+      "description": "Leon is trapped for his own protection. A medical doctor faces a difficult decision. Detective Carter encounters agent Snow.",
+      "airDate": "11-15-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 8,
+      "title": "Til Death",
+      "description": "Mr. Reese and Mr. Finch try to stop a rich married couple from killing each other.",
+      "airDate": "11-29-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 9,
+      "title": "C.O.D.",
+      "description": "Finch and Mr. Reese try to protect a taxi driver that is being chased by the Estonian mafia. HR try to make a deal with Elias.",
+      "airDate": "12-6-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 10,
+      "title": "Shadow Box",
+      "description": "While the FBI refocuses their efforts to catch \"The Man in the Suit,\" Reese's latest POI becomes a personal quest after he learns that she's the sister of a soldier who was killed in action.",
+      "airDate": "12-13-2012"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 11,
+      "title": "2 Pi R",
+      "description": "Special Agent Donnelly has Reese, along with three other men, in seventy-two hour custody on Rikers Island. With Finch's help, Carter is in unofficial charge of helping Reese get out of custody without disclosing to Donnelly that Reese is indeed the \"man in the suit\" that Donnelly considers the most dangerous man on the loose. Although Carter has a plan to do so, she may find that tenacious Donnelly may not let Reese and the other three go so easily if he has not yet found out which one is the man in the suit. Meanwhile, Finch, largely with Fusco's help, is handling ...",
+      "airDate": "1-3-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 12,
+      "title": "Prisoner's Dilemma",
+      "description": "Finch and Carter are trying to get Reese out of Riker's, where he is still being kept prisoner by Donnelly. Meanwhile, Fusco is working alone on the next number.",
+      "airDate": "1-10-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 13,
+      "title": "Dead Reckoning",
+      "description": "Reese finds out that being saved from prosecution by Stanton means having a bomb strapped to his chest while he and Snow do her biding.",
+      "airDate": "1-31-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 14,
+      "title": "One Percent",
+      "description": "A tech billionaire's erratic behavior makes it very hard for Mr Reese to protect him when his number comes up.",
+      "airDate": "2-7-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 15,
+      "title": "Booked Solid",
+      "description": "Finch and Reese go undercover in a hotel to protect a cleaning woman who is the apparent target of Serbian killers. Meanwhile, Carter begins the process of joining the FBI and someone from their past unexpectedly returns.",
+      "airDate": "2-14-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 16,
+      "title": "Relevance",
+      "description": "Sam Shaw and her associate Michael Cole receive the Relevant numbers from the Machine.",
+      "airDate": "2-21-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 17,
+      "title": "Proteus",
+      "description": "The Machine suddenly provides six numbers, one of whom has a place on remote Owen Island. Because of a tropical storm Finch and Reese are trapped there with eight others, and one is them is methodically killing the others, one by one.",
+      "airDate": "3-7-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 18,
+      "title": "All In",
+      "description": "After saving Leon Tao yet again, Reese goes to Atlantic City to watch over a retiree who's losing a fortune in the casino. HR smears Szymanski so that he can't testify at a Russian mob trial and Carter risks her life trying to clear him.",
+      "airDate": "3-14-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 19,
+      "title": "Trojan Horse",
+      "description": "Finch goes undercover at a tech company to watch a rising VP. The company appears to be riddled with agents who are a front for something more sinister. Shaw reappears and takes an interest in Root. HR decides to rub out an informant.",
+      "airDate": "4-4-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 20,
+      "title": "In Extremis",
+      "description": "A respected doctor is poisoned with Polonium and has just 24 hours to help Reese find his killer. Carter, grieving over the death of Cal Beecher, helps Fusco when HR turns Internal Affairs against him.",
+      "airDate": "4-25-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 21,
+      "title": "Zero Day",
+      "description": "They wait ten days for a new number due to a system virus, suspecting Root is the problem. It's for Ernest Thornhill, who isn't who, or what, he is supposed to be. At stake is The Machine - will it remain with Finch or end up with Decima?",
+      "airDate": "5-2-2013"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 22,
+      "title": "God Mode",
+      "description": "Reese and Finch team up with surprising allies in a race to save The Machine from Root and the mysterious international organization, Decima, who have both re-emerged with dangerous agendas.",
+      "airDate": "5-9-2013"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 1,
+      "title": "Liberty",
+      "description": "It's Fleet Week in New York City, making the hunt for one Naval Officer among a sea of sailors even more difficult for Reese, Finch and Shaw.",
+      "airDate": "9-24-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 2,
+      "title": "Nothing to Hide",
+      "description": "The head of an Internet company ostensibly for finding lost loved ones is really a front for selling personal info. Carter has to train a new cop while she looks for Beecher's killer and a new vigilante named Collier makes his appearance.",
+      "airDate": "10-1-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 3,
+      "title": "Lady Killer",
+      "description": "The team suspects the latest number to be a potential stalker/ killer until he's nearly shot on the street. Root plots her escape from the institution and gives her psychiatrist a big surprise.",
+      "airDate": "10-8-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 4,
+      "title": "Reasonable Doubt",
+      "description": "The next number the machine dispenses is for Vanessa Watkins, a hard-nosed prosecuting attorney who, when Finch and Reese first meet her, has just reported her husband, Jeremy Watkins, missing from their yacht. While Vanessa has put away many a criminal over her storied career, Jeremy has let many go as a flashy and high-priced defense attorney. As her number came in after the report of him missing, they know Jeremy's presumed death is not the reason for the number, yet they don't know if Vanessa is the target or the perpetrator. They learn that the lead investigator ...",
+      "airDate": "10-15-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 5,
+      "title": "Razgovor",
+      "description": "Shaw is tasked to stay close to a 10-year-old identified by The Machine, who is wanted by the Russians. Meanwhile, Carter's mission to bring HR to justice risks exposure.",
+      "airDate": "10-22-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 6,
+      "title": "Mors Praematura",
+      "description": "Root reappears and kidnaps Shaw. Finch helps an estate investigator who looking into the death of his step brother. A new vigilante group (Vigilance) makes it presence known. Carter's young partner has his loyalty to HR tested.",
+      "airDate": "10-29-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 7,
+      "title": "The Perfect Mark",
+      "description": "A hypnotherapist, who's really a con man, pumps his patients for personal information while they are hypnotized. One of his patients is an antique dealer who launders money for HR.",
+      "airDate": "11-5-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 8,
+      "title": "Endgame",
+      "description": "Finch receives 38 numbers at once from the Machine. He discovers they are connected to an unknown player who is inciting an all-out war between HR and the Russian mob.",
+      "airDate": "11-12-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 9,
+      "title": "The Crossing",
+      "description": "Danger closes in when the epic battle to bring the criminal organization HR to justice reaches new heights. And when the Machine suddenly gives out Reese's number, the POI team faces their greatest threat yet.",
+      "airDate": "11-19-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 10,
+      "title": "The Devil's Share",
+      "description": "The team seeks justice for Carter's murder, but Finch realizes that one person may go too far in the battle against HR. Meanwhile, NYPD officer Patrick Simmons' number comes up.",
+      "airDate": "11-26-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 11,
+      "title": "Lethe",
+      "description": "Flashbacks to Finch's adolescence provide insight into his creation of The Machine. Also, the team receives the number of an already dying man, and Reese leaves the POI team behind in the aftermath of the war with the crime organization.",
+      "airDate": "12-17-2013"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 12,
+      "title": "Aletheia",
+      "description": "Sameen, Harold, and Arthur make their escape. Root is captured and tortured. The others go to recover Arthur's back up hard drives but are caught in the crossfire when Vigilance arrives to claim them for themselves to expose Samaritan.",
+      "airDate": "1-7-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 13,
+      "title": "4C",
+      "description": "Reese, still despondent over Carter's death, boards a flight to Europe and gets a cryptic message on a cellphone about a passenger who is supposed to be just a low level programmer, but is the target of a drug cartel and the Mossad.",
+      "airDate": "1-14-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 14,
+      "title": "Provenance",
+      "description": "Reese rejoins Finch in New York, but when the team receives the number of a highly skilled antiquities thief, a surprising turn of events finds them planning a heist which could land them all in jail.",
+      "airDate": "2-4-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 15,
+      "title": "Last Call",
+      "description": "Finch goes undercover in an emergency call center to protect a 911 operator, who's being forced to cooperate with the kidnapper of a young boy. Before long they find out they connected to a murder Fusco is involved in.",
+      "airDate": "2-25-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 16,
+      "title": "RAM",
+      "description": "A flashback to the early days of Finch's operations reveals secrets and connections with far-reaching implications.",
+      "airDate": "3-4-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 17,
+      "title": "Root Path",
+      "description": "The Machine tasks Root to find a janitor who has a mysterious past. However, when her presence endangers him, the Machine sends his number to Finch as well.",
+      "airDate": "3-18-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 18,
+      "title": "Allegiance",
+      "description": "The team gets involved in a case of international politics when a former government contractor stalks a U.N. diplomat. Meanwhile, an adversary tries to take advantage of Root.",
+      "airDate": "3-25-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 19,
+      "title": "Most Likely to...",
+      "description": "Reese and Shaw go to a H.S. reunion to shadow a prosecutor who may have been involved in a killing 20 years ago. Finch and Fusco compete with the FBI to find out why a government employee was killed. And not far behind is Vigilance.",
+      "airDate": "4-1-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 20,
+      "title": "Death Benefit",
+      "description": "Reese poses as a Secret Service agent to get close to the latest POI, a U.S. Congressman who may hold the key to derailing Decima's plans to bring a second Machine online.",
+      "airDate": "4-15-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 21,
+      "title": "Beta",
+      "description": "Decima hunts down Reese and Shaw using Samaritan's feeds. Meanwhile, Greer sets a trap for Finch by targeting his former fiancée, Grace.",
+      "airDate": "4-29-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 22,
+      "title": "A House Divided",
+      "description": "Decima has completed its beta test of Samaritan and has now shut it down temporarily as Greer has to get the politicos, namely Garrison, to buy into the need to purchase it in the name of national security. Greer needs this to happen as they require the government feeds for Samaritan to operate properly. With Finch now being held by Greer and Decima, Reese believes that their first priority should be to retrieve him. However, Root, in her continuing contact with the Machine, convinces Reese and Shaw that the Machine is telling her that Finch, for the time being, is ...",
+      "airDate": "5-6-2014"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 23,
+      "title": "Deus Ex Machina",
+      "description": "The team takes desperate action in its race to prevent Samaritan from coming online and making them its first targets. Meanwhile, the months-long battle with the anti-surveillance terrorist group Vigilance comes to a shocking conclusion.",
+      "airDate": "5-13-2014"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 1,
+      "title": "Panopticon",
+      "description": "Required to assume new identities created by Root, the team tries to adapt to their new lives, but a new number complicates things.",
+      "airDate": "9-23-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 2,
+      "title": "Nautilus",
+      "description": "Harold reluctantly agrees to help John protect a young woman who is participating in a dangerous and deadly game, meanwhile Shaw works with a group of thieves as her new cover identity.",
+      "airDate": "9-30-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 3,
+      "title": "Wingman",
+      "description": "Finch recruits Fusco to stick close to the latest POI, a professional \"wingman\", but learning how to approach women soon becomes the least of his worries. Meanwhile, Reese must find a way to play by the rules at his new day job as the Machine sends Finch and Root on a mysterious errand.",
+      "airDate": "10-7-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 4,
+      "title": "Brotherhood",
+      "description": "Reese's cover job as an NYPD detective becomes complicated when the young brother and sister he's protecting become targets of a gang investigation.",
+      "airDate": "10-14-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 5,
+      "title": "Prophets",
+      "description": "On Election Day Reese shoots a potential jumper and is forced to go into counseling. The new number is for a pollster who suspects the election for Governor of New York was rigged. It was - by Samaritan, and his life is now in danger.",
+      "airDate": "10-21-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 6,
+      "title": "Pretenders",
+      "description": "John and others try to prevent a fake detective from getting himself killed, while Harold attends a conference in Hong Kong.",
+      "airDate": "10-28-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 7,
+      "title": "Honor Among Thieves",
+      "description": "Shaw joins a team of international thieves in order to keep tabs on the latest POI, but an unexpected turn of events puts her in danger of being detected by Samaritan. Also, Finch and Root undertake a dangerous sabotage mission.",
+      "airDate": "11-11-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 8,
+      "title": "Point of Origin",
+      "description": "Reese volunteers as an NYPD police academy instructor in order to keep an eye on a talented young officer whose suspicious actions make him question her motives. Meanwhile, Martine, armed with information from Samaritan, hunts a member of the team.",
+      "airDate": "11-18-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 9,
+      "title": "The Devil You Know",
+      "description": "Reese must save Elias from the Brotherhood. He can't get any help from Root or Shaw since Shaw's cover is blown and Root is escorting her to underground.",
+      "airDate": "11-25-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 10,
+      "title": "The Cold War",
+      "description": "Samaritan demonstrates its true power by taking control of New York for 48 hours and erasing crime from the city in an attempt to lure The Machine out of hiding.",
+      "airDate": "12-16-2014"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 11,
+      "title": "If-Then-Else",
+      "description": "Samaritan launches a cyber-attack on the stock exchange, leaving the team with no choice but to embark on a possible suicide mission in a desperate attempt to stop a global economic catastrophe.",
+      "airDate": "1-6-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 12,
+      "title": "Control-Alt-Delete",
+      "description": "Control is back and begins to question the methods and intentions of Samaritan. Also, alarming news reports of a pair of vigilantes rampaging through the Northeast begin to surface.",
+      "airDate": "1-13-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 13,
+      "title": "M.I.A.",
+      "description": "The hunt for Shaw takes Root and Reese to a small town in upstate New York where not everything is as idyllic as it seems; Fusco and a former person of interest team up.",
+      "airDate": "2-3-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 14,
+      "title": "Guilty",
+      "description": "While on a jury for a murder trial, Finch becomes suspicious of another juror; Reese starts to open up to a therapist.",
+      "airDate": "2-10-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 15,
+      "title": "Q & A",
+      "description": "Reese tries to protect a software programmer with a mysterious second life, but it's unclear which side of her life the threat is coming from. Meanwhile, Claire, a young hacker that Finch protected, reaches out to him for aid.",
+      "airDate": "2-17-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 16,
+      "title": "Blunt",
+      "description": "Reese and Finch must protect a street-smart grifter after her plan to steal cash from a medical marijuana dispensary fails.",
+      "airDate": "2-24-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 17,
+      "title": "Karma",
+      "description": "Reese and Finch try to protect a psychologist whose unorthodox methods for helping his patients find closure could cost him dearly. Meanwhile, flashbacks reveal Finch fragile state in days following bombing that killed his best friend, Nathan Ingram.",
+      "airDate": "3-10-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 18,
+      "title": "Skip",
+      "description": "Reese must protect a bounty hunter who refuses to let the potential threat to her life deter her from the relentless pursuit of her target. Also, Finch tries to set the plan he began in Hong Kong in motion.",
+      "airDate": "3-24-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 19,
+      "title": "Search and Destroy",
+      "description": "Reese and Finch scramble to protect a software CEO when his behavior becomes erratic following a hacker attack that reveals all his secrets and unravels his life.",
+      "airDate": "4-7-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 20,
+      "title": "Terra Incognita",
+      "description": "Reese tries to honor Carter's memory by solving a cold case she was unable to.",
+      "airDate": "4-14-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 21,
+      "title": "Asylum",
+      "description": "Reese and Fusco get caught in the war between Elias and Dominic while Finch and Root follow a clue to Shaw's whereabouts.",
+      "airDate": "4-28-2015"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 22,
+      "title": "YHWH",
+      "description": "Finch and Root race to save The Machine, which has been located by the rival AI, Samaritan.",
+      "airDate": "5-5-2015"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 1,
+      "title": "B.S.O.D.",
+      "description": "Lionel is investigated in relation to Dominic's death. Away from Samaritan, Mr. Reese and Harold try to save the Machine. Root is on the run.",
+      "airDate": "5-3-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 2,
+      "title": "SNAFU",
+      "description": "Root and Finch work on bringing Northern Lights back online. They are successful and thus they start receiving numbers from the irrelevant list. However, the Machine is not as productive as before.",
+      "airDate": "5-9-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 3,
+      "title": "Truth Be Told",
+      "description": "Reese's cover could be blown when he realizes the latest POI has ties to his old CIA colleague, Kara Stanton.",
+      "airDate": "5-10-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 4,
+      "title": "6,741",
+      "description": "Shaw escapes her captors, but the team is unsure of her mental state when she begins to act paranoid and reckless.",
+      "airDate": "5-16-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 5,
+      "title": "ShotSeeker",
+      "description": "Reese protects an NYPD analyst whose investigation into a software glitch has drawn the attention of Samaritan. Also, Reese and Fusco are threatened by an ally of Elias's, who is looking to avenge his friend's death.",
+      "airDate": "5-17-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 6,
+      "title": "A More Perfect Union",
+      "description": "The Machine sends Reese and Finch to a wedding to protect a pair of POIs before their nuptials. Also, Fusco becomes angry at being kept in the dark by the team and takes it upon himself to investigate a string of missing person reports.",
+      "airDate": "5-23-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 7,
+      "title": "QSO",
+      "description": "Root goes undercover at a radio station to protect the host of a conspiracy theory show who stumbles upon information that could get him killed. Also, Samaritan's agents try to convince a member of the team that their goals are noble.",
+      "airDate": "5-24-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 8,
+      "title": "Reassortment",
+      "description": "Reese and Finch become trapped in a hospital that becomes ground zero for a deadly viral outbreak. Also, Samaritan's newest recruit has second thoughts and Shaw continues to struggle with reality.",
+      "airDate": "5-24-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 9,
+      "title": "Sotto Voce",
+      "description": "The mysterious criminal mastermind known as \"The Voice\" returns and traps Reese and Fusco in their own precinct with several armed gang members and the latest POI. Also, Root makes a shocking discovery.",
+      "airDate": "5-30-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 10,
+      "title": "The Day the World Went Away",
+      "description": "Finch's number comes up when his cover identity is blown and sets off a deadly series of encounters with Samaritan's operatives.",
+      "airDate": "5-31-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 11,
+      "title": "Synecdoche",
+      "description": "Harold goes on a road trip with the Machine, while the rest of the team receive a new number; the president of the United States.",
+      "airDate": "6-7-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 12,
+      "title": ".exe",
+      "description": "As Reese and Shaw race to catch up with Finch, he infiltrates a maximum-security government facility in a desperate mission which could mean the end of the war with Samaritan.",
+      "airDate": "6-14-2016"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 13,
+      "title": "Return 0",
+      "description": "Finch, Reese, Fusco and Shaw embark on one last mission to prevent Samaritan from destroying The Machine and cementing its hold over mankind.",
+      "airDate": "6-21-2016"
+    }
+  ]
+]

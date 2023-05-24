@@ -129,8 +129,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-episodes-output.json
-show-output.json
-
 avatar-episodes.json
 avatar-output.json
