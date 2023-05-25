@@ -1,21 +1,33 @@
-// ---Scrapes a site---
+// ---Scrapes IMDB---
 // gets imdb data - show > season > episode
 
+// ---dependencies---
 const cheerio = require('cheerio');
 const axios = require('axios');
 const fs = require('fs');
+
+// ---helpers---
 const cleanDataModule = require('../helpers/cleanData');
 const writeOutputDataModule = require('../helpers/writeOutputData');
 
-const showId = "tt1839578";
-const seasons = [1, 2, 3, 4, 5];
+// ---user input---
+const userInput = JSON.parse(fs.readFileSync('./input.json', 'utf8'));
+const imdbId = userInput.imdbId;
+const numberOfSeasons = userInput.numberOfSeasons;
+
+// ---output---
 // let returnMessage;
 
-const getScrapedData = async (showTitleId) => {
+const getScrapedData = async (imdbId, numberOfSeasons) => {
     try {
-        showTitleId = showId;
+        // TODO - Make seasons a single number instead of an array
+        const seasons = [];
+        for (let i = 1; i <= numberOfSeasons; i++) {
+            seasons.push(i);
+        }
+
         const baseUrl = "https://www.imdb.com/title/";
-        const showScrapeUrl = baseUrl + showTitleId;  // e.g. - https://www.imdb.com/title/tt0417299/
+        const showScrapeUrl = baseUrl + imdbId;  // e.g. - https://www.imdb.com/title/tt0417299/
         // const season1ScrapeUrl = baseUrl + showTitleId + "/episodes?season=1"; // e.g. - https://www.imdb.com/title/tt0417299/episodes?season=1
         
         const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36';
@@ -65,7 +77,7 @@ const getScrapedData = async (showTitleId) => {
 
             const scrapeEpisodeData = async (season) => {
                 try {
-                    const episodeScrapeUrl = baseUrl + showTitleId + baseSeasonUrl + season;
+                    const episodeScrapeUrl = baseUrl + imdbId + baseSeasonUrl + season;
                         // e.g. - https://www.imdb.com/title/tt0417299/episodes?season=1
                     const episodeResponse = await axios.get(episodeScrapeUrl, requestOptions);
                     const $ = cheerio.load(episodeResponse.data);
@@ -193,8 +205,8 @@ const getScrapedData = async (showTitleId) => {
     }
 }
 
-module.exports = getScrapedData();
+module.exports = getScrapedData(imdbId, numberOfSeasons);
 
 // todo
-// -add all of the seasons to one larger array
-// -write that array to a file
+// - add error handling
+// - test with new changes
