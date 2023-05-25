@@ -4,7 +4,8 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
 const fs = require('fs');
-const cleanData = require('../helpers/cleanData');
+const cleanDataModule = require('../helpers/cleanData');
+const writeOutputDataModule = require('../helpers/writeOutputData');
 
 const showId = "tt1839578";
 const seasons = [1, 2, 3, 4, 5];
@@ -40,14 +41,14 @@ const getScrapedData = async (showTitleId) => {
             // const episodeAmount = $("div[data-testid='hero-subnav-bar-left-block']").text();
             // console.log("episodeAmount: ", episodeAmount);
             const yearsRan = $(".sc-afe43def-4 li:nth-of-type(2) a").text();
-            const showStart = cleanData(yearsRan).split("-")[0];
-            const showEnd = cleanData(yearsRan).split("-")[1];
+            const showStart = cleanDataModule(yearsRan).split("-")[0];
+            const showEnd = cleanDataModule(yearsRan).split("-")[1];
             const avgEpisodeLength = $(".ipc-inline-list--show-dividers li:nth-of-type(4)").text();
             const ageRating = $(".sc-afe43def-4 li:nth-of-type(3) a").text();
 
             const showMetaData = {
-                title: cleanData(metaTitle),
-                description: cleanData(scrapedDescription),
+                title: cleanDataModule(metaTitle),
+                description: cleanDataModule(scrapedDescription),
                 // numberOfEpisodes: episodeAmount,
                 artWorkUrl: metaImageUrl,
                 showStart: showStart,
@@ -58,10 +59,9 @@ const getScrapedData = async (showTitleId) => {
 
             // console.log("showMetaData: ", showMetaData);
 
-            const showDataJSON = JSON.stringify(showMetaData, null, 2);
-            const showMetaDataFile = "./results/show-output.json";
-            fs.writeFileSync(showMetaDataFile, showDataJSON);
-            console.log(`showMetaData written to ${showMetaDataFile}`);
+            // Write showMetaData to file
+            const showMetaDataFile = "./results/showOutput.json";
+            writeOutputDataModule.main(showMetaDataFile, showMetaData);
 
             const scrapeEpisodeData = async (season) => {
                 try {
@@ -134,8 +134,8 @@ const getScrapedData = async (showTitleId) => {
                         return {
                             seasonNumber: season,
                             episodeNumber: episodeNumbersList[index],
-                            title: cleanData(episodeTitles[index]),
-                            description: cleanData(episodeDescriptions[index]),
+                            title: cleanDataModule(episodeTitles[index]),
+                            description: cleanDataModule(episodeDescriptions[index]),
                             airDate: episodeDateList[index]
                         };
                     });
@@ -152,7 +152,7 @@ const getScrapedData = async (showTitleId) => {
                 const writeToFile = (episodeArray) => {
                     return new Promise((resolve, reject) => {
                         const episodesData = JSON.stringify(episodeArray, null, 2);
-                        const episodesFile = "./results/episodes-output.json";
+                        const episodesFile = "./results/episodesOutput.json";
                         // fs.writeFileSync(episodesFile, episodesData);
                         fs.writeFileSync(episodesFile, episodesData, 'utf8', (error) => {
                             if (error) {

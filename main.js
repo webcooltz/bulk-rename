@@ -5,6 +5,7 @@ const fs = require('fs');
 // const scrapeImdbModule = require('./functions/scrapeImdb');
 const getMetadataModule = require('./functions/getMetadata');
 // const changeMetadata = require('./functions/changeMetadata');
+const writeOutputDataModule = require('./helpers/writeOutputData');
 
 const fileDirectory = "C:/Users/tyler/Videos/poi/";
 // const showId = "tt0417299";
@@ -136,14 +137,8 @@ main = async () => {
       // write videofileMetadataObjects to file
       const videofileOutputFile = "./results/videofileObjects.json";
       const videofileMetadataObjectsJSON = JSON.stringify(videofileMetadataObjects, null, 2);
-      fs.writeFile(videofileOutputFile, videofileMetadataObjectsJSON, 'utf8', (err) => {
         if (err) {
-          console.error('Error writing file:', err);
-          return;
-        } else {
-          console.log("videofileMetadataObjects written to file");
-        }
-      });
+      writeOutputDataModule.main(videofileOutputFile, videofileMetadataObjects);
 };
 
 main();
