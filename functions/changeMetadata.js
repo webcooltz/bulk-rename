@@ -10,6 +10,7 @@ ffmpeg.setFfprobePath(ffprobePath);
 const writeOutputDataModule = require('../helpers/writeOutputData');
 
 const videofileObjects = JSON.parse(fs.readFileSync('./results/videofileObjects.json', 'utf8'));
+const failedVideofileObjects = JSON.parse(fs.readFileSync('./results/failedVideos.json', 'utf8'));
 
 const main = async (videofileObjects) => {
     const failedVideos = [];
@@ -28,6 +29,10 @@ const main = async (videofileObjects) => {
                 if (err) {
                     console.error('An error occurred:', err);
                 return;
+                } else {
+                    // console.log("metadata: ", metadata);
+                    console.log("videofileObject.filename: ", videofileObject.filename);
+                    console.log("videofileObject.newFilename: ", videofileObject.newFilename);
                 }
             
                 ffmpeg(videofileObject.filename)
@@ -39,27 +44,28 @@ const main = async (videofileObjects) => {
                         '-metadata', `show=${videofileObject.show}`,
                         '-metadata', `season_number=${videofileObject.season}`,
                         '-metadata', `title=${videofileObject.title}`,
-                        '-metadata', `episode_sort=${videofileObject.episode}`
+                        '-metadata', `episode_sort=${videofileObject.episode}`,
+                        // '-f mp4' // Specify the output format as MP4
                     ])
-                    .save(videofileObject.newFilename)
-                    // .on('start', (commandLine) => {
-                    //     console.log('FFmpeg command:', commandLine);
-                    // })
-                    // .on('stderr', (stderrLine) => {
-                    //     console.log('FFmpeg stderr:', stderrLine);
-                    // })
+                    .save(videofileObject.newFilename + '.mp4')
+                    .on('start', (commandLine) => {
+                        console.log('FFmpeg command:', commandLine);
+                    })
+                    .on('stderr', (stderrLine) => {
+                        console.log('FFmpeg stderr:', stderrLine);
+                    })
                     .on('end', () => {
                         console.log('Metadata added successfully.');
                         resolve();
                     })
                     .on('error', (err) => {
                         failedVideos.push(videofileObject);
-                        console.error(`Error adding metadata: ${videofileObject.filename}/n`, err);
                         reject(err);
                     });
             });
         });
     } catch (err) {
+        console.error(`Error adding metadata:\n ${videofileObject.filename}\n`, err);
         console.error("Error (catch): ", err);
     }
     completedTasks ++;

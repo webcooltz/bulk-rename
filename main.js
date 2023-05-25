@@ -8,9 +8,77 @@ const getMetadataModule = require('./functions/getMetadata');
 const writeOutputDataModule = require('./helpers/writeOutputData');
 
 const fileDirectory = "C:/Users/tyler/Videos/poi/";
+// ---variables---
+const inputJSON = "./input.json";
 // const showId = "tt0417299";
 const showMetadataJSON = "./results/show-output.json";
 const episodeMetadataJSON = "./results/episodes-output.json";
+const showMetadataJSON = "./results/showOutput.json";
+const episodeMetadataJSON = "./results/episodesOutput.json";
+
+// cleans filepath
+// -replaces backslashes with forward slashes
+// -adds a trailing slash if it doesn't exist
+const cleanFilepath = (filepath) => {
+    if (filepath.includes("\\")) {
+        filepath = filepath.replace(/\\/g, "/");
+    }
+    if (filepath[filepath.length - 1] !== "/") {
+        filepath += "/";
+    }
+    return filepath;
+};
+
+// take input and parse it
+// -directory
+// -showId
+const parseInputJSON = (inputJSON) => {
+  const inputJSONParsed = JSON.parse(fs.readFileSync(inputJSON, 'utf8'));
+  let cleanUserInput;
+
+  if (inputJSONParsed) {
+    cleanUserInput = inputJSONParsed;
+  } else {
+    console.error("Invalid input JSON.");
+    return;
+  }
+
+  let fileDirectory = cleanUserInput.fileDirectory;
+  if (fileDirectory) {
+    if (fileDirectory.length < 3) {
+      console.error("Invalid file directory.");
+      return;
+    }
+    cleanUserInput.fileDirectory = cleanFilepath(fileDirectory);
+  } else {
+    console.error("No file directory provided.");
+    return;
+  }
+
+  let ffmpegDirectory = cleanUserInput.ffmpegDirectory;
+  if (ffmpegDirectory) {
+    if (ffmpegDirectory.length < 3) {
+      console.error("Invalid file directory.");
+      return;
+    }
+    cleanUserInput.ffmpegDirectory = cleanFilepath(ffmpegDirectory);
+  } else {
+    console.error("No file directory provided.");
+    return;
+  }
+
+  if (cleanUserInput.imdbId) {
+    if (cleanUserInput.imdbId.length < 3) {
+      console.error("Invalid imdbId.");
+      return;
+    }
+  } else {
+    console.error("No imdbId provided.");
+    return;
+  }
+ 
+  return cleanUserInput;
+};
 
 // Input: video file meta data
 // Ouput: usable objects
@@ -43,6 +111,10 @@ const turnMetadataIntoObjects = (metadata) => {
 main = async () => {
   let showMetadata;
   let seasonsMetadata;
+
+  const userInput = parseInputJSON(inputJSON);
+  // console.log("userInput: ", userInput);
+  // return;
 
     // Read show data
     fs.readFile(showMetadataJSON, 'utf8', (err, data) => {
@@ -84,7 +156,7 @@ main = async () => {
       const waitAndGetMetadata = async () => {
         try {
           const videofileMetadata = await new Promise((resolve, reject) => {
-            getMetadataModule.main(fileDirectory, (err, metadata) => {
+            getMetadataModule.main(userInput.fileDirectory, (err, metadata) => {
               if (err) {
                 console.error('Error:', err);
                 reject(err);
@@ -122,9 +194,9 @@ main = async () => {
               videofileMetadataObject.description = episode.description;
               videofileMetadataObject.date = episode.airDate;
               if (videofileMetadataObject.episode < 10) {
-                videofileMetadataObject.newFilename = fileDirectory + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mp4"
+                videofileMetadataObject.newFilename = userInput.fileDirectory + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mp4"
               } else {
-                videofileMetadataObject.newFilename = fileDirectory + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mp4"
+                videofileMetadataObject.newFilename = userInput.fileDirectory + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mp4"
               }
             }
           }
@@ -132,12 +204,8 @@ main = async () => {
         videofileMetadataObject.show = showMetadata.title;
       }
 
-      console.log("videofileMetadataObjects: ", videofileMetadataObjects);
-
-      // write videofileMetadataObjects to file
+      // write episodes to file
       const videofileOutputFile = "./results/videofileObjects.json";
-      const videofileMetadataObjectsJSON = JSON.stringify(videofileMetadataObjects, null, 2);
-        if (err) {
       writeOutputDataModule.main(videofileOutputFile, videofileMetadataObjects);
 };
 

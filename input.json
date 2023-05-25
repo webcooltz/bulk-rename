@@ -1,5 +1,6 @@
 {
     "imdbId": "tt0111161",
+    "numberOfSeasons": 5,
     "fileDirectory": "D:\\TV Shows\\Person of Interest (2011)\\season1",
-    "numberOfSeasons": 5
+    "ffmpegDirectory": "C:\\ffmpeg\\bin"
 }
