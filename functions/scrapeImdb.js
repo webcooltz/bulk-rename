@@ -10,6 +10,9 @@ const fs = require('fs');
 const cleanDataModule = require('../helpers/cleanData');
 const writeOutputDataModule = require('../helpers/writeOutputData');
 
+// ---variables---
+const showMetaDataFile = "./results/showOutput.json";
+
 // ---user input---
 const userInput = JSON.parse(fs.readFileSync('./input.json', 'utf8'));
 const imdbId = userInput.imdbId;
@@ -72,7 +75,6 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             // console.log("showMetaData: ", showMetaData);
 
             // Write showMetaData to file
-            const showMetaDataFile = "./results/showOutput.json";
             writeOutputDataModule.main(showMetaDataFile, showMetaData);
 
             const scrapeEpisodeData = async (season) => {

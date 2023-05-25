@@ -1,18 +1,25 @@
 // changes metadata to match episodes scraped from imdb
+
+// ---dependencies---
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
-const ffmpegPath = 'D:/executables/ffmpeg-essentials_build/bin/ffmpeg.exe';
-const ffprobePath = 'D:/executables/ffmpeg-essentials_build/bin/ffprobe.exe';
-ffmpeg.setFfmpegPath(ffmpegPath);
-ffmpeg.setFfprobePath(ffprobePath);
 // const cliProgress = require('cli-progress');
 
+// ---helpers---
 const writeOutputDataModule = require('../helpers/writeOutputData');
 
+// ---variables---
+const failedVideosOutputFile = './results/failedVideos.json';
+const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
 const videofileObjects = JSON.parse(fs.readFileSync('./results/videofileObjects.json', 'utf8'));
 const failedVideofileObjects = JSON.parse(fs.readFileSync('./results/failedVideos.json', 'utf8'));
 
-const main = async (videofileObjects) => {
+const main = async (videofileObjects, ffmpegDirectory) => {
+    const ffmpegPath = `${ffmpegDirectory}ffmpeg.exe`;
+    const ffprobePath = `${ffmpegDirectory}ffprobe.exe`;
+    ffmpeg.setFfmpegPath(ffmpegPath);
+    ffmpeg.setFfprobePath(ffprobePath);
+
     const failedVideos = [];
   // const totalTasks = videofileObjects.length;
   // console.log("totalTasks: ", totalTasks);
@@ -73,9 +80,8 @@ const main = async (videofileObjects) => {
     }
 
     // write failed videos to file
-    const failedVideosOutputFile = './results/failedVideos.json';
     writeOutputDataModule.main(failedVideosOutputFile, failedVideos);
   // progressBar.stop();
 };
 
-main(videofileObjects);
+main(videofileObjects, ffmpegDirectory);

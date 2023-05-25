@@ -7,12 +7,9 @@ const getMetadataModule = require('./functions/getMetadata');
 // const changeMetadata = require('./functions/changeMetadata');
 const writeOutputDataModule = require('./helpers/writeOutputData');
 
-const fileDirectory = "C:/Users/tyler/Videos/poi/";
 // ---variables---
+const videofileOutputFile = "./results/videofileObjects.json";
 const inputJSON = "./input.json";
-// const showId = "tt0417299";
-const showMetadataJSON = "./results/show-output.json";
-const episodeMetadataJSON = "./results/episodes-output.json";
 const showMetadataJSON = "./results/showOutput.json";
 const episodeMetadataJSON = "./results/episodesOutput.json";
 
@@ -113,6 +110,14 @@ main = async () => {
   let seasonsMetadata;
 
   const userInput = parseInputJSON(inputJSON);
+  /*
+  {
+    "imdbId": "tt0111161",
+    "numberOfSeasons": 5,
+    "fileDirectory": "D:\\TV Shows\\Person of Interest (2011)\\season1",
+    "ffmpegDirectory": "C:\\ffmpeg\\bin"
+  }
+  */
   // console.log("userInput: ", userInput);
   // return;
 
@@ -141,7 +146,6 @@ main = async () => {
     
         try {
             const episodeMetadataParsed = JSON.parse(data);
-            // console.log(episodeMetadata);
             seasonsMetadata = episodeMetadataParsed;
         } catch (error) {
             console.error('Error parsing episodeMetadata JSON:', error);
@@ -156,7 +160,7 @@ main = async () => {
       const waitAndGetMetadata = async () => {
         try {
           const videofileMetadata = await new Promise((resolve, reject) => {
-            getMetadataModule.main(userInput.fileDirectory, (err, metadata) => {
+            getMetadataModule.main(userInput.fileDirectory, userInput.ffmpegDirectory, (err, metadata) => {
               if (err) {
                 console.error('Error:', err);
                 reject(err);
@@ -205,7 +209,6 @@ main = async () => {
       }
 
       // write episodes to file
-      const videofileOutputFile = "./results/videofileObjects.json";
       writeOutputDataModule.main(videofileOutputFile, videofileMetadataObjects);
 };
 

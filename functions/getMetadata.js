@@ -1,14 +1,12 @@
+// Gets metadata from existing video files
+// returns an array of objects
+
+// ---dependencies---
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
-const ffmpegPath = 'D:/executables/ffmpeg-essentials_build/bin/ffmpeg.exe';
-const ffprobePath = 'D:/executables/ffmpeg-essentials_build/bin/ffprobe.exe';
-ffmpeg.setFfmpegPath(ffmpegPath);
-ffmpeg.setFfprobePath(ffprobePath);
 
-const folderPath = "C:/Users/tyler/Videos/poi/";
-
-const getVideoFilenames = (folderPath, callback) => {
-  fs.readdir(folderPath, (err, files) => {
+const getVideoFilenames = (fileDirectory, callback) => {
+  fs.readdir(fileDirectory, (err, files) => {
     if (err) {
       console.error('Error reading folder:', err);
       callback(err, null);
@@ -32,7 +30,12 @@ const getMetadata = (videoPath, callback) => {
 };
 
 // Combined functions
-const main = (pathToVideoFiles, callback) => {
+const main = (pathToVideoFiles, ffmpegDirectory, callback) => {
+  const ffmpegPath = `${ffmpegDirectory}ffmpeg.exe`;
+  const ffprobePath = `${ffmpegDirectory}ffprobe.exe`;
+  ffmpeg.setFfmpegPath(ffmpegPath);
+  ffmpeg.setFfprobePath(ffprobePath);
+
   const metadataObjects = [];
   // get video file names
   getVideoFilenames(pathToVideoFiles, (err, videoFilenames) => {
@@ -52,7 +55,7 @@ const main = (pathToVideoFiles, callback) => {
           callback(err, null);
           return;
         }
-        console.log("videoMetadata format: ", videoMetadata.format);
+        // console.log("videoMetadata format: ", videoMetadata.format);
         // console.log("videoMetadata: ", videoMetadata);
         
         const metadataFormat = videoMetadata.format;
