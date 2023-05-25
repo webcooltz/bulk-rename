@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Input](#input)
-- [Running the app](#running)
+- [Running the app](#running-the-app)
 
 ## Input
 
@@ -29,7 +29,7 @@
     "fileDirectory": "D:/TV Shows/Person of Interest (2011)/season1/"
 }`
 
-## Running the app
+## Running-the-app
 
 * Open in VS Code or another IDE
 
