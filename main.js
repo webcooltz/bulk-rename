@@ -7,6 +7,9 @@ const getMetadataModule = require('./functions/getMetadata');
 // const changeMetadata = require('./functions/changeMetadata');
 const writeOutputDataModule = require('./helpers/writeOutputData');
 
+// ---helpers---
+const cleanDataModule = require('./helpers/cleanData');
+
 // ---variables---
 const videofileOutputFile = "./results/videofileObjects.json";
 const inputJSON = "./input.json";
@@ -86,7 +89,7 @@ const turnMetadataIntoObjects = (metadata) => {
 
     for (let i = 0; i < metadata.length; i++) {
         const videoMetadataObject = {
-            filename: metadata[i].filename,
+            filename: cleanDataModule(metadata[i].filename),
             show: "",
             season: "",
             episode: "",
@@ -94,8 +97,9 @@ const turnMetadataIntoObjects = (metadata) => {
             newFilename: ""
         };
         
-        const fileType = videoMetadataObject.filename.split(".")[1];
-        if (fileType === "mp4" || fileType === "m4v") {
+        const videoMetadataObjectSplit = videoMetadataObject.filename.split(".");
+        const fileType = videoMetadataObjectSplit[videoMetadataObjectSplit.length - 1];
+        if (fileType === "mkv" || fileType === "avi") {
           videoMetadataObjects.push(videoMetadataObject);
         }
     }
@@ -106,18 +110,24 @@ const turnMetadataIntoObjects = (metadata) => {
 };
 
 main = async () => {
+  const userInput = parseInputJSON(inputJSON);
+   /*
+    {
+      "imdbId": "tt0111161",
+      "numberOfSeasons": 5,
+      "fileDirectory": "D:\\TV Shows\\Person of Interest (2011)\\season1",
+      "ffmpegDirectory": "C:\\ffmpeg\\bin"
+    }
+  */
+
+  if (!userInput) {
+    console.error("Invalid user input.");
+    return;
+  }
+
   let showMetadata;
   let seasonsMetadata;
 
-  const userInput = parseInputJSON(inputJSON);
-  /*
-  {
-    "imdbId": "tt0111161",
-    "numberOfSeasons": 5,
-    "fileDirectory": "D:\\TV Shows\\Person of Interest (2011)\\season1",
-    "ffmpegDirectory": "C:\\ffmpeg\\bin"
-  }
-  */
   // console.log("userInput: ", userInput);
   // return;
 
@@ -130,7 +140,7 @@ main = async () => {
     
         try {
             const showMetadataParsed = JSON.parse(data);
-            // console.log(showMetadata);
+            // console.log("showMetadataParsed: ", showMetadataParsed);
             showMetadata = showMetadataParsed;
         } catch (error) {
             console.error('Error parsing showMetadata JSON:', error);
@@ -146,6 +156,7 @@ main = async () => {
     
         try {
             const episodeMetadataParsed = JSON.parse(data);
+            // console.log("episodeMetadataParsed: ", episodeMetadataParsed);
             seasonsMetadata = episodeMetadataParsed;
         } catch (error) {
             console.error('Error parsing episodeMetadata JSON:', error);
@@ -155,61 +166,61 @@ main = async () => {
     const processMetadata = (metadata) => {
         const videoMetadataObjects = turnMetadataIntoObjects(metadata);
         return videoMetadataObjects;
-      };
+    };
       
-      const waitAndGetMetadata = async () => {
-        try {
-          const videofileMetadata = await new Promise((resolve, reject) => {
-            getMetadataModule.main(userInput.fileDirectory, userInput.ffmpegDirectory, (err, metadata) => {
-              if (err) {
-                console.error('Error:', err);
-                reject(err);
-                return;
-              }
-            
-              resolve(metadata);
-            });
+    const waitAndGetMetadata = async () => {
+      try {
+        const videofileMetadata = await new Promise((resolve, reject) => {
+          getMetadataModule.main(userInput.fileDirectory, userInput.ffmpegDirectory, (err, metadata) => {
+            if (err) {
+              console.error('Error:', err);
+              reject(err);
+              return;
+            }
+          
+            resolve(metadata);
           });
-      
-          const videofileMetadataObjects = processMetadata(videofileMetadata);
+        });
+    
+        const videofileMetadataObjects = processMetadata(videofileMetadata);
 
-          return videofileMetadataObjects;
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      };
-      
-      const videofileMetadataObjects = await waitAndGetMetadata();
+        return videofileMetadataObjects;
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    
+    const videofileMetadataObjects = await waitAndGetMetadata();
 
-      // Add metadata to episode objects
-      // -search for episode name from episodeMetadata, compare with videofileMetadataObject.filename
-      // -if match, add episode number, season number, episode title, episode description, episode date
-      for (let videofileMetadataObject of videofileMetadataObjects) {
-        for (let season of seasonsMetadata) {
-          for (let episode of season) {
-            // turn to lowercase to compare easily
-            const filenameLowerCase = videofileMetadataObject.filename.toLowerCase();
-            const titleLowerCase = episode.title.toLowerCase();
+    // Add metadata to episode objects
+    // -search for episode name from episodeMetadata, compare with videofileMetadataObject.filename
+    // -if match, add episode number, season number, episode title, episode description, episode date
+    for (let videofileMetadataObject of videofileMetadataObjects) {
+      for (let season of seasonsMetadata) {
+        for (let episode of season) {
+          // turn to lowercase to compare easily
+          const filenameLowerCase = videofileMetadataObject.filename.toLowerCase();
+          const titleLowerCase = episode.title.toLowerCase();
 
-            if (filenameLowerCase.includes(titleLowerCase)) {
-              videofileMetadataObject.season = episode.seasonNumber;
-              videofileMetadataObject.episode = episode.episodeNumber;
-              videofileMetadataObject.title = episode.title;
-              videofileMetadataObject.description = episode.description;
-              videofileMetadataObject.date = episode.airDate;
-              if (videofileMetadataObject.episode < 10) {
-                videofileMetadataObject.newFilename = userInput.fileDirectory + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mp4"
-              } else {
-                videofileMetadataObject.newFilename = userInput.fileDirectory + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mp4"
-              }
+          if (filenameLowerCase.includes(titleLowerCase)) {
+            videofileMetadataObject.season = cleanDataModule(episode.seasonNumber.toString());
+            videofileMetadataObject.title = cleanDataModule(episode.title);
+            videofileMetadataObject.episode = cleanDataModule(episode.episodeNumber.toString());
+            videofileMetadataObject.description = cleanDataModule(episode.description);
+            videofileMetadataObject.date = episode.airDate;
+            if (videofileMetadataObject.episode < 10) {
+              videofileMetadataObject.newFilename = userInput.fileDirectory + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mkv"
+            } else {
+              videofileMetadataObject.newFilename = userInput.fileDirectory + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + ".mkv"
             }
           }
         }
-        videofileMetadataObject.show = showMetadata.title;
       }
+      videofileMetadataObject.show = cleanDataModule(showMetadata.title);
+    }
 
-      // write episodes to file
-      writeOutputDataModule.main(videofileOutputFile, videofileMetadataObjects);
+    // write episodes to file
+    writeOutputDataModule.main(videofileOutputFile, videofileMetadataObjects);
 };
 
 main();

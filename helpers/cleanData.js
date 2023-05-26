@@ -1,37 +1,37 @@
 // Cleans the data before it's put into the output file
 
 const characters = {
-    "–": "-",
-    "’": "'",
-    "…": "...",
-    "—": "-",
-    "&nbsp;": " ",
-    "&amp;": "&",
-    "“": '"',
-    "”": '"',
-    "‘": "'",
-    "’": "'",
-    " ": " "
+    "–": "-", // en dash
+    "…": "...", // ellipsis
+    "—": "-", // em dash
+    "&nbsp;": " ", // non-breaking space
+    "&amp;": "&", // ampersand
+    "“": '"', // left double quote
+    "”": '"', // right double quote
+    "‘": "'", // left single quote
+    "’": "'", // right single quote
+    " ": " ", // non-breaking space
+    "Π": "pi" // pi
 };
 
-const cleanScrapedData = (scrapedData) => {
+const cleanData = (inputData) => {
     // console.log(scrapedData);
-    let cleanData = scrapedData;
+    let cleanedData = inputData;
 
     // removes "bad" characters
     for (const [badChar, goodChar] of Object.entries(characters)) {
         const regex = new RegExp(badChar, "g");
-        cleanData = cleanData.replace(regex, goodChar);
+        cleanedData = cleanedData.replace(regex, goodChar);
     }
 
-    // removes footnotes
-    const cleanedText = cleanData.replace(/\[([A-Z])\](.*?)\[[^\/\]]*\]/g, "");
+    // removes footnotes if footnotes are present
+    cleanedData = cleanedData.replace(/\[([A-Z])\](.*?)\[[^\/\]]*\]/g, "");
 
     // removes new lines
-    // const cleanedText2 = cleanedText.replace(/\n/g, " ");
+    // cleanedData = cleanedData.replace(/\n/g, " ");
 
-    // console.log("cleanedText: ", cleanedText);
-    return cleanedText.trim();
+    // console.log("cleanedData: ", cleanedData);
+    return cleanedData.trim();
 }
 
-module.exports = cleanScrapedData;
+module.exports = cleanData;

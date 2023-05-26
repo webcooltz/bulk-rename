@@ -312,4 +312,71 @@ ffmpeg.ffprobe(videoPath, (err, metadata) => {
         chapters: []
         }
         */
+
+        /* -- before changeMetadata() --
+            videoMetadata format:  {
+                filename: 'D:/TV Shows/Person of Interest (2011)/season1/Person Of Interest S01e16 Risk-16.mp4',
+                nb_streams: 3,
+                nb_programs: 0,
+                format_name: 'mov,mp4,m4a,3gp,3g2,mj2',
+                format_long_name: 'QuickTime / MOV',
+                start_time: 0,
+                duration: 2637.448,
+                size: 554846485,
+                bit_rate: 1682979,
+                probe_score: 100,
+                tags: {
+                    major_brand: 'mp42',
+                    minor_version: '512',
+                    compatible_brands: 'mp42iso2avc1mp41',
+                    creation_time: '2023-05-19T23:28:31.000000Z',
+                    encoder: 'HandBrake 20230517113901-d234724b0-master 2023051901'
+                }
+            }
+        */
+       /* -- after changeMetadata() --
+            videoMetadata format:  {videoMetadata format:  {
+                filename: 'D:/TV Shows/Person of Interest (2011)/season1/E16 - Risk.mp4',
+                nb_streams: 3,
+                nb_programs: 0,
+                format_name: 'mov,mp4,m4a,3gp,3g2,mj2',
+                format_long_name: 'QuickTime / MOV',
+                start_time: 0,
+                duration: 2637.448,
+                size: 554783445,
+                bit_rate: 1682788,
+                probe_score: 100,
+                tags: {
+                    major_brand: 'isom',
+                    minor_version: '512',
+                    compatible_brands: 'isomiso2avc1mp41',
+                    title: 'Risk',
+                    encoder: 'Lavf60.5.100',
+                    show: 'Person of Interest',
+                    episode_sort: '16',
+                    season_number: '1'
+                }
+            }
+       */
+      /* -- not working (before) --
+            videoMetadata format:  {
+                filename: 'D:/TV Shows/Person of Interest (2011)/season1/Person Of Interest S01e06 The Fix-6.mp4',
+                nb_streams: 3,
+                nb_programs: 0,
+                format_name: 'mov,mp4,m4a,3gp,3g2,mj2',
+                format_long_name: 'QuickTime / MOV',
+                start_time: 0,
+                duration: 2639.296,
+                size: 505327122,
+                bit_rate: 1531702,
+                probe_score: 100,
+                tags: {
+                    major_brand: 'mp42',
+                    minor_version: '512',
+                    compatible_brands: 'mp42iso2avc1mp41',
+                    creation_time: '2023-05-19T21:23:34.000000Z',
+                    encoder: 'HandBrake 20230517113901-d234724b0-master 2023051901'
+                }
+            }
+      */
 });

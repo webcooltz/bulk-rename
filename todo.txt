@@ -1,11 +1,12 @@
 todo
+-auto-generate a .plexmatch file?
 -add failed to array, write to JSON file, you can run your stuff again from that
 
 next debug
 -find the difference between mission creep and other working episodes
 -episodes that broke:
-    -season 1: episodes - 3 (itunes but wasnt on other pc), 6, 9-10, 13, 15, 17-18, 20
-    -everything else was going slow
+    -season 1: MP4 - 3, 6, 9-10, 13, 15, 17-18, 20
+    -season 1: MKV - 3, 6, 9-10, 13, 15, 17-18, 20
 
 test cases
 -test one of the broken only -- erase all other episodes from the json file
@@ -16,7 +17,13 @@ test cases
 -see the diff between episode objects
     -result: same
 -see the diff between episode metadata
-    -result: 
+    -result: same
+-see the diff between episode file size
+    -result: about the same
+-see the diff between episode format
+    -result: same
+-take out title meta tag
+    -result: it works for video s1 e6 - the fix
 
 to-do debug
 -check if cleanvid app changes metadata -- if i would need to clean my movies before this

@@ -5,6 +5,10 @@
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 
+// ---variables for testing---
+const fileDirectory = "C:/Users/Admin/Videos/season1/";
+const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
+
 const getVideoFilenames = (fileDirectory, callback) => {
   fs.readdir(fileDirectory, (err, files) => {
     if (err) {
@@ -30,11 +34,14 @@ const getMetadata = (videoPath, callback) => {
 };
 
 // Combined functions
+// , callback
 const main = (pathToVideoFiles, ffmpegDirectory, callback) => {
   const ffmpegPath = `${ffmpegDirectory}ffmpeg.exe`;
   const ffprobePath = `${ffmpegDirectory}ffprobe.exe`;
   ffmpeg.setFfmpegPath(ffmpegPath);
   ffmpeg.setFfprobePath(ffprobePath);
+
+  let count = 0;
 
   const metadataObjects = [];
   // get video file names
@@ -46,7 +53,6 @@ const main = (pathToVideoFiles, ffmpegDirectory, callback) => {
     }
 
     // get metadata for each video
-    let count = 0;
     videoFilenames.forEach((videoFilename) => {
       const videoPath = pathToVideoFiles + videoFilename;
       getMetadata(videoPath, (err, videoMetadata) => {
@@ -55,8 +61,10 @@ const main = (pathToVideoFiles, ffmpegDirectory, callback) => {
           callback(err, null);
           return;
         }
-        // console.log("videoMetadata format: ", videoMetadata.format);
+
         // console.log("videoMetadata: ", videoMetadata);
+        // console.log("videoMetadata format tags: ", videoMetadata.format.tags);
+        console.log("videoMetadata format: ", videoMetadata.format);
         
         const metadataFormat = videoMetadata.format;
         metadataObjects.push(metadataFormat);
@@ -71,7 +79,7 @@ const main = (pathToVideoFiles, ffmpegDirectory, callback) => {
   });
 };
 
-// main(folderPath);
+// main(fileDirectory, ffmpegDirectory);
 
 module.exports = {
   main: main

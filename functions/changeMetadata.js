@@ -13,6 +13,7 @@ const failedVideosOutputFile = './results/failedVideos.json';
 const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
 const videofileObjects = JSON.parse(fs.readFileSync('./results/videofileObjects.json', 'utf8'));
 const failedVideofileObjects = JSON.parse(fs.readFileSync('./results/failedVideos.json', 'utf8'));
+const poiFailedVideoObjects = JSON.parse(fs.readFileSync('./results/poiFailedVideosMP4.json', 'utf8'));
 
 const main = async (videofileObjects, ffmpegDirectory) => {
     const ffmpegPath = `${ffmpegDirectory}ffmpeg.exe`;
@@ -38,23 +39,25 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                 return;
                 } else {
                     // console.log("metadata: ", metadata);
-                    console.log("videofileObject.filename: ", videofileObject.filename);
-                    console.log("videofileObject.newFilename: ", videofileObject.newFilename);
+                    // console.log("videofileObject: ", videofileObject);
+                    // console.log("videofileObject.filename: ", videofileObject.filename);
+                    console.log("videofileObject.title: ", videofileObject.title);
                 }
+
+                // Remove title tag
+                const metadataTags = { ...metadata.format.tags };
+                delete metadataTags.title;
             
                 ffmpeg(videofileObject.filename)
                     .outputOptions([
-                        // Copy video/audio codecs - Prevents re-encoding
-                        '-c:v copy', 
-                        '-c:a copy',
-                        // Add metadata tags
+                        '-c copy', // Copy video and audio codecs
+                        // '-f mkv', // Specify the output format as MKV
                         '-metadata', `show=${videofileObject.show}`,
                         '-metadata', `season_number=${videofileObject.season}`,
-                        '-metadata', `title=${videofileObject.title}`,
+                        // '-metadata', `format.tags:title=${videofileObject.title}`,
                         '-metadata', `episode_sort=${videofileObject.episode}`,
-                        // '-f mp4' // Specify the output format as MP4
                     ])
-                    .save(videofileObject.newFilename + '.mp4')
+                    .save(videofileObject.newFilename)
                     .on('start', (commandLine) => {
                         console.log('FFmpeg command:', commandLine);
                     })
@@ -62,7 +65,8 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                         console.log('FFmpeg stderr:', stderrLine);
                     })
                     .on('end', () => {
-                        console.log('Metadata added successfully.');
+                        console.log(`Metadata added successfully. Task #: ${completedTasks}/${videofileObjects.length}`);
+                        completedTasks ++;
                         resolve();
                     })
                     .on('error', (err) => {
@@ -75,12 +79,16 @@ const main = async (videofileObjects, ffmpegDirectory) => {
         console.error(`Error adding metadata:\n ${videofileObject.filename}\n`, err);
         console.error("Error (catch): ", err);
     }
-    completedTasks ++;
+    // completedTasks ++;
     // progressBar.update(completedTasks);
     }
 
     // write failed videos to file
-    writeOutputDataModule.main(failedVideosOutputFile, failedVideos);
+    if (failedVideos.length > 0) {
+        writeOutputDataModule.main(failedVideosOutputFile, failedVideos);
+    } else {
+        console.log("All videos processed successfully.");
+    }
   // progressBar.stop();
 };
 
