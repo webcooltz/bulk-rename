@@ -1,6 +1,13 @@
 todo
--auto-generate a .plexmatch file?
--add failed to array, write to JSON file, you can run your stuff again from that
+-add it all in one function, detailed log file with error messages and re-runs available
+
+add error handling
+-create log file
+-when video fails (due to name):
+    -skip video, add to failed video file 
+-when naming fails (diff names or characters)
+    -try to add more ability to fix names automatically
+    -add an error message
 
 next debug
 -find the difference between mission creep and other working episodes

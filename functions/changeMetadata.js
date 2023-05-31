@@ -41,7 +41,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                     // console.log("metadata: ", metadata);
                     // console.log("videofileObject: ", videofileObject);
                     // console.log("videofileObject.filename: ", videofileObject.filename);
-                    console.log("videofileObject.title: ", videofileObject.title);
+                    // console.log("videofileObject.title: ", videofileObject.title);
                 }
 
                 // Remove title tag
