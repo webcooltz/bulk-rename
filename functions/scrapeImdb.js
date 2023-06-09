@@ -8,7 +8,7 @@ const fs = require('fs');
 
 // ---helpers---
 const cleanDataModule = require('../helpers/cleanData');
-const writeOutputDataModule = require('../helpers/writeOutputData');
+const outputDataModule = require('../helpers/writeOutputData');
 
 // ---variables---
 const showMetaDataFile = "./results/showOutput.json";
@@ -56,14 +56,14 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             // const episodeAmount = $("div[data-testid='hero-subnav-bar-left-block']").text();
             // console.log("episodeAmount: ", episodeAmount);
             const yearsRan = $(".sc-afe43def-4 li:nth-of-type(2) a").text();
-            const showStart = cleanDataModule(yearsRan).split("-")[0];
-            const showEnd = cleanDataModule(yearsRan).split("-")[1];
+            const showStart = cleanDataModule.cleanData(yearsRan).split("-")[0];
+            const showEnd = cleanDataModule.cleanData(yearsRan).split("-")[1];
             const avgEpisodeLength = $(".ipc-inline-list--show-dividers li:nth-of-type(4)").text();
             const ageRating = $(".sc-afe43def-4 li:nth-of-type(3) a").text();
 
             const showMetaData = {
-                title: cleanDataModule(metaTitle),
-                description: cleanDataModule(scrapedDescription),
+                title: cleanDataModule.cleanData(metaTitle),
+                description: cleanDataModule.cleanData(scrapedDescription),
                 // numberOfEpisodes: episodeAmount,
                 artWorkUrl: metaImageUrl,
                 showStart: showStart,
@@ -75,7 +75,7 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             // console.log("showMetaData: ", showMetaData);
 
             // Write showMetaData to file
-            writeOutputDataModule.main(showMetaDataFile, showMetaData);
+            outputDataModule.writeOutputData(showMetaDataFile, showMetaData);
 
             const scrapeEpisodeData = async (season) => {
                 try {
@@ -148,8 +148,8 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                         return {
                             seasonNumber: season,
                             episodeNumber: episodeNumbersList[index],
-                            title: cleanDataModule(episodeTitles[index]),
-                            description: cleanDataModule(episodeDescriptions[index]),
+                            title: cleanDataModule.cleanData(episodeTitles[index]),
+                            description: cleanDataModule.cleanData(episodeDescriptions[index]),
                             airDate: episodeDateList[index]
                         };
                     });

@@ -10,6 +10,7 @@ add error handling
     -add an error message
 
 next debug
+-find out why every function is skipping to the end and not doing anything
 -find the difference between mission creep and other working episodes
 -episodes that broke:
     -season 1: MP4 - 3, 6, 9-10, 13, 15, 17-18, 20

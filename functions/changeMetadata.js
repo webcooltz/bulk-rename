@@ -6,14 +6,15 @@ const ffmpeg = require('fluent-ffmpeg');
 // const cliProgress = require('cli-progress');
 
 // ---helpers---
-const writeOutputDataModule = require('../helpers/writeOutputData');
+const outputDataModule = require('../helpers/writeOutputData');
+const logFileModule = require('../helpers/writeToLogfile');
 
 // ---variables---
 const failedVideosOutputFile = './results/failedVideos.json';
 const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
 const videofileObjects = JSON.parse(fs.readFileSync('./results/videofileObjects.json', 'utf8'));
-const failedVideofileObjects = JSON.parse(fs.readFileSync('./results/failedVideos.json', 'utf8'));
-const poiFailedVideoObjects = JSON.parse(fs.readFileSync('./results/poiFailedVideosMP4.json', 'utf8'));
+// const failedVideofileObjects = JSON.parse(fs.readFileSync('./results/failedVideos.json', 'utf8'));
+// const poiFailedVideoObjects = JSON.parse(fs.readFileSync('./results/poiFailedVideosMP4.json', 'utf8'));
 
 const main = async (videofileObjects, ffmpegDirectory) => {
     const ffmpegPath = `${ffmpegDirectory}ffmpeg.exe`;
@@ -27,7 +28,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
   
   // const progressBar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
   // progressBar.start(totalTasks, 0);
-  let completedTasks = 0;
+  let completedTasks = 1;
 
   for (const videofileObject of videofileObjects) {
     try {
@@ -35,13 +36,10 @@ const main = async (videofileObjects, ffmpegDirectory) => {
             // Get metadata
             ffmpeg.ffprobe(videofileObject.filename, (err, metadata) => {
                 if (err) {
-                    console.error('An error occurred:', err);
+                    const errorMessage = `Error occurred while reading metadata (changeMetadata.main).\nError: ${err}`;
+                    console.error(errorMessage);
+                    logFileModule.writeToLogfile(errorMessage);
                 return;
-                } else {
-                    // console.log("metadata: ", metadata);
-                    // console.log("videofileObject: ", videofileObject);
-                    // console.log("videofileObject.filename: ", videofileObject.filename);
-                    // console.log("videofileObject.title: ", videofileObject.title);
                 }
 
                 // Remove title tag
@@ -59,35 +57,47 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                     ])
                     .save(videofileObject.newFilename)
                     .on('start', (commandLine) => {
-                        console.log('FFmpeg command:', commandLine);
+                        const consoleMessage = `FFmpeg command: (changeMetadata.main).\n-Command: ${commandLine}`;
+                        console.log(consoleMessage);
+                        logFileModule.writeToLogfile(consoleMessage);
                     })
                     .on('stderr', (stderrLine) => {
-                        console.log('FFmpeg stderr:', stderrLine);
+                        const consoleMessage = `FFmpeg stderr: (changeMetadata.main).\n-Command: ${stderrLine}`;
+                        console.log(consoleMessage);
+                        logFileModule.writeToLogfile(consoleMessage);
                     })
                     .on('end', () => {
-                        console.log(`Metadata added successfully. Task #: ${completedTasks}/${videofileObjects.length}`);
+                        const consoleMessage = `Successfully added metadata. Task #: ${completedTasks}/${videofileObjects.length}`;
+                        console.log(consoleMessage);
+                        logFileModule.writeToLogfile(consoleMessage);
                         completedTasks ++;
+                        // progressBar.update(completedTasks);
                         resolve();
                     })
                     .on('error', (err) => {
+                        const consoleMessage = `Failed to add/change metadata.\n-Video: ${videofileObjects.filename}\n-Error: ${err}`;
+                        console.log(consoleMessage);
+                        logFileModule.writeToLogfile(consoleMessage);
+
                         failedVideos.push(videofileObject);
                         reject(err);
                     });
             });
         });
     } catch (err) {
-        console.error(`Error adding metadata:\n ${videofileObject.filename}\n`, err);
-        console.error("Error (catch): ", err);
+        const consoleMessage = `Catch - Failed to add/change metadata.\n-Video: ${videofileObjects.filename}\n-Error: ${err}`;
+        console.log(consoleMessage);
+        logFileModule.writeToLogfile(consoleMessage);
     }
-    // completedTasks ++;
-    // progressBar.update(completedTasks);
-    }
+} // end for loop
 
     // write failed videos to file
     if (failedVideos.length > 0) {
-        writeOutputDataModule.main(failedVideosOutputFile, failedVideos);
+        outputDataModule.writeOutputData(failedVideosOutputFile, failedVideos);
     } else {
-        console.log("All videos processed successfully.");
+        const successMessage = `All videos processed successfully (changeMetadata.main).`;
+        console.log(successMessage);
+        logFileModule.writeToLogfile(successMessage);
     }
   // progressBar.stop();
 };

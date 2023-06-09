@@ -6,8 +6,8 @@ const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 
 // ---variables for testing---
-const fileDirectory = "C:/Users/Admin/Videos/season1/";
-const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
+// const fileDirectory = "C:/Users/Admin/Videos/season1/";
+// const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
 
 const getVideoFilenames = (fileDirectory, callback) => {
   fs.readdir(fileDirectory, (err, files) => {
@@ -34,7 +34,6 @@ const getMetadata = (videoPath, callback) => {
 };
 
 // Combined functions
-// , callback
 const main = (pathToVideoFiles, ffmpegDirectory, callback) => {
   const ffmpegPath = `${ffmpegDirectory}ffmpeg.exe`;
   const ffprobePath = `${ffmpegDirectory}ffprobe.exe`;

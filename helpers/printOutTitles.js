@@ -2,7 +2,7 @@
 const fs = require('fs');
 
 // -- helpers --
-const writeOutputDataModule = require('./writeOutputData');
+const outputDataModule = require('./writeOutputData');
 
 // -- variables --
 const failedEpisodesJSON = "./results/poiFailedVideos.json";
@@ -20,7 +20,7 @@ const main = (inputJSON) => {
         titles.push(episode.title);
     }
 
-    writeOutputDataModule.main(titleOutputFile, titles);
+    outputDataModule.writeOutputData(titleOutputFile, titles);
 };
 
 main(failedEpisodesJSON);

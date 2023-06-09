@@ -1,15 +1,22 @@
 const fs = require('fs');
 
-const main = (outputFilePath, dataToWrite) => {
+// ---helper functions---
+const logFileModule = require('./writeToLogfile');
+
+const writeOutputData = (outputFilePath, dataToWrite) => {
       const outputDataToJSON = JSON.stringify(dataToWrite, null, 2);
       fs.writeFile(outputFilePath, outputDataToJSON, 'utf8', (err) => {
         if (err) {
-          console.error(`Error writing to file: ${outputFilePath}\n${err}`);
+          const errorMessage = `Error writing to file: ${outputFilePath}\n${err}`;
+          console.error(errorMessage);
+          logFileModule.writeToLogfile(errorMessage);
           return;
         } else {
-          console.log(`Data written to file: ${outputFilePath}`);
+          const successMessage = `Data written to file: ${outputFilePath}`;
+          console.log(successMessage);
+          logFileModule.writeToLogfile(successMessage);
         }
       });
 };
 
-module.exports = { main };
+module.exports = { writeOutputData };

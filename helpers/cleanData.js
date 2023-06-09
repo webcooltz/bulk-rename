@@ -34,4 +34,4 @@ const cleanData = (inputData) => {
     return cleanedData.trim();
 }
 
-module.exports = cleanData;
+module.exports = { cleanData };
