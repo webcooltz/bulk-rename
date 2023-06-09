@@ -63,7 +63,7 @@ const main = (pathToVideoFiles, ffmpegDirectory, callback) => {
 
         // console.log("videoMetadata: ", videoMetadata);
         // console.log("videoMetadata format tags: ", videoMetadata.format.tags);
-        console.log("videoMetadata format: ", videoMetadata.format);
+        // console.log("videoMetadata format: ", videoMetadata.format);
         
         const metadataFormat = videoMetadata.format;
         metadataObjects.push(metadataFormat);

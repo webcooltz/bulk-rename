@@ -1,0 +1,30 @@
+FFmpeg stderr: (changeMetadata.main).
+-Command: frame=    0 fps=0.0 q=-1.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    
+S:NOPTSs
+)
+1, 23.98 fps, 23.98 tbr, 1k tbn (default)
+)
+FFmpeg stderr: (changeMetadata.main).
+-Command: frame= 5798 fps=0.0 q=-1.0 size=   70912kB time=00:04:02.04 bitrate=2400.0kbits/s speed= 484x
+FFmpeg stderr: (changeMetadata.main).
+-Command: frame=16058 fps=16057 q=-1.0 size=  152320kB time=00:11:09.82 bitrate=1862.9kbits/s speed= 670x
+FFmpeg stderr: (changeMetadata.main).
+-Command: frame=27243 fps=18161 q=-1.0 size=  218624kB time=00:18:56.25 bitrate=1576.2kbits/s speed= 757x
+FFmpeg stderr: (changeMetadata.main).
+-Command: frame=36984 fps=18473 q=-1.0 Lsize=  307398kB time=00:25:43.45 bitrate=1631.5kbits/s speed= 771x    
+al headers:5kB muxing overhead: 0.198710%
+FFmpeg stderr: (changeMetadata.main).
+-Command:
+Successfully added metadata. Task #: 1/13
+Successfully added metadata. Task #: 2/13
+Successfully added metadata. Task #: 3/13
+Successfully added metadata. Task #: 4/13
+Successfully added metadata. Task #: 5/13
+Successfully added metadata. Task #: 6/13
+Successfully added metadata. Task #: 7/13
+Successfully added metadata. Task #: 8/13
+Successfully added metadata. Task #: 9/13
+Successfully added metadata. Task #: 10/13
+Successfully added metadata. Task #: 11/13
+Successfully added metadata. Task #: 12/13
+All videos processed successfully (changeMetadata.main).

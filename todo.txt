@@ -1,5 +1,6 @@
 todo
 -add it all in one function, detailed log file with error messages and re-runs available
+-add failed metadata episode objects to another file where it guesses what the data should be
 
 add error handling
 -create log file

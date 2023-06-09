@@ -1,5 +1,8 @@
 // Cleans the data before it's put into the output file
 
+// --- helpers ---
+const logfileModule = require("./writeToLogfile.js");
+
 const characters = {
     "–": "-", // en dash
     "…": "...", // ellipsis
@@ -15,23 +18,25 @@ const characters = {
 };
 
 const cleanData = (inputData) => {
-    // console.log(scrapedData);
-    let cleanedData = inputData;
+    if (!inputData) {
+        // console.log("Failed to clean data. cleanData.js - cleanData() - inputData is null or undefined");
+        logfileModule.writeToLogfile("Failed to clean data. cleanData.js - cleanData() - inputData is null or undefined");
+        return inputData;
+    } else {
+        // console.log(inputData);
+        let cleanedData = inputData;
 
-    // removes "bad" characters
-    for (const [badChar, goodChar] of Object.entries(characters)) {
-        const regex = new RegExp(badChar, "g");
-        cleanedData = cleanedData.replace(regex, goodChar);
+        // removes "bad" characters
+        for (const [badChar, goodChar] of Object.entries(characters)) {
+            const regex = new RegExp(badChar, "g");
+            cleanedData = cleanedData.replace(regex, goodChar);
+        }
+
+        // removes footnotes if footnotes are present
+        cleanedData = cleanedData.replace(/\[([A-Z])\](.*?)\[[^\/\]]*\]/g, "");
+
+        return cleanedData.trim();
     }
-
-    // removes footnotes if footnotes are present
-    cleanedData = cleanedData.replace(/\[([A-Z])\](.*?)\[[^\/\]]*\]/g, "");
-
-    // removes new lines
-    // cleanedData = cleanedData.replace(/\n/g, " ");
-
-    // console.log("cleanedData: ", cleanedData);
-    return cleanedData.trim();
 }
 
 module.exports = { cleanData };
