@@ -13,8 +13,6 @@ const logFileModule = require('../helpers/writeToLogfile');
 const failedVideosOutputFile = './results/failedVideos.json';
 const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
 const videofileObjects = JSON.parse(fs.readFileSync('./results/videofileObjects.json', 'utf8'));
-// const failedVideofileObjects = JSON.parse(fs.readFileSync('./results/failedVideos.json', 'utf8'));
-// const poiFailedVideoObjects = JSON.parse(fs.readFileSync('./results/poiFailedVideosMP4.json', 'utf8'));
 
 const main = async (videofileObjects, ffmpegDirectory) => {
     const ffmpegPath = `${ffmpegDirectory}ffmpeg.exe`;
@@ -23,18 +21,42 @@ const main = async (videofileObjects, ffmpegDirectory) => {
     ffmpeg.setFfprobePath(ffprobePath);
 
     const failedVideos = [];
+
+    let areVideofilesReady = false;
+    let completedTasks = 1;
+
+    if (!videofileObjects) {
+        const errorMessage = `No videofileObjects found (changeMetadata.main).`;
+        console.error(errorMessage);
+        logFileModule.writeToLogfile(errorMessage);
+        return;
+    }
+
+    // check if any video files need fixing
+    for (const videofileObject of videofileObjects) {
+        if (videofileObject.needsFixing === true) {
+            const errorMessage = `Video needs fixing: ${videofileObject.filepath}`;
+            console.error(errorMessage);
+            logFileModule.writeToLogfile(errorMessage);
+            
+            areVideofilesReady = false;
+            return;
+        }
+    }
+
+    areVideofilesReady = true;
+
   // const totalTasks = videofileObjects.length;
   // console.log("totalTasks: ", totalTasks);
   
   // const progressBar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
   // progressBar.start(totalTasks, 0);
-  let completedTasks = 1;
 
   for (const videofileObject of videofileObjects) {
     try {
         await new Promise((resolve, reject) => {
             // Get metadata
-            ffmpeg.ffprobe(videofileObject.filename, (err, metadata) => {
+            ffmpeg.ffprobe(videofileObject.filepath, (err, metadata) => {
                 if (err) {
                     const errorMessage = `Error occurred while reading metadata (changeMetadata.main).\nError: ${err}`;
                     console.error(errorMessage);
@@ -46,7 +68,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                 const metadataTags = { ...metadata.format.tags };
                 delete metadataTags.title;
             
-                ffmpeg(videofileObject.filename)
+                ffmpeg(videofileObject.filepath)
                     .outputOptions([
                         '-c copy', // Copy video and audio codecs
                         // '-f mkv', // Specify the output format as MKV
@@ -75,7 +97,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                         resolve();
                     })
                     .on('error', (err) => {
-                        const consoleMessage = `Failed to add/change metadata.\n-Video: ${videofileObjects.filename}\n-Error: ${err}`;
+                        const consoleMessage = `Failed to add/change metadata.\n-Video: ${videofileObject.filepath}\n-Error: ${err}`;
                         console.log(consoleMessage);
                         logFileModule.writeToLogfile(consoleMessage);
 
@@ -85,7 +107,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
             });
         });
     } catch (err) {
-        const consoleMessage = `Catch - Failed to add/change metadata.\n-Video: ${videofileObjects.filename}\n-Error: ${err}`;
+        const consoleMessage = `Catch - Failed to add/change metadata.\n-Video: ${videofileObjects.filepath}\n-Error: ${err}`;
         console.log(consoleMessage);
         logFileModule.writeToLogfile(consoleMessage);
     }

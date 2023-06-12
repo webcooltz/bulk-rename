@@ -1,21 +1,14 @@
 todo
--add it all in one function, detailed log file with error messages and re-runs available
--add failed metadata episode objects to another file where it guesses what the data should be
+-modularize functions
+-handle puncuation in file names
+-season folder iteration
 
-add error handling
--create log file
--when video fails (due to name):
-    -skip video, add to failed video file 
--when naming fails (diff names or characters)
-    -try to add more ability to fix names automatically
-    -add an error message
+error handling
+-logfile
+    -add tasks completed -- replace previous line
 
-next debug
--find out why every function is skipping to the end and not doing anything
--find the difference between mission creep and other working episodes
--episodes that broke:
-    -season 1: MP4 - 3, 6, 9-10, 13, 15, 17-18, 20
-    -season 1: MKV - 3, 6, 9-10, 13, 15, 17-18, 20
+debug
+-
 
 test cases
 -test one of the broken only -- erase all other episodes from the json file
@@ -36,3 +29,6 @@ test cases
 
 to-do debug
 -check if cleanvid app changes metadata -- if i would need to clean my movies before this
+
+done
+-added filename and filename cleanup

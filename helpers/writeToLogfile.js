@@ -31,7 +31,7 @@ const writeToLogfile = (dataToBeLogged) => {
         if (err) {
           console.error(`Error writing to logfile.\nPath: ${logfilePath}\nError: ${err}`);
         } else {
-          console.log(`Data written to logfile: ${logfilePath}`);
+          // console.log(`Data written to logfile: ${logfilePath}`);
         }
       }); 
     } // End of if/else

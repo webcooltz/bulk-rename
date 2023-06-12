@@ -1,30 +1,65 @@
+Data written to file: ./results/videofileObjects.json
+Successfully cleaned file paths (main.cleanFilepath).
+Successfully read-in show metadata (main.main).
+Successfully read-in seasons metadata (main.main).
+Error setting videofileMetadataObjects (main.main line 392) s01e23 - modern warfare.
+ond language.
+y.
+Data written to file: ./results/videofileObjects.json
+Error occurred while reading metadata (changeMetadata.main).
+Error: Error: ffprobe exited with code 1
+ffprobe version 2023-05-22-git-877ccaf776-essentials_build-www.gyan.dev Copyright (c) 2007-2023 the FFmpeg developers
+  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libvpl --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      58.  9.100 / 58.  9.100
+  libavcodec     60. 14.101 / 60. 14.101
+  libavformat    60.  5.100 / 60.  5.100
+  libavdevice    60.  2.100 / 60.  2.100
+  libavfilter     9.  8.100 /  9.  8.100
+  libswscale      7.  2.100 /  7.  2.100
+  libswresample   4. 11.100 /  4. 11.100
+  libpostproc    57.  2.100 / 57.  2.100
+s01e21 - contemporary american poultry: No such file or directory
+FFmpeg command: (changeMetadata.main).
+-Command: ffmpeg -i C:/Users/Admin/Downloads/Community (2009)/season1 (1080p)/Community.S01E21.Contemporary.American.Poultry.1080p.BluRay.DD5.1.x265-POIASD.mkv -y -c copy -metadata show=Community -metadata season_number=1 -metadata episode_sort=21 C:/Users/Admin/Downloads/Community (2009)/season1 (1080p)/E21 - Contemporary American Poultry.mkv
 FFmpeg stderr: (changeMetadata.main).
--Command: frame=    0 fps=0.0 q=-1.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    
-S:NOPTSs
-)
-1, 23.98 fps, 23.98 tbr, 1k tbn (default)
-)
+-Command:   libpostproc    57.  2.100 / 57.  2.100
+rsion3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libvpl --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
 FFmpeg stderr: (changeMetadata.main).
--Command: frame= 5798 fps=0.0 q=-1.0 size=   70912kB time=00:04:02.04 bitrate=2400.0kbits/s speed= 484x
+-Command:         title           : Chapter 5
 FFmpeg stderr: (changeMetadata.main).
--Command: frame=16058 fps=16057 q=-1.0 size=  152320kB time=00:11:09.82 bitrate=1862.9kbits/s speed= 670x
+-Command: frame= 7248 fps=0.0 q=-1.0 size=   87808kB time=00:05:02.48 bitrate=2378.1kbits/s speed= 605x
 FFmpeg stderr: (changeMetadata.main).
--Command: frame=27243 fps=18161 q=-1.0 size=  218624kB time=00:18:56.25 bitrate=1576.2kbits/s speed= 757x
+-Command: frame=15841 fps=15832 q=-1.0 size=  196096kB time=00:11:01.07 bitrate=2430.0kbits/s speed= 661x
 FFmpeg stderr: (changeMetadata.main).
--Command: frame=36984 fps=18473 q=-1.0 Lsize=  307398kB time=00:25:43.45 bitrate=1631.5kbits/s speed= 771x    
-al headers:5kB muxing overhead: 0.198710%
+-Command: frame=24295 fps=16190 q=-1.0 size=  296960kB time=00:16:53.48 bitrate=2400.3kbits/s speed= 675x
+FFmpeg stderr: (changeMetadata.main).
+-Command: frame=30584 fps=16697 q=-1.0 Lsize=  365885kB time=00:21:15.56 bitrate=2349.8kbits/s speed= 696x    
+al headers:2kB muxing overhead: 0.144602%
 FFmpeg stderr: (changeMetadata.main).
 -Command:
-Successfully added metadata. Task #: 1/13
-Successfully added metadata. Task #: 2/13
-Successfully added metadata. Task #: 3/13
-Successfully added metadata. Task #: 4/13
-Successfully added metadata. Task #: 5/13
-Successfully added metadata. Task #: 6/13
-Successfully added metadata. Task #: 7/13
-Successfully added metadata. Task #: 8/13
-Successfully added metadata. Task #: 9/13
-Successfully added metadata. Task #: 10/13
-Successfully added metadata. Task #: 11/13
-Successfully added metadata. Task #: 12/13
+Successfully added metadata. Task #: 1/25
+Successfully added metadata. Task #: 2/25
+Successfully added metadata. Task #: 3/25
+Successfully added metadata. Task #: 4/25
+Successfully added metadata. Task #: 5/25
+Successfully added metadata. Task #: 6/25
+Successfully added metadata. Task #: 7/25
+Successfully added metadata. Task #: 8/25
+Successfully added metadata. Task #: 9/25
+Successfully added metadata. Task #: 10/25
+Successfully added metadata. Task #: 11/25
+Successfully added metadata. Task #: 12/25
+Successfully added metadata. Task #: 13/25
+Successfully added metadata. Task #: 14/25
+Successfully added metadata. Task #: 15/25
+Successfully added metadata. Task #: 16/25
+Successfully added metadata. Task #: 17/25
+Successfully added metadata. Task #: 18/25
+Successfully added metadata. Task #: 19/25
+Successfully added metadata. Task #: 20/25
+Successfully added metadata. Task #: 21/25
+Successfully added metadata. Task #: 22/25
+Successfully added metadata. Task #: 23/25
+Successfully added metadata. Task #: 24/25
 All videos processed successfully (changeMetadata.main).

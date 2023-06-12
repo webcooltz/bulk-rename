@@ -1,95 +1,784 @@
 [
   [
     {
-      "seasonNumber": 0,
-      "episodeNumber": 1,
-      "title": "The Other - Inga (The Other Karma)",
-      "description": "The story of Mei and her twin-sister Fujioka, just before the horrible course of events narrated in the series.",
-      "airDate": "5-26-2012"
-    },
-    {
       "seasonNumber": 1,
       "episodeNumber": 1,
-      "title": "Sobyo",
-      "description": "May 1998. Koucichi Sakakibara just arrived at Yomiyama from Tokyo a month ago. Due to a collapsed lung, he was confined to the hospital until he is fully recovered. 3 classmates of his new school, Yomiyama North Junior High School, specifically Class 3-3; arrived to welcome and prepare him for life there. Class Officers Tomohiko Kazami, Yukari Sakuragi and head of Countermeasures Izumi Akazawa. All of them ask Kouichi bizarre questions which causes his first seed of suspicion of his school, especially Izumi who reacted strangely after shaking his hand. When Kouichi is...",
-      "airDate": "1-10-2012"
+      "title": "Pilot",
+      "description": "An ex-lawyer is forced to return to community college to get a degree. However, he tries to use the skills he learned as a lawyer to get the answers to all his tests and pick up on a sexy woman in his Spanish class.",
+      "airDate": "9-17-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 2,
-      "title": "Omowaku",
-      "description": "The mystery surrounding Class 3-3 is still secret to Koichi,but he learns a thing or two about Mei, who seems like a ghost to the rest of the classmates.",
-      "airDate": "1-17-2012"
+      "title": "Spanish 101",
+      "description": "Jeff takes steps to ensure that Britta will be his partner in Spanish class, but winds up with Pierce instead.",
+      "airDate": "9-24-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 3,
-      "title": "Honegumi",
-      "description": "As Koichi manages to learn more about the seemingly-cursed Class 3-3, his actions end up unchaining a horrible course of events.",
-      "airDate": "1-24-2012"
+      "title": "Introduction to Film",
+      "description": "Britta comes between Abed and his father when she signs him up for a film class, and Jeff risks failing a class unless he \"seizes the day.\"",
+      "airDate": "10-1-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 4,
-      "title": "Rinkaku",
-      "description": "Still unable to understand the sudden threat to every student in Class 3-3, Koichi experiences another tragedy, also related to his endless quest to find some answers.",
-      "airDate": "1-31-2012"
+      "title": "Social Psychology",
+      "description": "Jeff and Shirley bond by making fun of Britta's new hippie boyfriend, which doesn't go well for any involved. Meanwhile, Troy and Abed become pawns in Annie's psychology experiment.",
+      "airDate": "10-8-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 5,
-      "title": "Kakusan",
-      "description": "Even though Kouichi is still being ignored by most of his classmates, he doesn't give up to find out more about the past and Mei Misaki.",
-      "airDate": "2-7-2012"
+      "title": "Advanced Criminal Law",
+      "description": "Señor Chang is on the hunt for a cheater and threatens to fail the entire class if the culprit doesn't come forward. When someone confesses, Jeff comes to their defense. Meanwhile, Annie recruits Pierce to write the new school song.",
+      "airDate": "10-15-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 6,
-      "title": "Futari",
-      "description": "Kouichi and Mei team up and find out more about each other and the class 3-3.",
-      "airDate": "2-14-2012"
+      "title": "Football, Feminism and You",
+      "description": "Jeff talks Troy into playing for the college's football team, sparking Annie's anger. Pierce helps the dean come up with a new mascot, and Britta tries to become Shirley's bathroom friend.",
+      "airDate": "10-22-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 7,
-      "title": "Henchou",
-      "description": "After more grisly accidents, everyone in Class 3 is on edge-wondering which of their classmates are actually dead. After the charm rituals are called off, Koichi learns of an incident that happened 15 years ago which could provide a major clue.",
-      "airDate": "2-21-2012"
+      "title": "Introduction to Statistics",
+      "description": "Will Jeff blow off Annie's Halloween party and sell out his other classmates in order to get a chance to score with a sexy professor?",
+      "airDate": "10-29-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 8,
-      "title": "Konpeki",
-      "description": "Koichi, Reiko and Matsunaga meet at a resort hotel to discuss the curse, and the hotel itself may hold clues to ending the bloodshed. They spend the day on the beach, where they run into Mei, who's staying nearby. Coincidence?",
-      "airDate": "2-28-2012"
+      "title": "Home Economics",
+      "description": "When Jeff loses his home and his car, he is forced to move into Abed's dorm room. Troy has a big date, but why is a jealous Annie trying to help? Meanwhile, Pierce becomes the keyboardist for Vaughn's band.",
+      "airDate": "11-5-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 9,
-      "title": "Body paint",
-      "description": "After yet another gruesome accident, Class 3 is completely on edge! With rumors running wild, Koichi investigates the old Class 3 homeroom at the former school.",
-      "airDate": "3-6-2012"
+      "title": "Debate 109",
+      "description": "Jeff reluctantly agrees to be Annie's debate partner, Britta humors Pierce by letting him try hypnotherapy on her to get her to stop smoking, and the gang begins to think that Abed's films may predict their future.",
+      "airDate": "11-12-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 10,
-      "title": "Glass Eye",
-      "description": "As the body count rises, Koichi is more and more desperate to find Matsunaga's tape. When he actually discovers it during a class outing, the survivors come together to hear it, and find out what Matsunaga did to end the curse.",
-      "airDate": "3-13-2012"
+      "title": "Environmental Science",
+      "description": "Jeff hangs out with Senor Chang to get out of an essay, angering the rest of the group. Meanwhile, Abed and Troy search for their missing lab mouse, and Pierce helps Shirley out with a presentation.",
+      "airDate": "11-19-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 11,
-      "title": "Makeup",
-      "description": "With Matsunaga's tape comes the secrets necessary to stop the Calamity-and Koichi and his friends brainstorm a way to stop more disasters. But just as quickly as it was found, the tape again mysteriously disappears...",
-      "airDate": "3-20-2012"
+      "title": "Politics of Human Sexuality",
+      "description": "Annie helps the dean put on an \"STD Fair,\" but doesn't want to perform an embarrassing demonstration. Meanwhile Jeff finds a companion for a double date with Pierce, and Troy finds out that Abed is a better athlete than him.",
+      "airDate": "12-3-2009"
     },
     {
       "seasonNumber": 1,
       "episodeNumber": 12,
-      "title": "Shisha",
-      "description": "Panic ensues at the lodge as desperate students seek the key to stopping the class 3 calamity once and for all. Can Kouichi and his friends find the solution before the death count rises again?",
-      "airDate": "3-27-2012"
+      "title": "Comparative Religion",
+      "description": "Shirley throws a Christmas party for the gang and much to her surprise learns her classmates come from various religious backgrounds. Meanwhile, Jeff is challenged by the school bully and faces the reality that he may fail Spanish 101.",
+      "airDate": "12-10-2009"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 13,
+      "title": "Investigative Journalism",
+      "description": "The gang decides not to let an obnoxious student from their Spanish class into the study group. The dean appoints Jeff as editor of the student paper, where Annie is working on a story that could expose the dean as a racist.",
+      "airDate": "1-14-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 14,
+      "title": "Interpretive Dance",
+      "description": "Jeff runs in to problems when the study group and the dean discover that he's seeing a professor, while Troy and Britta discover each other's secret that they are both taking dance classes.",
+      "airDate": "1-21-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 15,
+      "title": "Romantic Expressionism",
+      "description": "When Annie starts hanging out with Britta's ex-boyfriend Vaughn, Britta and Jeff vow to protect her. Meanwhile, Pierce feels left out at Troy and Abed's movie night.",
+      "airDate": "2-4-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 16,
+      "title": "Communication Studies",
+      "description": "Jeff sets out to fix his relationship with Britta after things get awkward with a drunken phone call. Meanwhile, Annie and Shirley make plans to humiliate Señor Chang in order to defend Troy and Pierce's dignity.",
+      "airDate": "2-11-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 17,
+      "title": "Physical Education",
+      "description": "Jeff refuses to participate in a pool class because the teacher forces him to play in gym shorts, and the study group discovers a white version of Abed at the college.",
+      "airDate": "3-4-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 18,
+      "title": "Basic Genealogy",
+      "description": "It's Family Day at Greendale. Pierce tries to build a relationship with his stepdaughter, but she has eyes for Jeff instead. Britta gets in trouble with Troy's Nana, and Shirley's kids cause problems for Abed's father.",
+      "airDate": "3-11-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 19,
+      "title": "Beginner Pottery",
+      "description": "Jeff signs up for a pottery class for an easy credit, but winds up failing the class when his jealousy of another student gets the best of him. Meanwhile, Pierce's incompetence could ruin his group's grade in boating class.",
+      "airDate": "3-18-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 20,
+      "title": "The Science of Illusion",
+      "description": "Britta's April Fool's Day prank has disastrous consequences, but she refuses to confess that she was responsible. Annie and Shirley temporarily work as security guards, but both of them want to be the \"bad cop.\"",
+      "airDate": "3-25-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 21,
+      "title": "Contemporary American Poultry",
+      "description": "Jeff's plan to get chicken fingers from the school cafeteria for the study group quickly evolves into a mafia movie-style endeavor with Abed calling all the shots.",
+      "airDate": "4-22-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 22,
+      "title": "The Art of Discourse",
+      "description": "Shirley gets Pierce kicked out the study group, Jeff and Britta plot revenge on a group of high schoolers who make fun of them for attending community college, and Troy helps Abed accomplish some of his movie-clichéd social goals.",
+      "airDate": "4-29-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 23,
+      "title": "Modern Warfare",
+      "description": "Greendale Community College is transformed into an apocalyptic war zone when the dean promises the winner of a paintball competition priority registration, and it could fan the flames of sexual tension between Jeff and Britta.",
+      "airDate": "5-6-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 24,
+      "title": "English as a Second Language",
+      "description": "Annie uses inside information about Señor Chang to get him fired so that the study group will be forced to stay together and take Spanish again. Meanwhile, Troy discovers that he has a natural skill for plumbing.",
+      "airDate": "5-13-2010"
+    },
+    {
+      "seasonNumber": 1,
+      "episodeNumber": 25,
+      "title": "Pascal's Triangle Revisited",
+      "description": "Britta and Professor Slater fight for the affection of Jeff. Meanwhile, Troy is confused when Abed doesn't invite him to move into his dorm room.",
+      "airDate": "5-20-2010"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 1,
+      "title": "Anthropology 101",
+      "description": "Jeff and Britta engage in a dangerous game of relationship one-upsmanship in response to Britta's embarrassing moment at the end of the previous school year, which could cause the entire study group to fall apart.",
+      "airDate": "9-23-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 2,
+      "title": "Accounting for Lawyers",
+      "description": "Jeff blows off the study group and their break-dancing competition to hang out with his old co-workers at the law firm, but Annie tries to prove that one of them is the person who turned him in and got him fired.",
+      "airDate": "9-30-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 3,
+      "title": "The Psychology of Letting Go",
+      "description": "Pierce's religion convinces him that the spirit of his dead mother is captured in a cheap lava lamp, Jeff has a crisis of faith when he learns he has high cholesterol, and Britta and Annie try to raise money for the oil spill.",
+      "airDate": "10-7-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 4,
+      "title": "Basic Rocket Science",
+      "description": "Everyone in the study group except Abed is stuck in a crude 1980s space simulator as it is towed off campus, and Abed leads the team given the difficult assignment of bringing them home.",
+      "airDate": "10-14-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 5,
+      "title": "Messianic Myths and Ancient Peoples",
+      "description": "Shirley asks Abed to make a film about Jesus, but he quickly angers Shirley by turning it into a self-indulgent mess. Meanwhile, Pierce begins blowing off the study group to hang out with the \"hipsters.\"",
+      "airDate": "10-21-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 6,
+      "title": "Epidemiology",
+      "description": "The study group is left to fend for themselves by Dean Pelton during a rabies outbreak due to tainted food at Greendale's Halloween party.",
+      "airDate": "10-28-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 7,
+      "title": "Aerodynamics of Gender",
+      "description": "Britta, Annie and Shirley discover that Abed is skilled at insulting the mean girls, so they use him to their advantage. Meanwhile, Troy and Jeff find a secret garden with a trampoline, which they use for relaxation.",
+      "airDate": "11-4-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 8,
+      "title": "Cooperative Calligraphy",
+      "description": "Chaos and mistrust tear the study group apart as they try to figure out who stole Annie's pen, causing them to miss the Greendale Puppy Parade.",
+      "airDate": "11-11-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 9,
+      "title": "Conspiracy Theories and Interior Design",
+      "description": "Dean Pelton tries to bust Jeff for a phony night school credit, which only unveils a series of conspiracies, plots, and double-crosses between Jeff, Annie, and the dean.",
+      "airDate": "11-18-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 10,
+      "title": "Mixology Certification",
+      "description": "The study group takes Troy out to a bar to celebrate his 21st birthday. While there, Annie assumes a new identity, Abed is propositioned by a man, one of Shirley's secrets is discovered, and Britta and Jeff fight over the \"cool\" bars.",
+      "airDate": "12-2-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 11,
+      "title": "Abed's Uncontrollable Christmas",
+      "description": "When Abed wakes up to discover that everything is in stop motion animation, Professor Duncan and the study group help him try to discover the true meaning of Christmas.",
+      "airDate": "12-9-2010"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 12,
+      "title": "Asian Population Studies",
+      "description": "Annie lobbies for her new crush, who is also Jeff's rival, to join the study group, but a jealous Jeff counters with Chang. Meanwhile, Shirley announces that she's pregnant, but she doesn't know that it could be Chang's.",
+      "airDate": "1-20-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 13,
+      "title": "Celebrity Pharmacology 212",
+      "description": "Pierce bribes Annie into getting him a bigger role in her anti-drug play, Jeff gets in trouble when he sends a lewd text message from Britta's phone, and Shirley rejects Chang's attempts to be friendly to her.",
+      "airDate": "1-27-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 14,
+      "title": "Advanced Dungeons & Dragons",
+      "description": "The study group plays Dungeons & Dragons with another classmate to improve his spirits, but Pierce's jealousies cause their good intentions to backfire.",
+      "airDate": "2-3-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 15,
+      "title": "Early 21st Century Romanticism",
+      "description": "Jeff hangs out with Professor Duncan after a fight with the study group, but Chang tags along and starts a party. Meanwhile, Abed and Troy fight for a librarian's affection, and Britta goes to a dance with a girl she thinks is a lesbian.",
+      "airDate": "2-10-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 16,
+      "title": "Intermediate Documentary Filmmaking",
+      "description": "Pierce pretends to be dying so that he can bequeath a series of cryptic and sometimes mean-spirited gifts to his study partners, and Abed decides to shoot a documentary film of the situation.",
+      "airDate": "2-17-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 17,
+      "title": "Intro to Political Science",
+      "description": "Anticipating a visit from the vice president, dean Pelton holds an election for student body president. An idealistic Annie decides to run, but Jeff decides to run against her to spite her and show how stupid politics can be.",
+      "airDate": "2-24-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 18,
+      "title": "Custody Law and Eastern European Diplomacy",
+      "description": "Jeff uses Shirley's parental rights waiver against Chang as a way to get Chang out of the apartment, while Britta is afraid to tell Abed and Troy that their new friend is a war criminal.",
+      "airDate": "3-17-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 19,
+      "title": "Critical Film Studies",
+      "description": "Jeff's \"Pulp Fiction\"-themed surprise party for Abed is spoiled when Abed tells him over dinner that he's done with pop culture.",
+      "airDate": "3-24-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 20,
+      "title": "Competitive Wine Tasting",
+      "description": "Jeff suspects something isn't quite right when an attractive classmate gets engaged to marry Pierce.",
+      "airDate": "4-14-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 21,
+      "title": "Paradigms of Human Memory",
+      "description": "While working on the final diorama for their anthropology class, Chang discovers the cache of items stolen by Troy's monkey.",
+      "airDate": "4-21-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 22,
+      "title": "Applied Anthropology and Culinary Arts",
+      "description": "As the semester draws to a close, the anthropology class final is disrupted when Shirley goes into labor one month ahead of schedule.",
+      "airDate": "4-28-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 23,
+      "title": "A Fistful of Paintballs",
+      "description": "In a \"spaghetti western\" parody, Pierce tries to get revenge on the rest of the study group during this year's paintball tournament.",
+      "airDate": "5-5-2011"
+    },
+    {
+      "seasonNumber": 2,
+      "episodeNumber": 24,
+      "title": "For a Few Paintballs More",
+      "description": "When the study group learns that there's a sinister plot behind the paintball tournament, they unite the remaining players to defeat the enemy.",
+      "airDate": "5-12-2011"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 1,
+      "title": "Biology 101",
+      "description": "Jeff's plan to keep Pierce out of the Study Group backfires when he gets kicked out instead, Abed copes with bad news about Cougar Town, and Dean Pelton's authority is challenged by another Greendale dean.",
+      "airDate": "9-22-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 2,
+      "title": "Geography of Global Conflict",
+      "description": "When another over-achieving student steals Annie's idea for a Model U.N. club, the Study Group comes to her rescue. Meanwhile, new security cop Chang tries to stop Britta's last-ditch efforts to create a campus disturbance.",
+      "airDate": "9-29-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 3,
+      "title": "Competitive Ecology",
+      "description": "Chaos ensues when the Study Group tries to divide itself up into biology lab partners, and Chang appoints himself security \"detective,\" and tries to solve a mystery that is only in his head.",
+      "airDate": "10-6-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 4,
+      "title": "Remedial Chaos Theory",
+      "description": "At Abed and Troy's housewarming party, Jeff decides to let the decision on who gets the pizza rest on the roll of the dice, leaving Abed to contemplate six alternate realities.",
+      "airDate": "10-13-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 5,
+      "title": "Horror Fiction in Seven Spooky Steps",
+      "description": "During her pre-Halloween party, Britta gets everyone to tell a spooky story so that she can find out which member of the study group scored out as a psychopath on their psychology profiles.",
+      "airDate": "10-27-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 6,
+      "title": "Advanced Gay",
+      "description": "Pierce gets a visit from his bigoted father after his wipes become a hit in the gay community, and the dean of the School of Refrigeration recruits Troy to become his student.",
+      "airDate": "11-3-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 7,
+      "title": "Studies in Modern Movement",
+      "description": "The study group helps Annie move in with Troy and Abed - except for Jeff, who lies to get out of it but is busted by dean Pelton.",
+      "airDate": "11-10-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 8,
+      "title": "Documentary Filmmaking: Redux",
+      "description": "The dean is given the task of making a Greendale commercial, but the shoot soon goes over budget and spirals out of control - with Abed documenting the experience.",
+      "airDate": "11-17-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 9,
+      "title": "Foosball and Nocturnal Vigilantism",
+      "description": "Shirley teaches Jeff foosball so that he can beat a team of cocky, obnoxious Germans, while Annie creates an overly elaborate ruse so that she doesn't have to tell Abed that she broke his special edition The Dark Knight DVD.",
+      "airDate": "12-1-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 10,
+      "title": "Regional Holiday Music",
+      "description": "A holiday-themed parody of \"Glee\" in which Abed tries to persuade each member of the Study Group to join the glee club so that they can qualify for regionals.",
+      "airDate": "12-8-2011"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 11,
+      "title": "Urban Matrimony and the Sandwich Arts",
+      "description": "Pierce comes to Shirley with a business proposal just as she's about to get married to Andre. Meanwhile, Troy and Abed try to act \"normal\" for the wedding, Britta discovers a new skill, and Jeff struggles with his toast.",
+      "airDate": "3-15-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 12,
+      "title": "Contemporary Impressionists",
+      "description": "The members of the Study Group take jobs as celebrity impersonators to pay off Abed's debt to a celebrity impersonator business, but can Jeff be Ryan Seacrest without his fragile ego spiral out of control?",
+      "airDate": "3-22-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 13,
+      "title": "Digital Exploration of Interior Design",
+      "description": "When Britta falls for the human embodiment of the Subway sandwich chain, Shirley and Pierce hope to use the situation to their advantage.",
+      "airDate": "3-29-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 14,
+      "title": "Pillows and Blankets",
+      "description": "The students of Greendale are drawn into an epic pillow fight as Troy and Abed start a war that threatens to destroy their unique friendship.",
+      "airDate": "4-5-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 15,
+      "title": "Origins of Vampire Mythology",
+      "description": "While Britta struggles to stay away from her old carny boyfriend, Jeff becomes obsessed with their relationship. Meanwhile, the dean stops by Troy and Abed's to recruit Troy for the dean of the school of refrigeration.",
+      "airDate": "4-12-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 16,
+      "title": "Virtual Systems Analysis",
+      "description": "After sending Troy and Britta on a date, Annie volunteers to keep Abed company in his Dreamatorium.",
+      "airDate": "4-19-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 17,
+      "title": "Basic Lupine Urology",
+      "description": "When the yam the study group was growing for biology class is killed, Troy and Abed are on the case.",
+      "airDate": "4-26-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 18,
+      "title": "Course Listing Unavailable",
+      "description": "A fellow student has died and Biology class has been canceled, meaning everyone has to retake it in summer school. When the memorial service turns into a riot, Chang is granted special authoritative powers.",
+      "airDate": "5-3-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 19,
+      "title": "Curriculum Unavailable",
+      "description": "When Abed claims the Dean has been replaced by a doppelgänger he is forced to take psychiatric treatment. Naturally, the rest of the study group joins him at his session with Dr. Heidi.",
+      "airDate": "5-10-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 20,
+      "title": "Digital Estate Planning",
+      "description": "The study group must help Pierce win a video game so that he can claim his inheritance from his father, but somebody may be out to ensure that he loses.",
+      "airDate": "5-17-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 21,
+      "title": "The First Chang Dynasty",
+      "description": "The Study Group, now known as the \"Greendale Seven,\" launches a plot to rescue the real dean Pelton and end Chang's reign of terror over Greendale.",
+      "airDate": "5-17-2012"
+    },
+    {
+      "seasonNumber": 3,
+      "episodeNumber": 22,
+      "title": "Introduction to Finality",
+      "description": "Jeff faces an old nemesis as Shirley and Pierce square off in Greendale court, Abed succumbs to his evil alter ego, and Troy decides to meet his destiny at air conditioning school.",
+      "airDate": "5-17-2012"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 1,
+      "title": "History 101",
+      "description": "While the Dean creates a Hunger Games-style competition for admission into a History of Ice Cream class, the final class Jeff needs to graduate and a fear of graduation causes Abed to retreat to his happy place.",
+      "airDate": "2-7-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 2,
+      "title": "Paranormal Parentage",
+      "description": "The study group's Halloween plans are put on hold when Pierce locks himself in the panic room of his \"haunted\" mansion.",
+      "airDate": "2-14-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 3,
+      "title": "Conventions of Space and Time",
+      "description": "At the Inspector SpaceTime Convention, Abed finds a new \"soulmate,\" Jeff discovers he looks like one of the show's villains, Shirley and Pierce join a focus group, and Annie pretends to be Jeff's wife.",
+      "airDate": "2-21-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 4,
+      "title": "Alternative History of the German Invasion",
+      "description": "The Study Group loses access to the study room to the German foosballers, and Chang returns to campus, claiming to be suffering from \"Changnesia.\"",
+      "airDate": "2-28-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 5,
+      "title": "Cooperative Escapism in Familial Relations",
+      "description": "While Jeff and Britta spend Thanksgiving with Jeff's newly-discovered father and brother, the rest of the Study Group tries to escape from Shirley's dysfunctional family Thanksgiving celebration.",
+      "airDate": "3-7-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 6,
+      "title": "Advanced Documentary Filmmaking",
+      "description": "Abed makes a new documentary chronicling Greendale's effort to get a research grant for \"Changnesia,\" as well as Jeff's efforts to prove that Chang is faking his disease.",
+      "airDate": "3-14-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 7,
+      "title": "Economics of Marine Biology",
+      "description": "Dean Pelton and Annie try to land a \"whale\" student while Jeff is assigned to keep Pierce occupied. Meanwhile, Troy and Shirley take a physical education education course, and Abed creates a fraternity to annoy the dean.",
+      "airDate": "3-21-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 8,
+      "title": "Herstory of Dance",
+      "description": "While the dean sets up a Sadie Hawkins dance, Britta puts together a competing Sophie B. Hawkins dance. Meanwhile, Abed is set up with two dates to both dances by Annie and Shirley.",
+      "airDate": "4-4-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 9,
+      "title": "Intro to Felt Surrogacy",
+      "description": "Dean Pelton prompts the study group to use puppets to relive the traumatic events of a recent adventure.",
+      "airDate": "4-11-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 10,
+      "title": "Intro to Knots",
+      "description": "Jeff organizes a lovely holiday gathering at his apartment but Annie secretly invites Professor Cornwallis, to get in his good graces.",
+      "airDate": "4-18-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 11,
+      "title": "Basic Human Anatomy",
+      "description": "When Annie and Shirley learn that Leonard is actually holding the spot as the class valedictorian, they join forces to bring him down.",
+      "airDate": "4-25-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 12,
+      "title": "Heroic Origins",
+      "description": "Abed's research into the study group's history uncovers an overlooked series of chance encounters that led each of them to Greendale.",
+      "airDate": "5-2-2013"
+    },
+    {
+      "seasonNumber": 4,
+      "episodeNumber": 13,
+      "title": "Advanced Introduction to Finality",
+      "description": "A plan to celebrate Jeff's early graduation is unexpectedly disrupted by the study group's evil doppelgangers from the Darkest Timeline.",
+      "airDate": "5-9-2013"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 1,
+      "title": "Repilot",
+      "description": "Having failed in his second go-round as a lawyer, and unable to gather evidence for a potential lawsuit against Greendale, Jeff tries to convince the other former members of the Study Group to sue the school.",
+      "airDate": "1-2-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 2,
+      "title": "Introduction to Teaching",
+      "description": "Jeff blows off his new teaching job at Greendale until Annie signs up for his class and forces him to teach, and Abed loses his religion when he takes a course about whether Nicolas Cage is good or bad.",
+      "airDate": "1-2-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 3,
+      "title": "Basic Intergluteal Numismatics",
+      "description": "The college is imbued with panic when an unidentified person returns to dropping coins down people's butts and Annie takes it upon herself to find out who is behind it all.",
+      "airDate": "1-9-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 4,
+      "title": "Cooperative Polygraphy",
+      "description": "After Pierce's unexpected passing, a team of investigators headed by the no-nonsense Mr. Stone arrives at Greendale to subject the study group to lie detector tests before they can be considered for distributions under the will.",
+      "airDate": "1-16-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 5,
+      "title": "Geothermal Escapism",
+      "description": "As a going-away present to Troy before his around-the-world trip, Abed sets up a high-stakes game of \"Hot Lava\" at the college, but Britta suspects that the game is just masking his real feelings about Troy's departure.",
+      "airDate": "1-23-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 6,
+      "title": "Analysis of Cork-Based Networking",
+      "description": "Annie and Hickey fight Greendale bureaucracy to install a bulletin board, Abed learns a lesson about sign language, and the others discover the challenges of planning a properly sensitive school dance.",
+      "airDate": "1-30-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 7,
+      "title": "Bondage and Beta Male Sexuality",
+      "description": "Jeff helps Duncan score a date with Britta, and Abed has a Hickey encounter on his way to the movie theater.",
+      "airDate": "2-27-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 8,
+      "title": "App Development and Condiments",
+      "description": "When a new app is beta tested on Greendale students, the campus soon descends into a dystopian society where status is determined by app standing.",
+      "airDate": "3-6-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 9,
+      "title": "VCR Maintenance and Educational Publishing",
+      "description": "Whilst cleaning the storage room Jeff, Hickey and Shirley find a pile of unused hidden textbooks and plot a way to make the best out of it. Meanwhile, Annie and Abed are trying to find a new roommate.",
+      "airDate": "3-13-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 10,
+      "title": "Advanced Advanced Dungeons & Dragons",
+      "description": "The group proposes a \"sequel\" to Dungeons & Dragons night when they need to get a skeptical professor Hickey to bond with his estranged son.",
+      "airDate": "3-20-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 11,
+      "title": "G.I. Jeff",
+      "description": "The entire group becomes part of the cast of a classic \"G.I. Joe\" cartoon from the 1980s, which turns out to be part of Jeff's coping mechanism as he deals with a monumental life event.",
+      "airDate": "4-3-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 12,
+      "title": "Basic Story",
+      "description": "After a liability audit, the Save Greendale Committee discovered that they have, in fact, saved Greendale - until they discover that as a result of the successful audit, the school is being sold to Subway.",
+      "airDate": "4-10-2014"
+    },
+    {
+      "seasonNumber": 5,
+      "episodeNumber": 13,
+      "title": "Basic Sandwich",
+      "description": "When the group learns about Greendale's first dean, they embark on a mission to find his old computer lab; Subway enlists Chang to spy on the group as part of its plan to take over the school.",
+      "airDate": "4-17-2014"
+    }
+  ],
+  [
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 1,
+      "title": "Ladders",
+      "description": "Dean Pelton hires an administrative consultant to organize things at Greendale.",
+      "airDate": "8-2-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 2,
+      "title": "Lawnmower Maintenance & Postnatal Care",
+      "description": "Jeff and Frankie ask an inventor for help extracting Dean Pelton from his virtual reality world.",
+      "airDate": "3-17-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 3,
+      "title": "Basic Crisis Room Decorum",
+      "description": "The Greendale gang goes on the offensive when a rival college releases an attack ad.",
+      "airDate": "3-24-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 4,
+      "title": "Queer Studies & Advanced Waxing",
+      "description": "Dean Pelton is asked to lie; Chang auditions for a stage adaptation of \"The Karate Kid.\"",
+      "airDate": "3-31-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 5,
+      "title": "Laws of Robotics & Party Rights",
+      "description": "A prisoner attends Greendale via telerobot; Britta tries to get around one of Annie's rules.",
+      "airDate": "4-7-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 6,
+      "title": "Basic Email Security",
+      "description": "A hacker threatens to publish emails unless a scheduled appearance by a racist comic is canceled.",
+      "airDate": "4-14-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 7,
+      "title": "Advanced Safety Features",
+      "description": "An ex-boyfriend persuades Britta to join a guerilla marketing campaign.",
+      "airDate": "4-21-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 8,
+      "title": "Intro to Recycled Cinema",
+      "description": "The committee, along with a movie producer named Maury, help Abed complete his unfinished film.",
+      "airDate": "4-28-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 9,
+      "title": "Grifting 101",
+      "description": "When a clever clever con man, Professor DeSalvo, uses his class to cheat the study group, they enlist Jeff to get revenge. The situation goes awry as Britta and Dean Pelton get involved in Jeff and Professor DeSalvo's scamming competition.",
+      "airDate": "5-5-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 10,
+      "title": "Basic RV Repair and Palmistry",
+      "description": "While on a road trip to get rid of a Greendale artifact, Abed turns a situation into a feature film.",
+      "airDate": "5-12-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 11,
+      "title": "Modern Espionage",
+      "description": "When a secret game of paintball occurs on campus, Frankie threatens to expel those who participate.",
+      "airDate": "5-19-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 12,
+      "title": "Wedding Videography",
+      "description": "A marriage proposal in Jeff's law class exposes a connection between the future bride and groom.",
+      "airDate": "5-26-2015"
+    },
+    {
+      "seasonNumber": 6,
+      "episodeNumber": 13,
+      "title": "Emotional Consequences of Broadcast Television",
+      "description": "As their sixth year at Greendale draws to a close, Abed asks everyone to imagine pitching a TV show about what they would do in season seven.",
+      "airDate": "6-2-2015"
     }
   ]
 ]
