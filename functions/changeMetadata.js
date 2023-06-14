@@ -7,7 +7,7 @@ const ffmpeg = require('fluent-ffmpeg');
 
 // ---helpers---
 const outputDataModule = require('../helpers/writeOutputData');
-const logFileModule = require('../helpers/writeToLogfile');
+const logfileModule = require('../helpers/writeToLogfile');
 
 // ---variables---
 const failedVideosOutputFile = './results/failedVideos.json';
@@ -28,7 +28,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
     if (!videofileObjects) {
         const errorMessage = `No videofileObjects found (changeMetadata.main).`;
         console.error(errorMessage);
-        logFileModule.writeToLogfile(errorMessage);
+        logfileModule.writeToLogfile(errorMessage);
         return;
     }
 
@@ -37,7 +37,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
         if (videofileObject.needsFixing === true) {
             const errorMessage = `Video needs fixing: ${videofileObject.filepath}`;
             console.error(errorMessage);
-            logFileModule.writeToLogfile(errorMessage);
+            logfileModule.writeToLogfile(errorMessage);
             
             areVideofilesReady = false;
             return;
@@ -60,7 +60,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                 if (err) {
                     const errorMessage = `Error occurred while reading metadata (changeMetadata.main).\nError: ${err}`;
                     console.error(errorMessage);
-                    logFileModule.writeToLogfile(errorMessage);
+                    logfileModule.writeToLogfile(errorMessage);
                 return;
                 }
 
@@ -81,17 +81,17 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                     .on('start', (commandLine) => {
                         const consoleMessage = `FFmpeg command: (changeMetadata.main).\n-Command: ${commandLine}`;
                         console.log(consoleMessage);
-                        logFileModule.writeToLogfile(consoleMessage);
+                        logfileModule.writeToLogfile(consoleMessage);
                     })
                     .on('stderr', (stderrLine) => {
                         const consoleMessage = `FFmpeg stderr: (changeMetadata.main).\n-Command: ${stderrLine}`;
                         console.log(consoleMessage);
-                        logFileModule.writeToLogfile(consoleMessage);
+                        logfileModule.writeToLogfile(consoleMessage);
                     })
                     .on('end', () => {
                         const consoleMessage = `Successfully added metadata. Task #: ${completedTasks}/${videofileObjects.length}`;
                         console.log(consoleMessage);
-                        logFileModule.writeToLogfile(consoleMessage);
+                        logfileModule.writeToLogfile(consoleMessage);
                         completedTasks ++;
                         // progressBar.update(completedTasks);
                         resolve();
@@ -99,7 +99,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
                     .on('error', (err) => {
                         const consoleMessage = `Failed to add/change metadata.\n-Video: ${videofileObject.filepath}\n-Error: ${err}`;
                         console.log(consoleMessage);
-                        logFileModule.writeToLogfile(consoleMessage);
+                        logfileModule.writeToLogfile(consoleMessage);
 
                         failedVideos.push(videofileObject);
                         reject(err);
@@ -109,7 +109,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
     } catch (err) {
         const consoleMessage = `Catch - Failed to add/change metadata.\n-Video: ${videofileObjects.filepath}\n-Error: ${err}`;
         console.log(consoleMessage);
-        logFileModule.writeToLogfile(consoleMessage);
+        logfileModule.writeToLogfile(consoleMessage);
     }
 } // end for loop
 
@@ -119,7 +119,7 @@ const main = async (videofileObjects, ffmpegDirectory) => {
     } else {
         const successMessage = `All videos processed successfully (changeMetadata.main).`;
         console.log(successMessage);
-        logFileModule.writeToLogfile(successMessage);
+        logfileModule.writeToLogfile(successMessage);
     }
   // progressBar.stop();
 };

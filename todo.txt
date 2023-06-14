@@ -4,6 +4,9 @@ todo
 -season folder iteration
 
 error handling
+-replace & and "and"
+-replace ' with nothing
+-replace : with -
 -logfile
     -add tasks completed -- replace previous line
 

@@ -8,16 +8,17 @@ const characters = {
     "…": "...", // ellipsis
     "—": "-", // em dash
     "&nbsp;": " ", // non-breaking space
-    "&amp;": "&", // ampersand
+    // "&": "and", // ampersand
     "“": '"', // left double quote
     "”": '"', // right double quote
     "‘": "'", // left single quote
     "’": "'", // right single quote
     " ": " ", // non-breaking space
-    "Π": "pi" // pi
+    "Π": "pi", // pi
+    "'": "", // replace in titles
 };
 
-const cleanData = (inputData) => {
+const cleanupData = (inputData) => {
     if (!inputData) {
         // console.log("Failed to clean data. cleanData.js - cleanData() - inputData is null or undefined");
         logfileModule.writeToLogfile("Failed to clean data. cleanData.js - cleanData() - inputData is null or undefined");
@@ -39,4 +40,4 @@ const cleanData = (inputData) => {
     }
 }
 
-module.exports = { cleanData };
+module.exports = { cleanupData };

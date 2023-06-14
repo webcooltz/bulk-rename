@@ -56,14 +56,14 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             // const episodeAmount = $("div[data-testid='hero-subnav-bar-left-block']").text();
             // console.log("episodeAmount: ", episodeAmount);
             const yearsRan = $(".sc-afe43def-4 li:nth-of-type(2) a").text();
-            const showStart = cleanDataModule.cleanData(yearsRan).split("-")[0];
-            const showEnd = cleanDataModule.cleanData(yearsRan).split("-")[1];
+            const showStart = cleanDataModule.cleanupData(yearsRan).split("-")[0];
+            const showEnd = cleanDataModule.cleanupData(yearsRan).split("-")[1];
             const avgEpisodeLength = $(".ipc-inline-list--show-dividers li:nth-of-type(4)").text();
             const ageRating = $(".sc-afe43def-4 li:nth-of-type(3) a").text();
 
             const showMetaData = {
-                title: cleanDataModule.cleanData(metaTitle),
-                description: cleanDataModule.cleanData(scrapedDescription),
+                title: cleanDataModule.cleanupData(metaTitle),
+                description: cleanDataModule.cleanupData(scrapedDescription),
                 // numberOfEpisodes: episodeAmount,
                 artWorkUrl: metaImageUrl,
                 showStart: showStart,
@@ -148,8 +148,8 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                         return {
                             seasonNumber: season,
                             episodeNumber: episodeNumbersList[index],
-                            title: cleanDataModule.cleanData(episodeTitles[index]),
-                            description: cleanDataModule.cleanData(episodeDescriptions[index]),
+                            title: cleanDataModule.cleanupData(episodeTitles[index]),
+                            description: cleanDataModule.cleanupData(episodeDescriptions[index]),
                             airDate: episodeDateList[index]
                         };
                     });
