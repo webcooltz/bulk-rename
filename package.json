@@ -7,7 +7,7 @@
     "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scrape": "node ./functions/scrapeImdb.js",
-    "get": "node ./functions/getMetadata.js",
+    "get": "node ./functions/getMetadata-alone.js",
     "change": "node ./functions/changeMetadata.js"
   },
   "author": "webcooltz",
