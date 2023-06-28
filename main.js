@@ -405,7 +405,8 @@ main = async () => {
           // console.log("episodeGuess: ", episodeGuess);
           const episodeGuessNumber = parseInt(episodeGuess[0].split("e")[1]);
           // console.log("episodeGuessNumber: ", episodeGuessNumber);
-          const seasonGuess = videofileMetadataObject.filename.match(/s\d+/gi);
+          // find directory and use that as the season number if there is no season in the filename
+          const seasonGuess = videofileMetadataObject.filename.includes("s") ? videofileMetadataObject.filename.match(/s\d+/gi) : seasonDirectoryCleaned.match(/s\d+/gi);
           // console.log("seasonGuess: ", seasonGuess);
           const seasonGuessNumber = parseInt(seasonGuess[0].split("s")[1]);
           // console.log("seasonGuessNumber: ", seasonGuessNumber);
