@@ -5,19 +5,15 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
 const fs = require('fs');
-
 // ---helpers---
-const cleanDataModule = require('../helpers/cleanData');
-const outputDataModule = require('../helpers/writeOutputData');
-
-// ---variables---
+const { cleanupData } = require('../helpers/dataCleaner');
+const { writeOutputData } = require('../helpers/outputData');
+// ---filepaths---
 const showMetaDataFile = "./results/showOutput.json";
-
 // ---user input---
 const userInput = JSON.parse(fs.readFileSync('./input.json', 'utf8'));
 const imdbId = userInput.imdbId;
 const numberOfSeasons = userInput.numberOfSeasons;
-
 // ---output---
 // let returnMessage;
 
@@ -56,14 +52,14 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             // const episodeAmount = $("div[data-testid='hero-subnav-bar-left-block']").text();
             // console.log("episodeAmount: ", episodeAmount);
             const yearsRan = $(".sc-afe43def-4 li:nth-of-type(2) a").text();
-            const showStart = cleanDataModule.cleanupData(yearsRan).split("-")[0];
-            const showEnd = cleanDataModule.cleanupData(yearsRan).split("-")[1];
+            const showStart = cleanupData(yearsRan).split("-")[0];
+            const showEnd = cleanupData(yearsRan).split("-")[1];
             const avgEpisodeLength = $(".ipc-inline-list--show-dividers li:nth-of-type(4)").text();
             const ageRating = $(".sc-afe43def-4 li:nth-of-type(3) a").text();
 
             const showMetaData = {
-                title: cleanDataModule.cleanupData(metaTitle),
-                description: cleanDataModule.cleanupData(scrapedDescription),
+                title: cleanupData(metaTitle),
+                description: cleanupData(scrapedDescription),
                 // numberOfEpisodes: episodeAmount,
                 artWorkUrl: metaImageUrl,
                 showStart: showStart,
@@ -75,7 +71,7 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             // console.log("showMetaData: ", showMetaData);
 
             // Write showMetaData to file
-            outputDataModule.writeOutputData(showMetaDataFile, showMetaData);
+            writeOutputData(showMetaDataFile, showMetaData);
 
             const scrapeEpisodeData = async (season) => {
                 try {
@@ -148,8 +144,8 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                         return {
                             seasonNumber: season,
                             episodeNumber: episodeNumbersList[index],
-                            title: cleanDataModule.cleanupData(episodeTitles[index]),
-                            description: cleanDataModule.cleanupData(episodeDescriptions[index]),
+                            title: cleanupData(episodeTitles[index]),
+                            description: cleanupData(episodeDescriptions[index]),
                             airDate: episodeDateList[index]
                         };
                     });

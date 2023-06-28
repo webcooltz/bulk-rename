@@ -1,6 +1,7 @@
 {
     "imdbId": "tt0278238",
     "numberOfSeasons": 5,
-    "fileDirectory": "C:\\Users\\Admin\\Downloads\\Samurai Jack S01-S05 (2001-)",
-    "ffmpegDirectory": "D:/executables//ffmpeg/bin"
+    "fileDirectory": "C:\\Users\\Admin\\Downloads\\Samurai Jack (2001) - copy",
+    "ffmpegDirectory": "D:/executables//ffmpeg/bin",
+    "type": "animated"
 }

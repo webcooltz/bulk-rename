@@ -1,49 +1,34 @@
+/* ---Main.js---
+// -takes in JSON input
+// -gets show metadata (pre-scraped)
+// -gets video file metadata
+// -cleans data
+// -creates video file objects based on files and metadata
+// -writes output JSON (to be used to change the filenames/metadata)
+*/
+
 // ---packages---
 const fs = require('fs');
 const path = require('path');
-
 // ---functions---
-// const scrapeImdbModule = require('./functions/scrapeImdb');
+// const scrapeImdbModule = require('./functions/scrapeImdb'); // add scrape later
 const getMetadataModule = require('./functions/getMetadata');
-// const changeMetadata = require('./functions/changeMetadata');
-const outputDataModule = require('./helpers/writeOutputData');
-
+// const changeMetadata = require('./functions/changeMetadata'); // add change later
 // ---helpers---
-const cleanDataModule = require('./helpers/cleanData');
-const logfileModule = require('./helpers/writeToLogfile');
-
+const { cleanupData, cleanupFilepath, cleanupFilename } = require('./helpers/dataCleaner');
+const { writeToLogfile } = require('./helpers/logfile');
+const { writeOutputData } = require('./helpers/outputData');
 // ---JSON---
-const videofileOutputFile = "./results/videofileObjects.json";
 const inputJSON = "./input.json";
 const showMetadataJSON = "./results/showOutput.json";
 const episodeMetadataJSON = "./results/episodesOutput.json";
-
+const videofileOutputFile = "./results/videofileObjects.json";
 // ---variables---
-// const seasonDirectories = [];
 const episodeObjectsFinal = [];
 
 let showMetadata;
 let seasonsMetadata;
 let videoFileExtension;
-
-/* cleans filepath
-// -replaces backslashes with forward slashes
-// -adds a trailing slash if it doesn't exist
-*/
-const cleanupFilepath = (filepath) => {
-    if (filepath.includes("\\")) {
-        filepath = filepath.replace(/\\/g, "/");
-    }
-    if (filepath[filepath.length - 1] !== "/") {
-        filepath += "/";
-    }
-
-    const successMessage = "Successfully cleaned file paths (main.cleanFilepath).";
-    console.log(successMessage);
-    logfileModule.writeToLogfile(successMessage);
-
-    return filepath;
-};
 
 /* take JSON, clean it up, and return it
 // -directories
@@ -58,7 +43,7 @@ const parseInputJSON = (inputJSON) => {
   } else {
     const errorMessage = "Invalid input JSON (main.parseInputJSON).";
     console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
+    writeToLogfile(errorMessage);
     return;
   }
 
@@ -66,7 +51,7 @@ const parseInputJSON = (inputJSON) => {
     if (cleanUserInput.fileDirectory.length < 3) {
       const errorMessage = "Invalid file directory (main.parseInputJSON).";
       console.error(errorMessage);
-      logfileModule.writeToLogfile(errorMessage);
+      writeToLogfile(errorMessage);
       return;
     } else {
       cleanUserInput.fileDirectory = cleanupFilepath(cleanUserInput.fileDirectory);
@@ -74,7 +59,7 @@ const parseInputJSON = (inputJSON) => {
   } else {
     const errorMessage = "No file directory provided (main.parseInputJSON).";
     console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
+    writeToLogfile(errorMessage);
     return;
   }
 
@@ -82,7 +67,7 @@ const parseInputJSON = (inputJSON) => {
     if (cleanUserInput.ffmpegDirectory.length < 3) {
       const errorMessage = "Invalid ffmpeg directory (main.parseInputJSON).";
       console.error(errorMessage);
-      logfileModule.writeToLogfile(errorMessage);
+      writeToLogfile(errorMessage);
       return;
     } else {
       cleanUserInput.ffmpegDirectory = cleanupFilepath(cleanUserInput.ffmpegDirectory);
@@ -90,7 +75,7 @@ const parseInputJSON = (inputJSON) => {
   } else {
     const errorMessage = "No ffmpeg directory provided (main.parseInputJSON).";
     console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
+    writeToLogfile(errorMessage);
     return;
   }
 
@@ -98,80 +83,23 @@ const parseInputJSON = (inputJSON) => {
     if (cleanUserInput.imdbId.length < 3) {
       const errorMessage = "Invalid imdbId (main.parseInputJSON).";
       console.error(errorMessage);
-      logfileModule.writeToLogfile(errorMessage);
+      writeToLogfile(errorMessage);
       return;
     } else {
-      cleanUserInput.imdbId = cleanDataModule.cleanupData(cleanUserInput.imdbId);
+      cleanUserInput.imdbId = cleanupData(cleanUserInput.imdbId);
     }
   } else {
     const errorMessage = "No imdbId provided (main.parseInputJSON).";
     console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
+    writeToLogfile(errorMessage);
     return;
   }
  
   const successMessage = "Successfully parsed JSON input (main.parseInputJSON).";
   console.log(successMessage);
-  logfileModule.writeToLogfile(successMessage);
+  writeToLogfile(successMessage);
 
   return cleanUserInput;
-};
-
-/* cleans up filename
-// -turn periods to spaces in filenames
-*/
-const cleanupFilename = (filename) => {
-  if (!filename) {
-    const errorMessage = "No filename provided (main.cleanupFilename).";
-    console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
-    return;
-  }
-
-  try {
-    const resolutions = ["1080p", "720p", "480p", "360p"];
-    const videoFilename = filename.split("/")[filename.split("/").length - 1];
-    let newFilename = videoFilename.toLowerCase();
-
-    // if filename includes resolution, remove it
-    for (let i = 0; i < resolutions.length; i++) {
-      if (newFilename.includes(resolutions[i])) {
-        newFilename = newFilename.split(resolutions[i])[0];
-      }
-    }
-
-    // if showname is included in filename, remove it
-    if (newFilename.includes(showMetadata.title.toLowerCase())) {
-      newFilename = newFilename.split(showMetadata.title.toLowerCase())[1];
-    }
-
-    // if bluray or brrip is included in filename, remove it
-    if (newFilename.includes("bluray")) {
-      newFilename = newFilename.split("bluray")[0];
-    }
-    if (newFilename.includes("brrip")) {
-      newFilename = newFilename.split("brrip")[0];
-    }
-
-    // if there are any periods, turn them into spaces
-    newFilename = newFilename.replace(/\./g, " ");
-
-    // add a dash after episode number
-    newFilename = newFilename.replace(/e(\d+)/i, "e$1 -");
-
-    // console.log("newFilename (after rename): ", newFilename);
-
-    const successMessage = "Successfully cleaned up filename (main.cleanupFilename).";
-    console.log(successMessage);
-    logfileModule.writeToLogfile(successMessage);
-
-    return newFilename;
-  } catch(error) {
-    const errorMessage = "Error cleaning up filename (main.cleanupFilename).";
-    console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
-    return;
-  }
 };
 
 // Input: video file meta data
@@ -189,12 +117,12 @@ const turnMetadataIntoObjects = async (metadata) => {
         isVideofile = true;
         videoFileExtension = "." + fileType;
       }
-      // cleanup filename
-      const cleanFilename = await cleanupFilename(metadata[i].filename);
+
+      const cleanFilename = await cleanupFilename(metadata[i].filename, showMetadata);
 
       const videoMetadataObject = {
-          filepath: cleanDataModule.cleanupData(metadata[i].filename),
-          filename: cleanDataModule.cleanupData(cleanFilename),
+          filepath: metadata[i].filename,
+          filename: cleanFilename,
           show: "",
           season: "",
           episode: "",
@@ -210,14 +138,14 @@ const turnMetadataIntoObjects = async (metadata) => {
 
     const successMessage = "Successfully parsed metadata into objects (main.turnMetadataIntoObjects).";
     console.log(successMessage);
-    logfileModule.writeToLogfile(successMessage);
+    writeToLogfile(successMessage);
 
     return videoMetadataObjects;
     
   } catch (error) {
     const errorMessage = `Error parsing metadata into objects (main.turnMetadataIntoObjects).\nError: ${error}`;
     console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
+    writeToLogfile(errorMessage);
   }
 };
 
@@ -229,7 +157,7 @@ const readShowMetadata = () => {
       if (err) {
         const errorMessage = `Error reading file (main.main (read showMetaData)).\nError: ${err}`;
         console.error(errorMessage);
-        logfileModule.writeToLogfile(errorMessage);
+        writeToLogfile(errorMessage);
         reject(err);
         return;
       }
@@ -240,12 +168,12 @@ const readShowMetadata = () => {
 
         const successMessage = "Successfully read-in show metadata (main.main).";
         console.log(successMessage);
-        logfileModule.writeToLogfile(successMessage);
+        writeToLogfile(successMessage);
         resolve();
       } catch (error) {
         const errorMessage = `Error parsing showMetadata JSON (main.main).\nError: ${error}`;
         console.error(errorMessage);
-        logfileModule.writeToLogfile(errorMessage);
+        writeToLogfile(errorMessage);
         reject(error);
       }
     });
@@ -259,7 +187,7 @@ const readEpisodeMetadata = () => {
       if (err) {
         const errorMessage = `Error reading file (main.main).\nError: ${err}`;
         console.error(errorMessage);
-        logfileModule.writeToLogfile(errorMessage);
+        writeToLogfile(errorMessage);
         reject(err);
         return;
       }
@@ -270,12 +198,12 @@ const readEpisodeMetadata = () => {
 
         const successMessage = "Successfully read-in seasons metadata (main.main).";
         console.log(successMessage);
-        logfileModule.writeToLogfile(successMessage);
+        writeToLogfile(successMessage);
         resolve();
       } catch (error) {
         const errorMessage = `Error parsing episodeMetadata JSON (main.main).\nError: ${error}`;
         console.error(errorMessage);
-        logfileModule.writeToLogfile(errorMessage);
+        writeToLogfile(errorMessage);
         reject(error);
       }
     });
@@ -289,22 +217,23 @@ const getSeasonDirectories = (fileDirectory) => {
       if (err) {
         const errorMessage = `Error reading directory (main.main).\nError: ${err}`;
         console.error(errorMessage);
-        logfileModule.writeToLogfile(errorMessage);
+        writeToLogfile(errorMessage);
         reject(err);
         return;
       } else {
         const seasonDirectories = [];
 
         items.forEach((folder) => {
-          const fullPath = path.join(fileDirectory, folder);
+          let fullPath = path.join(fileDirectory, folder);
           if (fs.existsSync(fullPath) && fs.statSync(fullPath).isDirectory()) {
             seasonDirectories.push(fullPath + "/");
           }
         });
+        // console.log("seasonDirectories: ", seasonDirectories);
 
         const successMessage = `Successfully read-in season directories (main.main).`;
         console.log(successMessage);
-        logfileModule.writeToLogfile(successMessage);
+        writeToLogfile(successMessage);
 
         resolve(seasonDirectories);
       }
@@ -319,14 +248,15 @@ main = async () => {
       "imdbId": "tt0111161",
       "numberOfSeasons": 5,
       "fileDirectory": "D:\\TV Shows\\Person of Interest (2011)\\season1",
-      "ffmpegDirectory": "C:\\ffmpeg\\bin"
+      "ffmpegDirectory": "C:\\ffmpeg\\bin",
+      "type": "anime"
     }
   */
 
   if (!userInput) {
     const errorMessage = "Invalid user input (main.main).";
     console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
+    writeToLogfile(errorMessage);
     return;
   }
 
@@ -339,7 +269,7 @@ main = async () => {
   if (seasonDirectories.length < 1) {
     const errorMessage = "No seasons found (main.main).";
     console.error(errorMessage);
-    logfileModule.writeToLogfile(errorMessage);
+    writeToLogfile(errorMessage);
     return;
   }
   // console.log("seasonDirectories: ", seasonDirectories);
@@ -367,7 +297,7 @@ main = async () => {
             if (err) {
               const errorMessage = `Error getting metadata (main.waitAndGetMetadata).\nError: ${err}`;
               console.error(errorMessage);
-              logfileModule.writeToLogfile(errorMessage);
+              writeToLogfile(errorMessage);
               reject(err);
               return;
             }
@@ -378,13 +308,13 @@ main = async () => {
 
         const successMessage = "Successfully got metadata from video files (main.waitAndGetMetadata).";
         console.log(successMessage);
-        logfileModule.writeToLogfile(successMessage);
+        writeToLogfile(successMessage);
 
         return videofileMetadataObjects;
       } catch (error) {
         const errorMessage = `Catch error getting metadata from video files (main.waitAndGetMetadata).\nError: ${error}`;
         console.error(errorMessage);
-        logfileModule.writeToLogfile(errorMessage);
+        writeToLogfile(errorMessage);
       }
     };
       
@@ -400,7 +330,8 @@ main = async () => {
         for (const episode of season) {
           // console.log("videofileMetadataObject: ", videofileMetadataObject);
           // clean before comparing
-          episode.title = cleanDataModule.cleanupData(episode.title);
+          episode.title = episode.title;
+          // console.log("videofileMetadataObject.filename: ", videofileMetadataObject.filename);
           const episodeGuess = videofileMetadataObject.filename.match(/e\d+/gi);
           // console.log("episodeGuess: ", episodeGuess);
           const episodeGuessNumber = parseInt(episodeGuess[0].split("e")[1]);
@@ -420,12 +351,12 @@ main = async () => {
             // episode number
             videofileMetadataObject.episode = episode.episodeNumber.toString();
             // episode description
-            videofileMetadataObject.description = cleanDataModule.cleanupData(episode.description);
+            videofileMetadataObject.description = cleanupData(episode.description);
             // episode date
             videofileMetadataObject.date = episode.airDate;
             // episode filename
             videofileMetadataObject.newFilename = episode.episodeNumber < 10 ? seasonDirectoryCleaned + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + videoFileExtension : seasonDirectoryCleaned + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + videoFileExtension;
-            
+            // videofileMetadataObject.newFilename = cleanupData(videofileMetadataObject.newFilename);
             episodeObjectsFinal.push(videofileMetadataObject);
 
           } else if (episodeGuessNumber === episode.episodeNumber && seasonGuessNumber === episode.seasonNumber) {
@@ -436,19 +367,20 @@ main = async () => {
             // season
             videofileMetadataObject.season = episode.seasonNumber.toString();
             // episode title
-            videofileMetadataObject.title = episode.title;
+            videofileMetadataObject.title = cleanupData(episode.title);
             // episode alternate title
-            videofileMetadataObject.alternateTitle = cleanDataModule.cleanupData(videofileMetadataObject.filename.split("-")[1].trim());
+            videofileMetadataObject.alternateTitle = cleanupData(videofileMetadataObject.filename.split("-")[1].trim());
             // remove excess characters from alternate title
             videofileMetadataObject.alternateTitle = videofileMetadataObject.alternateTitle.includes("[") ? videofileMetadataObject.alternateTitle.split("[")[0].trim() : videofileMetadataObject.alternateTitle;
             // episode description
-            videofileMetadataObject.description = cleanDataModule.cleanupData(episode.description);
+            videofileMetadataObject.description = cleanupData(episode.description);
             // episode date
             videofileMetadataObject.date = episode.airDate;
             // new filename
-            const newFilename = episode.episodeNumber < 10 ? seasonDirectoryCleaned + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title : seasonDirectoryCleaned + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title;
+            let newFilename = episode.episodeNumber < 10 ? seasonDirectoryCleaned + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title : seasonDirectoryCleaned + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title;
+            // newFilename = cleanupData(newFilename);
             // add file extension depending on whether or not there is an alternate title
-            if (videofileMetadataObject.alternateTitle.length > 0) {
+            if (videofileMetadataObject.alternateTitle.length > 0 && userInput.type === "anime") {
               const alternateTitleWithoutExtension = videofileMetadataObject.alternateTitle.split(".")[0];
               videofileMetadataObject.newFilename = newFilename + ` (${alternateTitleWithoutExtension})` + videoFileExtension;
             } else {
@@ -460,7 +392,7 @@ main = async () => {
           } else {
             const errorMessage = `Error setting videofileMetadataObjects (main.main line 392) ${videofileMetadataObject.filename}.`;
             // console.error(errorMessage);
-            // logfileModule.writeToLogfile(errorMessage);
+            // writeToLogfile(errorMessage);
             // todo - fix this -- every loop iteration hits this. maybe do try-catch instead?
           } // end of if
       } // end of for loop
@@ -469,17 +401,12 @@ main = async () => {
 } // end of for loop - season directories
 
   // write episodes to file
-  outputDataModule.writeOutputData(videofileOutputFile, episodeObjectsFinal);
+  writeOutputData(videofileOutputFile, episodeObjectsFinal);
 
   // display success message in log file
   const successMessage = `Successfully completed main.js (main.main).`;
   console.log(successMessage);
-  logfileModule.writeToLogfile(successMessage);
+  writeToLogfile(successMessage);
 };
 
 main();
-
-// module.exports = main();
-
-// to-do
-// -if seasons are in the same folder / if season numbers are mixed in the same folder

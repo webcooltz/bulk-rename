@@ -1,7 +1,8 @@
 todo
 -modularize functions
 -handle puncuation in file names
--season folder iteration
+-if anime, use alt title - otherwise, use title
+-remove show title from season folder
 
 error handling
 -replace & and "and"
@@ -35,3 +36,6 @@ to-do debug
 
 done
 -added filename and filename cleanup
+-goes through each season automatically
+-logfile
+-output JS file
