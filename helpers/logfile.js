@@ -4,9 +4,20 @@ const fs = require('fs');
 const logfilePath = "./results/logfile.txt";
 
 // Main function
-const writeToLogfile = (dataToBeLogged) => {
+const writeToLogfile = (successOrError, dataToBeLogged) => {
   // Adds timestamp
   // dataToBeLogged = dataToBeLogged + " " + new Date().toLocaleString();
+
+  if (successOrError.toLowerCase() === "success") {
+    successOrError = "SUCCESS";
+    console.log(`${successOrError} - ${dataToBeLogged}`)
+  } else if (successOrError.toLowerCase() === "error") {
+    successOrError = "ERROR";
+    console.error(`${successOrError} - ${dataToBeLogged}`)
+  } else {
+    successOrError = "UNKNOWN";
+    console.log(`${successOrError} - ${dataToBeLogged}`)
+  }
 
   fs.readFile(logfilePath, 'utf8', (err, data) => {
     if (err) {
