@@ -12,7 +12,7 @@ const { writeToLogfile } = require('../helpers/logfile');
 // ---filepaths---
 const showMetaDataFile = './results/showOutput.json';
 // ---user input---
-const userInput = JSON.parse(fs.readFileSync('./input.json', 'utf8'));
+const userInput = JSON.parse(fs.readFileSync('./input/input.json', 'utf8'));
 const imdbId = userInput.imdbId;
 const numberOfSeasons = userInput.numberOfSeasons;
 // ---variables---

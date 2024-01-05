@@ -1,446 +1,156 @@
 [
-  [
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 1,
-      "title": "Episode I - The Beginning",
-      "description": "When the ancient evil Aku returns to terrorize Japan, the emperors young son is send to distant lands to train in the ways of the warrior. Only then can he wield his fathers magical sword to stop Aku from taking over the world.",
-      "airDate": "8-10-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 2,
-      "title": "Episode II - The Samurai Called Jack",
-      "description": "Aku has transported his mortal samurai enemy into the far future in which Aku rules all. Now the warrior has to find a way back while adjusting to his new surroundings. He also takes a new name: Jack.",
-      "airDate": "8-10-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 3,
-      "title": "Episode III - The First Fight",
-      "description": "Akus destroyer beetle drones are closing in on Samurai Jack and the pack of archaeologist dogs, therefore Jack decides to use anything and everything at hand to defend themselves.",
-      "airDate": "8-10-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 4,
-      "title": "Episode IV - Jack, the Woolies and the Chritchellites",
-      "description": "While hunting for food, Jack helps the tiny Chritchellites recapture an escaped Woolie. But once they invite him back to their village for dinner, Jack begins to suspect an imbalance in the pecking order.",
-      "airDate": "8-13-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 5,
-      "title": "Episode V - Jack in Space",
-      "description": "Samurai Jack hooks up with a group of scientists who are secretly building a rocket to escape from Akus service. When they hear about Jacks predicament, the scientist come up with a way to send him back in time.",
-      "airDate": "8-27-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 6,
-      "title": "Episode VI - Jack and the Warrior Woman",
-      "description": "Jack is aided by an equally skilled warrior woman with a dark secret to search for a crystal with magical properties.",
-      "airDate": "11-19-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 7,
-      "title": "Episode VII - Jack and the Three Blind Archers",
-      "description": "Jack learns about a wishing well of King Osric on top of a tower protected by three unbeatable archers and vows to make his way past them.",
-      "airDate": "8-20-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 8,
-      "title": "Episode VIII - Jack vs. Mad Jack",
-      "description": "Despite a reward of Two Googooplex on his head, no bounty hunter has been able to defeat Samurai Jack, therefore Aku creates an evenly matched mirror image of Jack to battle him.",
-      "airDate": "10-15-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 9,
-      "title": "Episode IX - Jack Under the Sea",
-      "description": "Samurai Jack ventures into the deep end of the ocean after hearing of a time portal can be found in Oceanis, the sunken underwater city of the Triceraquin.",
-      "airDate": "9-3-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 10,
-      "title": "Episode X - Jack and the Lava Monster",
-      "description": "Having made his way through a cave filled with booby-traps, Samurai Jack faces a giant lava monster that used to be a viking warrior in days long past.",
-      "airDate": "11-5-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 11,
-      "title": "Episode XI - Jack and the Scotsman",
-      "description": "Samurai Jack is crossing a seemingly endless rope bridge when he meets another wanted man coming from the other side: the Scotsman. After fighting each other to a stalemate, they are forced to team-up when bounty hunters arrive on the scene and shackle Jack and the Scotsman to each other.",
-      "airDate": "10-29-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 12,
-      "title": "Episode XII - Jack and the Gangsters",
-      "description": "Samurai Jack gets an offer to join a Thirties style gang of mobsters at the Blue Monkey club and decides to take them up on it so he can get close to Aku. The gang plans to steal something Aku has been unable to obtain: the legendary Neptune Jewel, guarded by Earth, Wind and Fire.",
-      "airDate": "11-26-2001"
-    },
-    {
-      "seasonNumber": 1,
-      "episodeNumber": 13,
-      "title": "Episode XIII - Akus Fairy Tales",
-      "description": "Samurai Jack has become a popular folk hero amongst little children, so Aku decides to spread his own kind of fairy tales that put Jack in a bad light.",
-      "airDate": "12-3-2001"
-    }
-  ],
-  [
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 1,
-      "title": "Episode XIV - Jack Learns to Jump Good",
-      "description": "After reaching a time portal only to have Aku move it beyond reach at the last moment, Samurai Jack meets a wild man with extraordinary jumping skills. He offers to learn tribe of monkeys that raised the wild man how to defend themselves if they will in turn teach him how to jump good.",
-      "airDate": "3-1-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 2,
-      "title": "Episode XV - Jack Tales",
-      "description": "Three scary stories. Jack enters the land of the magic worm to ask it to grant him a magic wish. At night, Jack meets a family of cannibal robots who hunger for his magic sword. Jack tries to rescue a wish giving fairy from captivity by a greedy gargoyle.",
-      "airDate": "3-8-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 3,
-      "title": "Episode XVI - Jack and the Smackback",
-      "description": "Samurai Jack is ambushed while hes sleeping and taken to the Dome of Doom. There he is given the name Two Sandles and has to fight to the death for the spectators amusement.",
-      "airDate": "3-15-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 4,
-      "title": "Episode XVII - Jack and the Scotsman II",
-      "description": "The Scotsman asks Samurai Jack for help him rescue his wife from the Keltic Master o the Hunt who plans to devour her in the Castle of Bone.",
-      "airDate": "3-22-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 5,
-      "title": "Episode XVIII - Jack and the Ultra-Robots",
-      "description": "Jack follows a path of destruction that leads to a group of Adamantium Ultra-Robots built especially to defeat him.",
-      "airDate": "3-29-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 6,
-      "title": "Episode XIX - Jack Remembers the Past",
-      "description": "On his journey, Jack happens upon his the place he once called home and begins to recall his childhood there.",
-      "airDate": "4-5-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 7,
-      "title": "Episode XX - Jack and the Monks",
-      "description": "Having been deprived of yet another gateway to the past and after almost losing his hat, Samurai Jack is unsure if he can still go on. Then he meets three mountain monks and joins them on their quest to climb the mountain of Fathoom.",
-      "airDate": "4-12-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 8,
-      "title": "Episode XXI - Jack and the Dragon",
-      "description": "Jack follows a trail of stench in an effort to rid the land of this sickening smell. It leads him to a spire where a dragon suffers from a stomach ache.",
-      "airDate": "9-6-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 9,
-      "title": "Episode XXII - Jack vs. the Five Hunters",
-      "description": "Aku hires the best hunters in the universe, the Imakandi, to track down Samurai Jack.",
-      "airDate": "9-13-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 10,
-      "title": "Episode XXIII - Jack vs. Demongo, the Soul Collector",
-      "description": "Aku unleashes upon Samurai Jack Demongo, who commands the essence of many great warriors who once threatened Aku.",
-      "airDate": "9-20-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 11,
-      "title": "Episode XXIV - Jack Is Naked",
-      "description": "While bathing, Jacks sword, shoes and clothing are stolen by what looks like a white rabbit. When Jack follows the culprit down a hole, he enters a strange underground realm like none he has ever seen.",
-      "airDate": "9-27-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 12,
-      "title": "Episode XXV - Jack and the Spartans",
-      "description": "Samurai Jack joins 300 Spartans in their age old war against a mad mechanical beast.",
-      "airDate": "10-4-2002"
-    },
-    {
-      "seasonNumber": 2,
-      "episodeNumber": 13,
-      "title": "Episode XXVI - Jacks Shoes",
-      "description": "Samurai Jacks sandals are run over and destroyed by three robot bikers. Unable to defeat them without protection on his feet, Jack tries out all the latest footwear from the world famous Foot Chalet. But none are adequate replacements.",
-      "airDate": "10-11-2002"
-    }
-  ],
-  [
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 1,
-      "title": "Episode XXVII - Chicken Jack",
-      "description": "Samurai Jack accidentally bumps into an easily irritated wizard, who turns him into a chicken. Before he can catch up with the wicked sorcerer, Chicken Jack is captured and forced to fight for his life in Creature Combat Club.",
-      "airDate": "10-18-2002"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 2,
-      "title": "Episode XXVIII - Jack and the Rave",
-      "description": "Samurai Jack enters a town where all the children have fallen under the spell of Akus rave music and vows to release every one of them from Akus evil grasp.",
-      "airDate": "11-1-2002"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 3,
-      "title": "Episode XXIX - Couple on a Train",
-      "description": "Samurai Jack boards a train in the new old West and finds himself cornered by bounty hunter Ezekiel Clench as well as a beautiful filly named Josephine.",
-      "airDate": "11-8-2002"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 4,
-      "title": "Episode XXX - Jack and the Zombies",
-      "description": "Aku leads Samurai Jack towards a graveyard where the undead do the evil shape-shifters bidding.",
-      "airDate": "10-25-2002"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 5,
-      "title": "Episode XXXI - Jack and the Scarab",
-      "description": "Aku releases the minions of Set who were trapped in ancient Egypt and orders them to destroy Samurai Jack. Luckily Jack knows his way around the pyramids from when he was a boy.",
-      "airDate": "11-15-2002"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 6,
-      "title": "Episode XXXII - Jack and the Traveling Creatures",
-      "description": "Several creatures help Samurai Jack to travel to an island where a time passage is located. However it is protected by an unbeatable warrior. Only the one to defeat this guardian may enter the passage.",
-      "airDate": "4-26-2003"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 7,
-      "title": "Episode XXXIII - Jack and the Annoying Creature",
-      "description": "Samurai Jack is unable to get rid of a large furry animal that insists on following him.",
-      "airDate": "5-3-2003"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 8,
-      "title": "Episode XXXIV - Jack and the Swamp Wizard",
-      "description": "An old hermit who lives in a swamp leads Samurai Jack on a quest to unite the three gems of the Titans: the Eye of Chronos and the fists of Might and Ability.",
-      "airDate": "5-10-2003"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 9,
-      "title": "Episode XXXV - Jack and the Haunted House",
-      "description": "Samurai Jack follows a little girl to return the doll she lost in the woods. She leads him into a haunted house filled with memories of the previous inhabitants.",
-      "airDate": "5-17-2003"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 10,
-      "title": "Episode XXXVI - Jack, the Monks and the Ancient Masters Son",
-      "description": "As Samurai Jack fights two Shaolin monks they are surprised to recognize each others fighting styles. They take him to their secret hidden temple where Grandmaster Tan Zang points Jack towards a time portal. Unfortunately the way to the portal is heavily defended.",
-      "airDate": "5-31-2003"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 11,
-      "title": "Episode XXXVII - The Birth of Evil: Part I",
-      "description": "The origin of Aku and how he came to terrorize the Earth from the days of the dinosaurs onwards.",
-      "airDate": "8-16-2003"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 12,
-      "title": "Episode XXXVIII - The Birth of Evil: Part II",
-      "description": "The young emperor is helpless against the evil of Aku. But the ancient gods Odin, Ra and Rama combine forces to forge a sword for him representing all that is good: the only weapon that can hurt Aku.",
-      "airDate": "8-16-2003"
-    },
-    {
-      "seasonNumber": 3,
-      "episodeNumber": 13,
-      "title": "Episode XXXIX - Jack and the Labyrinth",
-      "description": "Samurai Jack has been given a map of a booby trap ridden labyrinth that holds a powerful diamond that can return him to his own time. But he gets some competition from an equally accomplished master thief.",
-      "airDate": "8-26-2003"
-    }
-  ],
-  [
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 1,
-      "title": "Episode XL - Jack vs. the Ninja",
-      "description": "A deadly Ninja warrior has honed his skills to fight Samurai Jack. But just as he is about to ambush him, Jack is called away to rescue a village from attacking crab monsters.",
-      "airDate": "6-14-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 2,
-      "title": "Episode XLI - Robo-Samurai vs. Mondo-bot",
-      "description": "Robots that dwell in the sewers of Andromeda ask Jack to enter a giant Robot Samurai and battle Mondo Bot who terrorizes the city.",
-      "airDate": "6-21-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 3,
-      "title": "Episode XLII - Samurai vs. Samurai",
-      "description": "Samurai Jack is challenged to a duel by Da Samurai, who despite all his big mouth is not worthy to face Jacks blade.",
-      "airDate": "6-28-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 4,
-      "title": "Episode XLIII - The Aku Infection",
-      "description": "During battle, Samurai Jack accidentally swallows a piece of darkness coughed up by a sickly Aku. When Akus blackness begins to take over the Samurai, he seeks help from Master Ning.",
-      "airDate": "11-5-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 5,
-      "title": "Episode XLIV - The Princess and the Bounty Hunters",
-      "description": "Bounty Hunters Jo Junga the Aborigional, I & Am the infamous twins, The Gentleman & Boris the Russian have all tracked down Samurai Jack up North. Princess Mira of the Andaluvians convinces them to join forces and attack the Samurai together.",
-      "airDate": "11-12-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 6,
-      "title": "Episode XLV - The Scotsman Saves Jack: Part I",
-      "description": "The Scotsman recognizes Samurai Jack working as a water boy on a boat and calling himself Brent Worthington. He then decides to find out why and where Jack got his memory erased by retracing his steps.",
-      "airDate": "8-23-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 7,
-      "title": "Episode XLVI - The Scotsman Saves Jack: Part II",
-      "description": "The Scotsman has saved Jack from living out the rest of his life as a water boy. Now they have to settle which one is more worthy to man the oars on the way back.",
-      "airDate": "8-23-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 8,
-      "title": "Episode XLVII - Jack and the Flying Prince and Princess",
-      "description": "Princess Verbina and Prince Astor of the Lebidoptirans are on a quest to find their star navy to save their home world Chrystalis. But they are forced to crash land on Akus Earth and are immediately captured by his minions. Luckily Samurai Jack is witness to the events and follows them.",
-      "airDate": "11-19-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 9,
-      "title": "Episode XLVIII - Jack vs. Aku",
-      "description": "After all else fails, Aku challenges Samurai Jack to a duel. To make sure of a fair fight, Jack is not allowed to use his sword while Aku must fight in human form, without minions and magic tricks.",
-      "airDate": "11-24-2003"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 10,
-      "title": "Episode XLIX - The Four Seasons of Death",
-      "description": "As Jack goes through fall, winter, spring and summer, he must battle the perils that each season brings.",
-      "airDate": "2-14-2004"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 11,
-      "title": "Episode L - Tale of X-49",
-      "description": "An experimental X-series robot was given emotions as an experiment and therefore was the only one of its kind to survive intact. It retired after taking a shine to sweet thing Lulu, but Aku forces it to take on one more job: hunt down Samurai Jack.",
-      "airDate": "9-25-2004"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 12,
-      "title": "Episode LI - Young Jack in Africa",
-      "description": "A tale told in flashback concerning the childhood training of Samurai Jack in Africa, but, even as part the Nubian tribe, the young prince is not safe from Akus minions.",
-      "airDate": "9-25-2004"
-    },
-    {
-      "seasonNumber": 4,
-      "episodeNumber": 13,
-      "title": "Episode LII - Jack and the Baby",
-      "description": "Samurai Jack saves a baby boy from three hungry Ogres and looks after him while searching for the childs parents.",
-      "airDate": "9-25-2004"
-    }
-  ],
-  [
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 1,
-      "title": "Episode XCII",
-      "description": "A samurai warrior fights against the evil entity that took him away from his home world.",
-      "airDate": "3-11-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 2,
-      "title": "Episode XCIII",
-      "description": "Out of weapons and pursued relentlessly by the masterful seven Daughters of Aku, Jack faces what may be his final confrontation.",
-      "airDate": "3-18-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 3,
-      "title": "Episode XCIV",
-      "description": "A gravely injured Samurai Jack chooses to create his own fate by going up against the deadliest foes hes ever faced, Assassins from the Cult of Aku.",
-      "airDate": "3-25-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 4,
-      "title": "Episode XCV",
-      "description": "Samurai Jack partners with a deadly assassin in order to escape a gargantuan creature that has swallowed them whole.",
-      "airDate": "4-8-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 5,
-      "title": "Episode XCVI",
-      "description": "Samurai Jack fights to save a village from a horrible fate.",
-      "airDate": "4-15-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 6,
-      "title": "Episode XCVII",
-      "description": "After Jack left with the mysterious figure Ashi goes on a quest to find him.",
-      "airDate": "4-22-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 7,
-      "title": "Episode XCVIII",
-      "description": "Jack looks for his sword and Ashi fends off attackers, including someone from her past.",
-      "airDate": "4-29-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 8,
-      "title": "Episode XCIX",
-      "description": "Samurai Jack and Ashi find themselves hunted by one of the Galaxys deadliest creatures.",
-      "airDate": "5-6-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 9,
-      "title": "Episode C",
-      "description": "Samurai Jacks worst fear is realized when he faces off against Aku; the demon makes a shocking discovery about Ashi that puts her in grave danger.",
-      "airDate": "5-13-2017"
-    },
-    {
-      "seasonNumber": 5,
-      "episodeNumber": 10,
-      "title": "Episode CI",
-      "description": "The fate of the entire universe hangs in the balance as Samurai Jack faces Aku.",
-      "airDate": "5-20-2017"
-    }
-  ]
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "1",
+    "title": "Redemption: Part 1",
+    "description": "Master Bra'tac arrives with bad news: Teal'c's wife is deathly ill, and Teal'c leaves to be with her. Shortly thereafter, the gate is opened but nothing comes through. Then Carter discovers a very low power signal that is slowly building an overload powerful enough to destroy the Earth.",
+    "airDate": "06-07-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "2",
+    "title": "Redemption: Part 2",
+    "description": "Anubis' weapon continues to threaten Earth. Various plans are tried until Jonas Quinn suggests something simple that just might work. Meanwhile, Master Bra'tac has discovered the planet from which Anubis is launching the attack. He, Teal'c and Rya'c journey there to put a stop to it.",
+    "airDate": "06-14-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "3",
+    "title": "Descent",
+    "description": "When SGC detects an Goa'uld ship in orbit, SG-1 is dispatched with Jacob Carter to investigate. They find the ship to be abandoned with no discernible life signs and Sam determines it to be the same used to kidnap Thor. Once on board the Goa'uld vessel, they find that the crew had initiated a self destruct sequence. O'Neill would very much like to salvage the ship despite Jacob's warnings that it could be a Trojan horse. An examination of the computer core reveals that Thor may have been able to introduce a virus but Jacob was right: it's an ambush and the ship soon plunges in the ocean. SGC and the Navy mount a rescue operation.",
+    "airDate": "06-21-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "4",
+    "title": "Frozen",
+    "description": "The SG-1 team travels to the Antarctic science station when the scientists there discover an ancient body in the ice. The age of the ice core samples would indicate that the body predates mankind. As they thaw the body, it comes to life. It's a young woman who they call Ayiana. As Ayiana gains strength, those around her all fall ill having contracted an unknown virus which they believe Ayiana carried. The new arrival also shows healing powers and can seemingly cure any illness just by touch. As she does so however she weakens to the point of death. In the end, only Col. O'Neill remains untreated and SGC seeks the help of the Tok'ra who offer an unexpected solution.",
+    "airDate": "06-28-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "5",
+    "title": "Nightwalkers",
+    "description": "After Sam receives an emergency call from geneticist Dr. Richard Flemming, the SGC learns that he has been working for Immunotech, a company owned by Adrian Conrad, who implanted himself with a Goa'uld symbiote in order to cure himself. Fleming has now gone missing and General Hammond orders Sam, Jonas and Teal'c to investigate. They head to Oregon where Fleming lived and worked and learn from the local Sheriff that Fleming isn't the first Immunotech worker to disappear. The locals are acting strangely and seem to suffer from memory lapses. What they eventually find is a town full of Goa'uld and NID seemingly aware of everything that is going on.",
+    "airDate": "07-12-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "6",
+    "title": "Abyss",
+    "description": "O'Neill's symbiont Kanan drags him to a planet ruled by the Goa'uld Ba'al, where Kanan was undercover. Ba'al captures and tortures O'Neil, whose only hope may lie with - Daniel Jackson?!?",
+    "airDate": "07-19-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "7",
+    "title": "Shadow Play",
+    "description": "Stargate Command is approached by representatives of Jonas Quinn's home planet seeking military hardware. Their world is divided into three territories and there is a long history of war among them. Jonas' country fears that the other two territories are about to sign a non-aggression pact thus making them vulnerable to attack. In return for arms, they are offering an abundance of Naquadria. SGC isn't about to get involved in what amounts to a civil war but there's another possible outcome when Jonas' one-time professor, Doctor Kieran, tells them of an underground movement ready to overthrow the government and seek out a lasting peace. SG-1 travels to Jonas Quinn's home planet to obtain information on the situation there but not all is as it seems.",
+    "airDate": "07-26-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "8",
+    "title": "The Other Guys",
+    "description": "SG-1 is providing security for three scientists who are conducting research on a far-off planet. Goa'uld warlord Khonsu arranges to capture the SG-1 team and O'Neill tells Jay Felger, nominally the group's leader, to use the gate and head back to SGC. Felger is quite enamored with SG-1, admiring their exploits and daring-do. Rather than follow O'Neill's orders, Felger and another scientist, Simon Coombs, transport themselves up to the Goa'uld ship. What the scientists don't know is that SG-1's capture is a ruse to allow Khonsu, who is actually a Tok'ra, to pass on information. O'Neill is quite annoyed with the two scientists but their presence proves useful in the end.",
+    "airDate": "08-02-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "9",
+    "title": "Allegiance",
+    "description": "The Tok'ra are forced to evacuate their newly established base under attack from the Goa'uld. They flee to the SGC's Alpha site. Tensions rise between the allied factions, the Free Jaffa, Tau'ri, and Tok'ra. Jacob and Selmak feel the end of the Tok'ra is near and Sam finds a Naquadah generator has been sabotaged to function as a bomb. Jack suspects the recently arrived Tok'ra and attempts to weed out the traitor.",
+    "airDate": "08-09-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "10",
+    "title": "Cure",
+    "description": "SG-1 makes first contact with the planet Pangar. It seems to be a peaceful world that have recently discovered ancient Goa'uld ruins. They offer Earth their greatest discovery, a drug called Tretonin, which they say keeps them entirely disease free. In return, they want the gate addresses for specific worlds, most of which turn out to be Goa'uld home worlds. An investigation further reveals that the wonder drug is based on Goa'uld symbiotes and the Pangarans reveal another secret - they have a symbiote queen, found in the ancient ruins. When a Pangaran guard is seriously injured, SG-1 asks the Tok'ra for help. They soon realize that the queen is the founder of their race.",
+    "airDate": "08-16-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "11",
+    "title": "Prometheus",
+    "description": "A television news crew has unearthed information about an Air Force project called 'Prometheus'. They believe it to be a generator, but know it uses Trinium, an element not found on Earth. In order to keep them quiet the Air Force allows them to film the X-303, a spaceship based on Asgard technologies, otherwise known as Prometheus. Things turn south when the news crew arm themselves and hold the Prometheus, as well as Sam and Jonas, hostage.",
+    "airDate": "08-23-2002"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "12",
+    "title": "Unnatural Selection",
+    "description": "Having regained control of the X-303, the SG-1 team finds itself in an unknown part of space. Rescue comes in the form of the Asgard, specifically Thor, who needs their help. The Asgard home world has been overrun by the Replicators and they require SG-1's help as well as the relatively low tech X-303. The Asgard had set a trap for the Replicators and hoped to use a time dilation device that would give them the time they need to find a way to defeat them. The problem is that the Replicators have turned off the device and the Asgard want SG-1 to go in and activate it. They accept the assignment but to meet their objective, O'Neill will face a moral dilemma.",
+    "airDate": "01-10-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "13",
+    "title": "Sight Unseen",
+    "description": "SG-1 brings back an Ancient device, the purpose of which is unknown. When Jonas touched it the device activated. Upon reaching the SGC Jonas sees a large red insect fly into a wall, but no one else can confirm his sighting. The SGC is put into lockdown, but nothing is found. Jonas suspects that the Ancient device is causing his hallucinations, but to his dismay it is set to be shipped to Area 51. When Teal'c and Jack see the bugs as well, General Hammond decides to let Jonas take a crack at deciphering the Ancient text on the device.",
+    "airDate": "01-17-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "14",
+    "title": "Smoke & Mirrors",
+    "description": "Senator Kinsey is shot in the chest at a public event, killing him just before his party's presidential nomination. Jack is arrested for the murder, and General Hammond assigns the rest of SG-1 to uncover the truth.",
+    "airDate": "01-24-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "15",
+    "title": "Paradise Lost",
+    "description": "Former Colonel Harry Maybourne comes to Jack with a proposition: Jack gets him a presidential pardon and Harry shows them the advanced weapons cache that Simmons was trying to get to. They go through with the deal, but Harry attempts to double cross SG-1. He manages to get through the portal leading to the cache, but with one unexpected item, Jack. They find themselves in a field and Harry's zat is missing. Jack, however, still has his P-90. Harry reveals that they are not at a weapons cache, but rather a utopia. He meant to live out the rest of his life there and believes that there is no way back.",
+    "airDate": "01-31-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "16",
+    "title": "Metamorphosis",
+    "description": "The Russian SG team brings back a man who claims that his people are being experimented on by Nirrti. SG-1 investigate where the experiments are conducted, with the Russian SG team as backup. The inhabitants worship Nirrti as their god and savior from a terrible plague. SG-1 attempts to use the same device Nirrti used on the people to reverse the mutations, but the people turn on them at the arrival of Nirrti.",
+    "airDate": "02-07-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "17",
+    "title": "Disclosure",
+    "description": "The US and Russia reveal Stargate Command and its operations to representatives of the other permanent members of the United Nations Security Council.",
+    "airDate": "02-14-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "18",
+    "title": "Forsaken",
+    "description": "On a mission to observe a nebula, SG-1 finds a crashed ship and its three human survivors. They soon come under fire from an pair of aliens bearing the weapons of the survivors. They repel the attack, but one of the three is wounded. She is taken to the SGC for treatment while Sam attempts to repair the ship. Jack and Teal'c feel that there is more to the relationship between the aliens and these humans, and attempt to trap an alien.",
+    "airDate": "02-21-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "19",
+    "title": "The Changeling",
+    "description": "Teal'c is having strange nightmares featuring Apophis in which he is human and a firefighter with the rest of his team alongside him.",
+    "airDate": "02-28-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "20",
+    "title": "Memento",
+    "description": "On a shakedown cruise of the Prometheus, the ship's hyperdrive regulator becomes irreparably damaged. A nearby planet was listed on the cartouche of addresses found on Abydos and thus may have a stargate. After a short jump towards the planet, the Naquadria reactor overloads and must be jettisoned. After the reactor explodes above the planet causing damage, the fate of SG-1 and the crew of the Prometheus is in the hands of a once Goa'uld-controlled world that they're off to a rough start with.",
+    "airDate": "03-07-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "21",
+    "title": "Prophecy",
+    "description": "On a routine mission, SG-1 encounters a civilization desperate to be freed from the clutches of a Goa'uld. While on the planet, Jonas falls ill and is suspended from active duty. His mysterious illness is diagnosed as a brain tumor but gives him the unbelievable ability to glimpse the future, a future where O'Neill and SG-1 are walking into a trap!",
+    "airDate": "03-14-2003"
+  },
+  {
+    "seasonNumber": "6",
+    "episodeNumber": "22",
+    "title": "Full Circle",
+    "description": "Riding in the elevator in the SGC, O'Neill is visited by Daniel Jackson who needs his help. Daniel tells him that Anubis is headed for Abydos to search for something called the Eye of Ra, a relic that would make Anubis all-powerful. It's essential that SG-1 go to Abydos and secure the Eye but no has seen it - including Daniel - nor has anyone ever been able to find it. On the planet they see their old friend Skaara and with Daniel's help locate the Eye. They also find a tablet that speaks of a lost city of the ancients. When Anubis and his troops land in force there is little anyone can do to stop them. In the end it's left to Daniel to decide if he will try to stop Anubis - thereby breaking a cardinal rule of the Ancients.",
+    "airDate": "03-21-2003"
+  }
 ]

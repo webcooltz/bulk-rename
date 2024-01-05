@@ -1,8 +1,7 @@
 {
-  "title": "Samurai Jack",
-  "description": "A samurai, sent through time, fights to return home and save the world.",
-  "showStart": "2001",
-  "showEnd": "2017",
-  "avgEpisodeLength": "25m",
-  "ageRating": "PG"
+  "title": "Stargate SG-1",
+  "description": "A secret military team, SG-1, is formed to explore other planets through the recently discovered Stargates.",
+  "showStart": "1997",
+  "avgEpisodeLength": "44",
+  "ageRating": "TV-14"
 }

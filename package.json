@@ -7,6 +7,8 @@
     "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scrape": "node ./functions/scrapeImdb.js",
+    "convert": "node ./functions/scraping/convertScrapedEpisodes.js",
+    "convert2": "node ./functions/scraping/convertScrapedShow.js",
     "get": "node ./functions/getMetadata-alone.js",
     "change": "node ./functions/changeMetadata.js"
   },
@@ -16,7 +18,9 @@
     "axios": "^1.4.0",
     "cheerio": "^1.0.0-rc.12",
     "cli-progress": "^3.12.0",
+    "csv-parse": "^5.5.3",
     "fluent-ffmpeg": "^2.1.2",
+    "papaparse": "^5.4.1",
     "util": "^0.12.5"
   },
   "devDependencies": {

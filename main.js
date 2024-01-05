@@ -19,12 +19,12 @@ const { cleanupData, cleanupFilepath, cleanupFilename } = require('./helpers/dat
 const { writeToLogfile } = require('./helpers/logfile');
 const { writeOutputData } = require('./helpers/outputData');
 // ---JSON---
-const inputJSON = "./input.json";
+const inputJSON = "./input/input.json";
 const showMetadataJSON = "./results/showOutput.json";
 const episodeMetadataJSON = "./results/episodesOutput.json";
-const videofileOutputFile = "./results/videofileObjects.json";
+const videofileOutputFilepath = "./results/videofileObjects.json";
 // ---variables---
-const episodeObjectsFinal = [];
+const finalEpisodeObjects = [];
 
 let showMetadata;
 let seasonsMetadata;
@@ -357,7 +357,7 @@ main = async () => {
             // episode filename
             videofileMetadataObject.newFilename = episode.episodeNumber < 10 ? seasonDirectoryCleaned + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + videoFileExtension : seasonDirectoryCleaned + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + videoFileExtension;
             // videofileMetadataObject.newFilename = cleanupData(videofileMetadataObject.newFilename);
-            episodeObjectsFinal.push(videofileMetadataObject);
+            finalEpisodeObjects.push(videofileMetadataObject);
 
           } else if (episodeGuessNumber === episode.episodeNumber && seasonGuessNumber === episode.seasonNumber) {
             // show
@@ -388,7 +388,7 @@ main = async () => {
             }
             videofileMetadataObject.needsFixing = true;
 
-            episodeObjectsFinal.push(videofileMetadataObject);
+            finalEpisodeObjects.push(videofileMetadataObject);
           } else {
             const errorMessage = `Error setting videofileMetadataObjects (main.main line 392) ${videofileMetadataObject.filename}.`;
             // console.error(errorMessage);
@@ -401,7 +401,7 @@ main = async () => {
 } // end of for loop - season directories
 
   // write episodes to file
-  writeOutputData(videofileOutputFile, episodeObjectsFinal);
+  writeOutputData(videofileOutputFilepath, finalEpisodeObjects);
 
   // display success message in log file
   const successMessage = `Successfully completed main.js (main.main).`;
