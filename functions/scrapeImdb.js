@@ -1,6 +1,6 @@
-// ---Scrapes IMDB---
-// gets imdb data - show > season > episode
-
+/* scrapeImdb.js
+//  -gets imdb data - show > season > episode
+*/
 // ---dependencies---
 const cheerio = require('cheerio');
 const axios = require('axios');
@@ -8,12 +8,27 @@ const fs = require('fs');
 // ---helpers---
 const { cleanupData } = require('../helpers/dataCleaner');
 const { writeOutputData } = require('../helpers/outputData');
+const { writeToLogfile } = require('../helpers/logfile');
 // ---filepaths---
-const showMetaDataFile = "./results/showOutput.json";
+const showMetaDataFile = './results/showOutput.json';
 // ---user input---
 const userInput = JSON.parse(fs.readFileSync('./input.json', 'utf8'));
 const imdbId = userInput.imdbId;
 const numberOfSeasons = userInput.numberOfSeasons;
+// ---variables---
+const baseUrl = 'https://www.imdb.com/title/';
+const baseSeasonUrl = '/episodes?season=';
+// ---headers---
+const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36';
+const referer = 'https://www.google.com';
+let requestOptions = {
+    url: '',
+    method: 'GET',
+    headers: {
+        'User-Agent': userAgent,
+        'Referer': referer
+    }
+};
 // ---output---
 // let returnMessage;
 
@@ -25,30 +40,19 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             seasons.push(i);
         }
 
-        const baseUrl = "https://www.imdb.com/title/";
         const showScrapeUrl = baseUrl + imdbId;  // e.g. - https://www.imdb.com/title/tt0417299/
-        // const season1ScrapeUrl = baseUrl + showTitleId + "/episodes?season=1"; // e.g. - https://www.imdb.com/title/tt0417299/episodes?season=1
-        
-        const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36';
-        const referer = 'https://www.google.com';
-        const requestOptions = {
-            url: showScrapeUrl,
-            method: 'GET',
-            headers: {
-              'User-Agent': userAgent,
-              'Referer': referer
-            }
-        };
-        const baseSeasonUrl = "/episodes?season=";
+        requestOptions.url = showScrapeUrl;
+        // console.log("requestOptions: ", requestOptions);
 
-        // ---------- SHOW META DATA ----------
+        // ---------- SHOW METADATA ----------
         axios.get(requestOptions.url, requestOptions)
         .then(async response => {
             const $ = cheerio.load(response.data);
+            // console.log("response.data: ", response.data); // this is huge
 
-            const metaTitle = $("span.sc-afe43def-1").text();
+            const showTitle = $("span.sc-afe43def-1").text();
             const metaImageUrl = $("img.ipc-img").attr("src");
-            const scrapedDescription = $("span.sc-2eb29e65-2").text();
+            const showDescription = $("span.sc-2eb29e65-2").text();
             // const episodeAmount = $("div[data-testid='hero-subnav-bar-left-block']").text();
             // console.log("episodeAmount: ", episodeAmount);
             const yearsRan = $(".sc-afe43def-4 li:nth-of-type(2) a").text();
@@ -58,8 +62,8 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
             const ageRating = $(".sc-afe43def-4 li:nth-of-type(3) a").text();
 
             const showMetaData = {
-                title: cleanupData(metaTitle),
-                description: cleanupData(scrapedDescription),
+                title: cleanupData(showTitle),
+                description: cleanupData(showDescription),
                 // numberOfEpisodes: episodeAmount,
                 artWorkUrl: metaImageUrl,
                 showStart: showStart,
@@ -67,11 +71,10 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                 avgEpisodeLength: avgEpisodeLength,
                 ageRating: ageRating
             };
-
             // console.log("showMetaData: ", showMetaData);
 
-            // Write showMetaData to file
             writeOutputData(showMetaDataFile, showMetaData);
+            writeToLogfile("Success", `Scraped showMetaData and wrote to file: ${showMetaDataFile}`);
 
             const scrapeEpisodeData = async (season) => {
                 try {
@@ -90,29 +93,23 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                         const title = $(element).text();
                         episodeTitles.push(title);
                     });
-
                     // DESCRIPTION
                     $("div[itemprop='description']").each((index, element) => {
                         const description = $(element).text();
                         episodeDescriptions.push(description);
                     });
-
                     // EPISODE NUMBER
                     // case - episodeSeasonAndNumber: "S1, Ep1" -> ["S1", " Ep1"] -> "Ep1" -> ["1"] -> "1"
                     $(".hover-over-image div").each((index, element) => {
                         const number = $(element).text();
                         const episodeNumber = parseInt(number.split(",")[1].trim().split("Ep")[1]);
                         episodeNumbersList.push(episodeNumber);
-                    });
-
-                    // const episodeImageUrl = $("div.list_item:nth-of-type(n+2) img").attr("src");
-    
+                    });    
                     // DATE
                     // case - date: "21 Feb 2005"
                     $("div.airdate").each((index, element) => {
                         const date = $(element).text();
                         const cleanDate = date.trim();
-
                         // if month has a period, remove it (e.g. - "Feb." -> "Feb"
                         let episodeDateMonth;
                         if (cleanDate.split(" ")[1].includes(".")) {
@@ -120,14 +117,12 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                         } else {
                             episodeDateMonth = cleanDate.split(" ")[1];
                         } 
-
                         const episodeDateDay = cleanDate.split(" ")[0];
                         const episodeDateMonthNumber = new Date(Date.parse(episodeDateMonth + " 1, 2021")).getMonth() + 1;
                         const episodeDateYear = cleanDate.split(" ")[2];
                         const episodeDateFormatted = episodeDateMonthNumber.toString() + "-" + episodeDateDay + "-" + episodeDateYear;
                         episodeDateList.push(episodeDateFormatted);
                     });
-
                     // SEASON
                     // const seasonMetaData = {
                     //     seasonNumber: season,
@@ -138,7 +133,6 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                     //     episodeDates: episodeDateList,
                     //     episodes: []
                     // };
-
                     // EPISODES
                     const seasonEpisodes = episodeTitles.map((_, index) => {
                         return {
@@ -150,25 +144,25 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                         };
                     });
 
+                    writeToLogfile("Success", `Scraped ${seasonEpisodes.length} episodes for season ${season}.`);
                     return seasonEpisodes;
                 } catch (error) {
-                    throw new Error('Error occurred during scraping.');
+                    writeToLogfile("Error", `Error scraping episode data: \n-${error}`);
                 }
             };
 
             if (showMetaData) {
                 // returnMessage = "Show information scraped.";
-
                 const writeToFile = (episodeArray) => {
                     return new Promise((resolve, reject) => {
                         const episodesData = JSON.stringify(episodeArray, null, 2);
                         const episodesFile = "./results/episodesOutput.json";
-                        // fs.writeFileSync(episodesFile, episodesData);
                         fs.writeFileSync(episodesFile, episodesData, 'utf8', (error) => {
                             if (error) {
+                                writeToLogfile("Error", `Error writing show/episode data (writeToFile):\n-${error}.`);
                                 reject(error);
                             } else {
-                                console.log(`episodesData written to ${episodesFile}`);
+                                writeToLogfile("Success", `episodesData written to ${episodesFile}`);
                                 resolve();
                             }
                         });
@@ -182,29 +176,28 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                             // console.log("episodes: ", episodes);
                             return episodes;
                         });
-                  
                         const allEpisodes = await Promise.all(scrapingPromises);
-                  
                         await writeToFile(allEpisodes);
-                        console.log('allEpisodes written to file successfully.');
                     } catch (error) {
-                        console.error('Error occurred during scraping or writing to file:', error);
+                        const errorMessage = `Error occurred during scraping or writing to file.`;
+                        writeToLogfile("Error", `${errorMessage}:\n-${error}.`);
                     }
                 })();
             } else {
-                console.log("showmetadata invalid error");
+                writeToLogfile("Error", `showMetaData error not yet handled.`);
             }
         })
         .catch(error => {
-            console.error("showMetaData scrape error: ", error);
+            const errorMessage = `Error occurred during scraping.`;
+            writeToLogfile("Error", `${errorMessage}:\n-${error}.`);
         });
     } catch (error) {
-        console.error("general error (scrape): ", error);
+        const errorMessage = `Error scraping show/episode data.`;
+        writeToLogfile("Error", `${errorMessage}:\n-${error}.`);
     }
 }
 
 module.exports = getScrapedData(imdbId, numberOfSeasons);
 
 // todo
-// - add error handling
-// - test with new changes
+// - add error handling for when show doesn't exist
