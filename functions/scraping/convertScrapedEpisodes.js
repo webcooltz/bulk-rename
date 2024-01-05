@@ -9,13 +9,14 @@
 const fs = require('fs');
 const path = require('path');
 const Papa = require('papaparse'); // CSV parser
-const episodesOutputFilepath = "./results/episodesOutput.json";
+const scrapedEpisodesFilepath = "./results/scrapedEpisodes.json";
 // ---Input---
 const csvFilePath = path.join(__dirname, '../../input/episodes.csv'); // Path to the CSV file
 const csvEpisodeData = fs.readFileSync(csvFilePath, 'utf8'); // Read the CSV data from the file
 // ---helpers---
 const { writeToLogfile } = require('../../helpers/logfile');
 const { writeOutputData } = require('../../helpers/outputData');
+const { cleanupData } = require('../../helpers/dataCleaner');
 // ---Variables---
 var episodeDataObjects = []; // Array to hold the episode objects
 const finalEpisodeObjects = []; // Array to hold the final episode objects
@@ -75,8 +76,8 @@ const createEpisodeObjects = () => {
                 const episodeObject = {
                     seasonNumber: episodeSeasonNumbers[i],
                     episodeNumber: episodeEpisodeNumbers[i],
-                    title: episodeTitles[i],
-                    description: episodeDescriptions[i],
+                    title: cleanupData(episodeTitles[i]),
+                    description: cleanupData(episodeDescriptions[i]),
                     airDate: episodeAirdates[i],
                 };
                 finalEpisodeObjects.push(episodeObject);
@@ -178,7 +179,7 @@ const convertScrapedEpisodes = async (csvEpisodeData) => {
         console.log("finalEpisodeObjects: ", finalEpisodeObjects);
 
         if (finalEpisodeObjects) {
-            writeOutputData(episodesOutputFilepath, finalEpisodeObjects);
+            writeOutputData(scrapedEpisodesFilepath, [finalEpisodeObjects]);
         }
     } catch (err) {
         console.error(`Catch - Failed to convert CSV to JSON.\n-Location: /functions/convertScrapedEpisodes.js -> main()\n-Error message: ${err}`);

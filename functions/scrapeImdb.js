@@ -156,7 +156,7 @@ const getScrapedData = async (imdbId, numberOfSeasons) => {
                 const writeToFile = (episodeArray) => {
                     return new Promise((resolve, reject) => {
                         const episodesData = JSON.stringify(episodeArray, null, 2);
-                        const episodesFile = "./results/episodesOutput.json";
+                        const episodesFile = "./results/scrapedEpisodes.json";
                         fs.writeFileSync(episodesFile, episodesData, 'utf8', (error) => {
                             if (error) {
                                 writeToLogfile("Error", `Error writing show/episode data (writeToFile):\n-${error}.`);

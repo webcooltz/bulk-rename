@@ -43,19 +43,38 @@
 
 - Run `npm i` to download the packages
 
-### Scraping episode/show data
-
-- Run `npm run scrape` to scrape IMDB and get the show's info saved
-- Double-check the info is correct before proceeding
-
 #### Pre-scraped data
 
-- Run `npm run convert` to convert CSV to JSON
+- Scrape data using Chrome extension
+- Paste episode data into /input/episodes.csv
+- Paste show data into /input/show-info.csv
+- Run `npm run convert` to convert episode data
+- Run `npm run convert2` to convert show data
 
 ### Getting current video metadata
 
-- Run `npm run start` to get the app's metadata
-- It will compare the IMDB data and properly put together your show data
+- Run `npm run start` to get the videos' metadata in your directory listed in the /input/input.json file
+- It will compare the scraped IMDB data and match them up
+- Double-check the info is correct before proceeding
+
+### Renaming videos
+
+- Run `npm run rename`
+
+#### If a video failed
+
+- Check the `results/failedVideos.json` file to see which videos failed
+- You may have to manually fix these (using iTunes or another program)
+
+### Acceptable scenarios
+
+- S06E01.mkv
+
+## Deprecated
+
+### Scraping episode/show data
+
+- Run `npm run scrape` to scrape IMDB and get the show's info saved
 - Double-check the info is correct before proceeding
 
 ### Changing video file metadata
@@ -63,8 +82,3 @@
 - Run `npm run change` to change your video metadata
 - Double-check there are no errors
 - Delete the old video files
-
-#### If a video failed:
-
-- Check the `results/failedVideos.json` file to see which videos failed
-- You may have to manually fix these (using iTunes or another program)

@@ -3,7 +3,7 @@ const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 
 // ---variables for testing---
-const fileDirectory = "D:/TV Shows/Samurai Jack (2001)/Season 2 (360p)";
+const fileDirectory = "C:/Users/Admin/Downloads/Stargate SG-1 (1997)/season6";
 const ffmpegDirectory = "D:/executables/ffmpeg/bin/";
 
 const getVideoFilenames = (fileDirectory, callback) => {

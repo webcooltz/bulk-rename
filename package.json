@@ -1,6 +1,6 @@
 {
   "name": "bulk-rename",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "rename files and meta data",
   "main": "scrape-imdb.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "convert": "node ./functions/scraping/convertScrapedEpisodes.js",
     "convert2": "node ./functions/scraping/convertScrapedShow.js",
     "get": "node ./functions/getMetadata-alone.js",
-    "change": "node ./functions/changeMetadata.js"
+    "change": "node ./functions/changeMetadata.js",
+    "rename": "node ./functions/renameVideos.js"
   },
   "author": "webcooltz",
   "license": "ISC",
@@ -18,7 +19,6 @@
     "axios": "^1.4.0",
     "cheerio": "^1.0.0-rc.12",
     "cli-progress": "^3.12.0",
-    "csv-parse": "^5.5.3",
     "fluent-ffmpeg": "^2.1.2",
     "papaparse": "^5.4.1",
     "util": "^0.12.5"
