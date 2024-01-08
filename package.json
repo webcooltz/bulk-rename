@@ -4,14 +4,14 @@
   "description": "rename files and meta data",
   "main": "scrape-imdb.js",
   "scripts": {
-    "start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape": "node ./functions/scrapeImdb.js",
     "convert": "node ./functions/scraping/convertScrapedEpisodes.js",
     "convert2": "node ./functions/scraping/convertScrapedShow.js",
+    "prep": "node main.js",
+    "rename": "node ./functions/renameVideos.js",
+    "scrape": "node ./functions/scrapeImdb.js",
     "get": "node ./functions/getMetadata-alone.js",
     "change": "node ./functions/changeMetadata.js",
-    "rename": "node ./functions/renameVideos.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "webcooltz",
   "license": "ISC",

@@ -271,8 +271,8 @@ const main = async () => {
       }
     */
     if (!userInput) {
-      console.error(`Invalid input JSON (main.main).\n-Location: main.js -> main()`);
-      writeToLogfile(`Invalid input JSON (main.main).\n-Location: main.js -> main()\n-Timestamp: ${new Date().toISOString()}`);
+      console.error(`Invalid input JSON.\n-Location: main.js -> main()`);
+      writeToLogfile(`Invalid input JSON.\n-Location: main.js -> main()\n-Timestamp: ${new Date().toISOString()}`);
       return;
     }
 
@@ -316,8 +316,8 @@ const main = async () => {
           const videofileMetadata = await new Promise((resolve, reject) => {
             getMetadataModule.main(seasonDirectoryCleaned, userInput.ffmpegDirectory, (err, metadata) => {
               if (err) {
-                console.error(`Error getting metadata from video files (main.waitAndGetMetadata).\nError: ${err}`);
-                writeToLogfile(`Error getting metadata from video files (main.waitAndGetMetadata).\nTimestamp: ${new Date().toISOString()}\nError: ${err}`);
+                console.error(`Error getting metadata from video files.\n-Location: main.js -> waitAndGetMetadata()\n-Error message: ${err}`);
+                writeToLogfile(`Error getting metadata from video files.\n-Location: main.js -> waitAndGetMetadata()\n-Timestamp: ${new Date().toISOString()}\n-Error message: ${err}`);
                 reject(err);
                 return;
               }
@@ -326,12 +326,12 @@ const main = async () => {
           });
           const videofileMetadataObjects = processMetadata(videofileMetadata);
 
-          console.log("Successfully got metadata from video files\n-Location: main.js -> waitAndGetMetadata()");
-          writeToLogfile(`Successfully got metadata from video files\n-Location: main.js -> waitAndGetMetadata()\n-Timestamp: ${new Date().toISOString()}`);
+          console.log("Successfully got metadata from video files.\n-Location: main.js -> waitAndGetMetadata()");
+          writeToLogfile(`Successfully got metadata from video files.\n-Location: main.js -> waitAndGetMetadata()\n-Timestamp: ${new Date().toISOString()}`);
           return videofileMetadataObjects;
         } catch (err) {
-          console.error(`Catch error getting metadata from video files\n-Location: main.js -> waitAndGetMetadata()\n-Error message: ${err}`);
-          writeToLogfile(`Catch error getting metadata from video files\n-Location: main.js -> waitAndGetMetadata()\n-Timestamp: ${new Date().toISOString()}\n-Error message: ${err}`);
+          console.error(`Catch - Error getting metadata from video files.\n-Location: main.js -> waitAndGetMetadata()\n-Error message: ${err}`);
+          writeToLogfile(`Catch - Error getting metadata from video files.\n-Location: main.js -> waitAndGetMetadata()\n-Timestamp: ${new Date().toISOString()}\n-Error message: ${err}`);
         }
       };
         
@@ -360,9 +360,8 @@ const main = async () => {
           // console.log("season: ", season);
           for (const episode of season) {
             // console.log("episode: ", episode);
-            // clean before comparing
-            // episode.title = episode.title;
             // console.log("videofileMetadataObject.filename: ", videofileMetadataObject.filename);
+            // clean before comparing
             const episodeGuess = videofileMetadataObject.filename.match(/e\d+/gi);
             // console.log("episodeGuess: ", episodeGuess);
             const episodeGuessNumber = parseInt(episodeGuess[0].split("e")[1]);
@@ -371,54 +370,41 @@ const main = async () => {
             const seasonGuess = videofileMetadataObject.filename.includes("s") ? videofileMetadataObject.filename.match(/s\d+/gi) : seasonDirectoryCleaned.match(/s\d+/gi);
             // console.log("seasonGuess: ", seasonGuess);
             const seasonGuessNumber = parseInt(seasonGuess[0].split("s")[1]);
-            // turn into int just in case
-            episode.episodeNumber = parseInt(episode.episodeNumber);
-            episode.seasonNumber = parseInt(episode.seasonNumber);
             // console.log("seasonGuessNumber: ", seasonGuessNumber);
             // console.log("episodeGuessNumber: ", episodeGuessNumber);
+            // Turn episode number to int just in case it comes in as a string
+            episode.episodeNumber = parseInt(episode.episodeNumber);
+            episode.seasonNumber = parseInt(episode.seasonNumber);
             // console.log("episode.episodeNumber: ", episode.episodeNumber);
-            // console.log("episode.season: ", episode.seasonNumber);
+            // console.log("episode.seasonNumber: ", episode.seasonNumber);
+            // ---IF episode # and season # match---
             if (videofileMetadataObject.filename.toLowerCase().includes(episode.title.toLowerCase())) {
-              // console.log("includes");
-              // show
-              videofileMetadataObject.show = showMetadata.title;
-              // season
-              videofileMetadataObject.season = episode.seasonNumber.toString();
-              // episode title
-              videofileMetadataObject.title = episode.title;
-              // episode number
-              videofileMetadataObject.episode = episode.episodeNumber.toString();
-              // episode description
-              videofileMetadataObject.description = cleanupData(episode.description);
-              // episode date
-              videofileMetadataObject.date = episode.airDate;
+              videofileMetadataObject.show = showMetadata.title; // show
+              videofileMetadataObject.season = episode.seasonNumber.toString(); // season
+              videofileMetadataObject.title = episode.title; // episode title
+              videofileMetadataObject.episode = episode.episodeNumber.toString(); // episode number
+              videofileMetadataObject.description = cleanupData(episode.description); // episode description
+              videofileMetadataObject.date = episode.airDate; // episode date
               // episode filename
               videofileMetadataObject.newFilename = episode.episodeNumber < 10 ? seasonDirectoryCleaned + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + videoFileExtension : seasonDirectoryCleaned + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title + videoFileExtension;
-              // videofileMetadataObject.newFilename = cleanupData(videofileMetadataObject.newFilename);
+              
               finalEpisodeObjects.push(videofileMetadataObject);
-
+            // ---ELSE IF episode # matches---
             } else if (episodeGuessNumber === episode.episodeNumber && seasonGuessNumber === episode.seasonNumber) {
               // console.log("includes (2)");
-              // show
-              videofileMetadataObject.show = showMetadata.title;
-              // episode number
-              videofileMetadataObject.episode = episode.episodeNumber.toString();
-              // season
-              videofileMetadataObject.season = episode.seasonNumber.toString();
-              // episode title
-              videofileMetadataObject.title = cleanupData(episode.title);
+              videofileMetadataObject.show = showMetadata.title; // show
+              videofileMetadataObject.episode = episode.episodeNumber.toString(); // episode number
+              videofileMetadataObject.season = episode.seasonNumber.toString(); // season
+              videofileMetadataObject.title = cleanupData(episode.title); // episode title
               // episode alternate title
               videofileMetadataObject.alternateTitle = cleanupData(videofileMetadataObject.filename.split("-")[1].trim());
               // remove excess characters from alternate title
               videofileMetadataObject.alternateTitle = videofileMetadataObject.alternateTitle.includes("[") ? videofileMetadataObject.alternateTitle.split("[")[0].trim() : videofileMetadataObject.alternateTitle;
-              // episode description
-              videofileMetadataObject.description = cleanupData(episode.description);
-              // episode date
-              videofileMetadataObject.date = episode.airDate;
+              videofileMetadataObject.description = cleanupData(episode.description); // episode description
+              videofileMetadataObject.date = episode.airDate; // episode date
               // new filename
               let newFilename = episode.episodeNumber < 10 ? seasonDirectoryCleaned + "E0" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title : seasonDirectoryCleaned + "E" + videofileMetadataObject.episode + " - " + videofileMetadataObject.title;
-              // newFilename = cleanupData(newFilename);
-              // add file extension depending on whether or not there is an alternate title
+              // add file extension depending on alternate title
               if (videofileMetadataObject.alternateTitle.length > 0 && userInput.type === "anime") {
                 const alternateTitleWithoutExtension = videofileMetadataObject.alternateTitle.split(".")[0];
                 videofileMetadataObject.newFilename = newFilename + ` (${alternateTitleWithoutExtension})` + videoFileExtension;
@@ -447,8 +433,8 @@ const main = async () => {
     console.log("Successfully wrote output data to file\n-Location: main.js -> main()");
     writeToLogfile(`Successfully wrote output data to file\n-Location: main.js -> main()\n-Timestamp: ${new Date().toISOString()}`);
   } catch (err) {
-    console.error(`Error in main.js (main.main).\nError: ${err}`);
-    writeToLogfile(`Error in main.js (main.main).\nTimestamp: ${new Date().toISOString()}\nError: ${err}`);
+    console.error(`Error in main.js\n-Location: main.js -> main().\n-Error message: ${err}`);
+    writeToLogfile(`Error in main.js\n-Location: main.js -> main().\nTimestamp: ${new Date().toISOString()}\n-Error message: ${err}`);
   }
 };
 

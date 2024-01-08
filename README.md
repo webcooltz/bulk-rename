@@ -53,7 +53,7 @@
 
 ### Getting current video metadata
 
-- Run `npm run start` to get the videos' metadata in your directory listed in the /input/input.json file
+- Run `npm run prep` to get the videos' metadata in your directory listed in the /input/input.json file
 - It will compare the scraped IMDB data and match them up
 - Double-check the info is correct before proceeding
 
@@ -69,6 +69,10 @@
 ### Acceptable scenarios
 
 - S06E01.mkv
+
+#### Not working
+
+- Stargate.SG-1.S07E01.720p.BluRay.x264-BORDURE.mkv
 
 ## Deprecated
 
